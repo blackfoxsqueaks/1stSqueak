@@ -1,0 +1,1256 @@
+@media (min-width: 1520px) {
+	.mediaViewInfo {
+		--web-view-name: Dashboard;
+		--web-view-id: Dashboard;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-show-by-media-query: true;
+		--web-enable-deep-linking: true;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Dashboard {
+		position: absolute;
+		display: block;
+		width: 1520px;
+		height: 2132px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Dashboard;
+		--web-view-id: Dashboard;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-show-by-media-query: true;
+		--web-enable-deep-linking: true;
+	}
+	#Dashboard_hm {
+		left: 557px;
+		top: 73px;
+		position: absolute;
+		overflow: visible;
+		width: 171px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(38,103,255,1);
+		letter-spacing: 0.15px;
+	}
+	#Mail:hover {
+		color: rgba(38,103,255,1);
+	}
+	#Mail {
+		left: 792px;
+		top: 73px;
+		position: absolute;
+		overflow: visible;
+		width: 65px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(165,165,165,1);
+		letter-spacing: 0.15px;
+		transition: all .3s ease-out;
+	}
+	#Notion:hover {
+		color: rgba(38,103,255,1);
+	}
+	#Notion {
+		left: 921px;
+		top: 73px;
+		position: absolute;
+		overflow: visible;
+		width: 105px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(165,165,165,1);
+		letter-spacing: 0.15px;
+		transition: all .3s ease-out;
+	}
+	#Firebase:hover {
+		color: rgba(38,103,255,1);
+	}
+	#Firebase {
+		left: 1090px;
+		top: 73px;
+		position: absolute;
+		overflow: visible;
+		width: 135px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(165,165,165,1);
+		letter-spacing: 0.15px;
+		transition: all .3s ease-out;
+	}
+	#Analytics:hover {
+		color: rgba(38,103,255,1);
+	}
+	#Analytics {
+		left: 1289px;
+		top: 73px;
+		position: absolute;
+		overflow: visible;
+		width: 146px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(165,165,165,1);
+		letter-spacing: 0.15px;
+		transition: all .3s ease-out;
+	}
+	#Drop_Logo_White_vectorized_hz {
+		position: absolute;
+		width: 166px;
+		height: 52.067px;
+		left: 77px;
+		top: 65.466px;
+		overflow: visible;
+	}
+	#All_Copyrights_Reserved__Drop {
+		left: 600px;
+		top: 2029px;
+		position: absolute;
+		overflow: visible;
+		width: 321px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_3839_h {
+		position: absolute;
+		width: 1375px;
+		height: 209px;
+		left: 59px;
+		top: 207px;
+		overflow: visible;
+	}
+	#Rectangle_2943_h {
+		position: absolute;
+		width: 1375px;
+		height: 209px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Drops_Management_System_h {
+		left: 57px;
+		top: 57px;
+		position: absolute;
+		overflow: visible;
+		width: 551px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 38px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Welcome_back {
+		left: 57px;
+		top: 114px;
+		position: absolute;
+		overflow: visible;
+		width: 195px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(147,147,147,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3844 {
+		position: absolute;
+		width: 635px;
+		height: 669px;
+		left: 59px;
+		top: 459px;
+		overflow: visible;
+	}
+	#Group_3840 {
+		position: absolute;
+		width: 635px;
+		height: 669px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2944 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(38,103,255,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2944 {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 695px;
+		height: 729px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_3827_h {
+		position: absolute;
+		width: 492.434px;
+		height: 121.206px;
+		left: 38.101px;
+		top: 153.445px;
+		overflow: visible;
+	}
+	#Group_3817_h {
+		position: absolute;
+		width: 122.747px;
+		height: 121.206px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_ia {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_ia {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 182.747px;
+		height: 181.077px;
+		left: 0px;
+		top: 0px;
+	}
+	#order-tracking_ib {
+		position: absolute;
+		width: 115.154px;
+		height: 115.154px;
+		left: 7.593px;
+		top: 6.051px;
+		overflow: visible;
+	}
+	#WashDrop_Orders {
+		left: 153.434px;
+		top: 26.651px;
+		position: absolute;
+		overflow: visible;
+		width: 258px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 28px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Track_and_distribute_WashDrop__id {
+		left: 153.434px;
+		top: 72.115px;
+		position: absolute;
+		overflow: visible;
+		width: 340px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3832_ie {
+		position: absolute;
+		width: 463.97px;
+		height: 111.241px;
+		left: 38.101px;
+		top: 323.947px;
+		overflow: visible;
+	}
+	#Group_3818_if {
+		position: absolute;
+		width: 112.776px;
+		height: 111.241px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_ig {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_ig {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 172.776px;
+		height: 171.241px;
+		left: 0px;
+		top: 0px;
+	}
+	#architecture-and-city_ih {
+		position: absolute;
+		width: 85.119px;
+		height: 85.119px;
+		left: 15.507px;
+		top: 12.409px;
+		overflow: visible;
+	}
+	#Registered_Compounds_ii {
+		left: 140.97px;
+		top: 24.949px;
+		position: absolute;
+		overflow: visible;
+		width: 324px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_compounds_listings_ij {
+		left: 140.97px;
+		top: 67.508px;
+		position: absolute;
+		overflow: visible;
+		width: 245px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3833_ik {
+		position: absolute;
+		width: 475.208px;
+		height: 115.73px;
+		left: 38.101px;
+		top: 494.22px;
+		overflow: visible;
+	}
+	#Group_3823_il {
+		position: absolute;
+		width: 116.338px;
+		height: 115.73px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_im {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_im {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 176.338px;
+		height: 174.755px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_2892_in {
+		position: absolute;
+		width: 110.521px;
+		height: 110.521px;
+		left: 3.284px;
+		top: 5.208px;
+		overflow: visible;
+	}
+	#WashDrop_Services {
+		left: 164.208px;
+		top: 29.299px;
+		position: absolute;
+		overflow: visible;
+		width: 272px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_WashDrop_services_listi_ip {
+		left: 164.208px;
+		top: 71.162px;
+		position: absolute;
+		overflow: visible;
+		width: 312px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3843 {
+		position: absolute;
+		width: 264px;
+		height: 71.534px;
+		left: 185.5px;
+		top: 25.466px;
+		overflow: visible;
+	}
+	#Everything_WashDrop_ir {
+		left: 17.5px;
+		top: 49.534px;
+		position: absolute;
+		overflow: visible;
+		width: 202px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(147,147,147,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3842 {
+		position: absolute;
+		width: 264px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3841_it {
+		position: absolute;
+		width: 264px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#WASHDROP_iu {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 265px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		color: rgba(38,103,255,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3850 {
+		position: absolute;
+		width: 642px;
+		height: 672px;
+		left: 792px;
+		top: 456px;
+		overflow: visible;
+	}
+	#Group_3845 {
+		position: absolute;
+		width: 642px;
+		height: 672px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3840_ix {
+		position: absolute;
+		width: 642px;
+		height: 672px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2944_iy {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(38,103,255,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2944_iy {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 702px;
+		height: 732px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_3843_iz {
+		position: absolute;
+		width: 228px;
+		height: 71.534px;
+		left: 207px;
+		top: 25.466px;
+		overflow: visible;
+	}
+	#Manage_Workshops_i {
+		left: 23px;
+		top: 49.534px;
+		position: absolute;
+		overflow: visible;
+		width: 184px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(147,147,147,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3842_i {
+		position: absolute;
+		width: 228px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3841_i {
+		position: absolute;
+		width: 228px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Workshops_i {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 229px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3834 {
+		position: absolute;
+		width: 473.25px;
+		height: 112.252px;
+		left: 60.875px;
+		top: 494.22px;
+		overflow: visible;
+	}
+	#Group_3824 {
+		position: absolute;
+		width: 113.8px;
+		height: 112.252px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_i {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_i {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 173.8px;
+		height: 172.251px;
+		left: 0px;
+		top: 0px;
+	}
+	#Image_273 {
+		position: absolute;
+		width: 64.259px;
+		height: 79.088px;
+		left: 24.894px;
+		top: 10.52px;
+		overflow: visible;
+	}
+	#Workshop_Services_i {
+		left: 142.25px;
+		top: 26.275px;
+		position: absolute;
+		overflow: visible;
+		width: 267px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_workshops_services_list {
+		left: 142.25px;
+		top: 65.687px;
+		position: absolute;
+		overflow: visible;
+		width: 332px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3831 {
+		position: absolute;
+		width: 440.267px;
+		height: 117px;
+		left: 55.375px;
+		top: 323.95px;
+		overflow: visible;
+	}
+	#Group_3820 {
+		position: absolute;
+		width: 118.614px;
+		height: 117px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_jc {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_jc {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 178.614px;
+		height: 177px;
+		left: 0px;
+		top: 0px;
+	}
+	#Image_226 {
+		position: absolute;
+		width: 101.593px;
+		height: 108.486px;
+		left: 11.688px;
+		top: 4.217px;
+		overflow: visible;
+	}
+	#Available_Workshops_je {
+		left: 148.267px;
+		top: 26.206px;
+		position: absolute;
+		overflow: visible;
+		width: 293px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_workshops_listings {
+		left: 148.267px;
+		top: 68.203px;
+		position: absolute;
+		overflow: visible;
+		width: 237px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3828 {
+		position: absolute;
+		width: 487.267px;
+		height: 117px;
+		left: 58.367px;
+		top: 153.45px;
+		overflow: visible;
+	}
+	#Group_3819 {
+		position: absolute;
+		width: 118.614px;
+		height: 117px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_ji {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_ji {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 178.614px;
+		height: 177px;
+		left: 0px;
+		top: 0px;
+	}
+	#Workshop_Appointments_jj {
+		left: 143.267px;
+		top: 23.206px;
+		position: absolute;
+		overflow: visible;
+		width: 345px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Track_reserved_appointments {
+		left: 146.267px;
+		top: 65.203px;
+		position: absolute;
+		overflow: visible;
+		width: 241px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Image_267 {
+		position: absolute;
+		width: 74.575px;
+		height: 74.575px;
+		left: 22.761px;
+		top: 21.213px;
+		overflow: visible;
+	}
+	#Group_3848 {
+		position: absolute;
+		width: 635px;
+		height: 553px;
+		left: 59px;
+		top: 1210px;
+		overflow: visible;
+	}
+	#Group_3846 {
+		position: absolute;
+		width: 635px;
+		height: 553px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3840_jo {
+		position: absolute;
+		width: 635px;
+		height: 553px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2944_jp {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(38,103,255,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2944_jp {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 695px;
+		height: 613px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_3843_jq {
+		position: absolute;
+		width: 278px;
+		height: 76.534px;
+		left: 179px;
+		top: 25.466px;
+		overflow: visible;
+	}
+	#Manage_everything_Washdrop {
+		left: 0px;
+		top: 54.534px;
+		position: absolute;
+		overflow: visible;
+		width: 279px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(147,147,147,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3842_js {
+		position: absolute;
+		width: 140px;
+		height: 50px;
+		left: 68.537px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3841_jt {
+		position: absolute;
+		width: 140px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Events_ju {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 141px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3830 {
+		position: absolute;
+		width: 428.427px;
+		height: 124.05px;
+		left: 69.485px;
+		top: 152.45px;
+		overflow: visible;
+	}
+	#Group_3822 {
+		position: absolute;
+		width: 125.761px;
+		height: 124.05px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_jx {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_jx {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 185.761px;
+		height: 184.05px;
+		left: 0px;
+		top: 0px;
+	}
+	#dancing {
+		position: absolute;
+		width: 105.139px;
+		height: 105.139px;
+		left: 10px;
+		top: 9.455px;
+		overflow: visible;
+	}
+	#Registered_Visitors_jz {
+		left: 161.427px;
+		top: 26.173px;
+		position: absolute;
+		overflow: visible;
+		width: 268px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_event_visitors_j {
+		left: 161.427px;
+		top: 70.762px;
+		position: absolute;
+		overflow: visible;
+		width: 183px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3829 {
+		position: absolute;
+		width: 394.457px;
+		height: 143.182px;
+		left: 69.485px;
+		top: 344.657px;
+		overflow: visible;
+	}
+	#Group_3821 {
+		position: absolute;
+		width: 145.157px;
+		height: 143.182px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_j {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_j {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 205.157px;
+		height: 203.182px;
+		left: 0px;
+		top: 0px;
+	}
+	#placard {
+		position: absolute;
+		width: 123.761px;
+		height: 123.762px;
+		left: 10px;
+		top: 9.456px;
+		overflow: visible;
+	}
+	#Manage_Events_j {
+		left: 180.457px;
+		top: 33.4px;
+		position: absolute;
+		overflow: visible;
+		width: 215px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_events_listings_j {
+		left: 180.457px;
+		top: 74.334px;
+		position: absolute;
+		overflow: visible;
+		width: 202px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3849 {
+		position: absolute;
+		width: 642px;
+		height: 553px;
+		left: 792px;
+		top: 1210px;
+		overflow: visible;
+	}
+	#Group_3847 {
+		position: absolute;
+		width: 642px;
+		height: 553px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3840_j {
+		position: absolute;
+		width: 642px;
+		height: 553px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2944_ka {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(38,103,255,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2944_ka {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 702px;
+		height: 613px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_3843_kb {
+		position: absolute;
+		width: 278px;
+		height: 76.534px;
+		left: 182px;
+		top: 25.466px;
+		overflow: visible;
+	}
+	#Manage_everything_Washdrop_kc {
+		left: 0px;
+		top: 54.534px;
+		position: absolute;
+		overflow: visible;
+		width: 279px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(147,147,147,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3842_kd {
+		position: absolute;
+		width: 118px;
+		height: 50px;
+		left: 80.037px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_3841_ke {
+		position: absolute;
+		width: 118px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Other_kf {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 119px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 40px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3836 {
+		position: absolute;
+		width: 305.031px;
+		height: 123.299px;
+		left: 111.576px;
+		top: 173.448px;
+		overflow: visible;
+	}
+	#Group_3826 {
+		position: absolute;
+		width: 125px;
+		height: 123.299px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_ki {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_ki {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 185px;
+		height: 183.3px;
+		left: 0px;
+		top: 0px;
+	}
+	#user {
+		position: absolute;
+		width: 103.944px;
+		height: 103.944px;
+		left: 10px;
+		top: 9.367px;
+		overflow: visible;
+	}
+	#User_Data_kk {
+		left: 154.031px;
+		top: 31.58px;
+		position: absolute;
+		overflow: visible;
+		width: 142px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_user_data {
+		left: 154.031px;
+		top: 71.719px;
+		position: absolute;
+		overflow: visible;
+		width: 152px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Group_3835 {
+		position: absolute;
+		width: 419.299px;
+		height: 127.811px;
+		left: 111.576px;
+		top: 357.657px;
+		overflow: visible;
+	}
+	#Group_3825 {
+		position: absolute;
+		width: 129.573px;
+		height: 127.811px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2942_ko {
+		fill: rgba(247,247,247,1);
+	}
+	.Rectangle_2942_ko {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 189.573px;
+		height: 187.811px;
+		left: 0px;
+		top: 0px;
+	}
+	#Image_310 {
+		position: absolute;
+		width: 80.778px;
+		height: 80.777px;
+		left: 24.397px;
+		top: 23.517px;
+		overflow: visible;
+	}
+	#Manage_Vouchers_kq {
+		left: 171.299px;
+		top: 35.42px;
+		position: absolute;
+		overflow: visible;
+		width: 249px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 27px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#Manage_vouchers_kr {
+		left: 171.299px;
+		top: 72.391px;
+		position: absolute;
+		overflow: visible;
+		width: 147px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(149,149,149,1);
+		letter-spacing: 0.15px;
+	}
+	#Rectangle_2945 {
+		fill: rgba(38,103,255,1);
+	}
+	.Rectangle_2945 {
+		filter: drop-shadow(-2px 3px 20px rgba(175, 175, 175, 0.847));
+		position: absolute;
+		overflow: visible;
+		width: 670px;
+		height: 176px;
+		left: 455px;
+		top: 1870px;
+	}
+	#Contact_Administrator_kt {
+		left: 587px;
+		top: 1910px;
+		position: absolute;
+		overflow: visible;
+		width: 348px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Ridley Grotesk;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+	}
+}

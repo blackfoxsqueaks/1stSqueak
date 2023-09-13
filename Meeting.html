@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Drop - Team Meeting</title>
+
+    <meta name="description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Drop App">
+<meta itemprop="description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta itemprop="image" content="https://drop-eg.com/MeetingOG.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://drop-eg.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Drop - Team Meeting" />
+<meta property="og:description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta property="og:image" content="https://drop-eg.com/MeetingOG.png" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drop - Team Meeting">
+<meta name="twitter:description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta name="twitter:image" content="https://drop-eg.com/MeetingOG.png">
+
+
+<link rel="canonical" href="http://drop-eg.com/" />
+
+
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2667ff">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+    <style>
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Bold.woff") format("truetype");
+    font-weight: Bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Medium.woff") format("truetype");
+    font-weight: Medium;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Regular.woff") format("truetype");
+    font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Ridley Grotesk';
+        }
+        #dialogText {
+            color: white;
+            background-color: #2667ff;
+            font-weight: Bold;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #FFFFFF;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+        #DropLogo {
+            text-align: center;
+            width: 180px;
+            padding-top: 10px;
+        }
+
+        #image-container {
+
+            text-align: center;
+        }
+
+
+
+        
+        #mainDialog {
+            max-width: 400px;
+            margin: 5px;
+            border: solid #FFFFFF 1px;
+            border-radius: 20px;
+            box-shadow: -2px 3px 20px rgba(175, 175, 175, 0.8);
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+
+
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            padding: 5px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 7px auto;
+            border-radius: 8px;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+        
+        #messageWrapper {
+            float: center;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: #2667ff;
+        }
+        
+        #submitPass {
+            font-size: 15px;
+            font-family: Ridley Grotesk;
+            margin-top: 8px;
+            padding: 15px;
+            border-radius: 13px;
+            color: white;
+            background-color: #2667ff;
+            border: solid gray 0px;
+            float: center;
+            cursor: pointer;
+            width: 250px;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+  <script type="text/javascript" nonce="4e43354eb675475bad659a748b6" src="//local.adguard.org?ts=1682941140677&amp;type=content-script&amp;dmn=drop-eg.com&amp;pth=%2FDashboard&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-java&amp;st-dnt"></script></head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">Drop - Team Meeting</div>
+                <div id="image-container"> 
+                    <img id="DropLogo" src="assets/Dashboard/KeysGIF.gif">
+                <div> 
+                <div id="passArea">
+                    <p id="passwordPrompt">Please enter your meeting key</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Loading your meeting...</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Done</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    (function() {
+
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
+
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
+
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
+
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
+
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
+
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
+
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
+
+                let decrypted = new TextDecoder().decode(decryptedArray);
+
+                if (decrypted === "") throw "No data returned";
+
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
+
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
+</html>

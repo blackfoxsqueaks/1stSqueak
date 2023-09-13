@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Drop - Partner Meeting</title>
+
+    <meta name="description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Drop App">
+<meta itemprop="description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta itemprop="image" content="https://drop-eg.com/MeetingOG.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://drop-eg.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Drop - Partner Meeting" />
+<meta property="og:description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta property="og:image" content="https://drop-eg.com/MeetingOG.png" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drop - Partner Meeting">
+<meta name="twitter:description" content="Drop App lets you wash your car anywhere. Service, repair and customize it at Egypt's top rated & verified workshops and best service centers.">
+<meta name="twitter:image" content="https://drop-eg.com/MeetingOG.png">
+
+
+<link rel="canonical" href="http://drop-eg.com/" />
+
+
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2667ff">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+    <style>
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Bold.woff") format("truetype");
+    font-weight: Bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Medium.woff") format("truetype");
+    font-weight: Medium;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ridley Grotesk';
+  src: url("fonts/Ridley_Grotesk_Regular.woff") format("truetype");
+    font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Ridley Grotesk';
+        }
+        #dialogText {
+            color: white;
+            background-color: #2667ff;
+            font-weight: Bold;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #FFFFFF;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+        #DropLogo {
+            text-align: center;
+            width: 180px;
+            padding-top: 10px;
+        }
+
+        #image-container {
+
+            text-align: center;
+        }
+
+
+
+        
+        #mainDialog {
+            max-width: 400px;
+            margin: 5px;
+            border: solid #FFFFFF 1px;
+            border-radius: 20px;
+            box-shadow: -2px 3px 20px rgba(175, 175, 175, 0.8);
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+
+
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            padding: 5px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 7px auto;
+            border-radius: 8px;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+        
+        #messageWrapper {
+            float: center;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: #2667ff;
+        }
+        
+        #submitPass {
+            font-size: 15px;
+            font-family: Ridley Grotesk;
+            margin-top: 8px;
+            padding: 15px;
+            border-radius: 13px;
+            color: white;
+            background-color: #2667ff;
+            border: solid gray 0px;
+            float: center;
+            cursor: pointer;
+            width: 250px;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+  <script type="text/javascript" nonce="4e43354eb675475bad659a748b6" src="//local.adguard.org?ts=1682941140677&amp;type=content-script&amp;dmn=drop-eg.com&amp;pth=%2FDashboard&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-java&amp;st-dnt"></script></head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">Drop - Partner Meeting</div>
+                <div id="image-container"> 
+                    <img id="DropLogo" src="assets/Dashboard/KeysGIF.gif">
+                <div> 
+                <div id="passArea">
+                    <p id="passwordPrompt">Please enter your meeting key</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Loading your meeting...</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Done</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    (function() {
+
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
+
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
+
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
+
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
+
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
+
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
+
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
+
+                let decrypted = new TextDecoder().decode(decryptedArray);
+
+                if (decrypted === "") throw "No data returned";
+
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
+
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
+</html>
