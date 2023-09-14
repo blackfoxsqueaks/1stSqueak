@@ -25,9 +25,6 @@ submitButtonD.addEventListener("click",(e)=>{
     })
 
 
-    formr.reset()
-
-
 
 
     window.location.href = "EarlyAccess_Complete.html";
