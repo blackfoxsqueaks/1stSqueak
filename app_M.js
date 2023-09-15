@@ -26,7 +26,37 @@ submitButton.addEventListener("click",(e)=>{
     })
 
 
+})
 
-    window.location.href = "EarlyAccess_Complete.html";
+
+
+
+submitButton.addEventListener("click",function(event){
+ event.preventDefault();
+
+const userName_M = document.getElementById('firstName_M').value;
+const userEmail_M = document.getElementById('email_M').value;
+
+
+
+         const newUser = {
+    name: userName_M,
+    email: userEmail_M
+  }
+
+
+     fetch('https://api.retool.com/v1/workflows/53c0c882-cb6a-428f-a111-ba04843e9a67/startTrigger?workflowApiKey=retool_wk_04c5817f31904aa0861d905104722734', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json; charset=utf-8'
+    },
+    body: JSON.stringify(newUser),
+  })
+    .then(async response => response.text())
+    .then(result => {
+        window.location.href = "EarlyAccess_Complete.html"
+    });
+
+
 
 })
