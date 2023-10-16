@@ -3,10 +3,13 @@
 
   const ref = database.ref("registeredUsers")
 
-
+let spinnerWrapper = document.querySelector('.spinner-wrapper');
 
 var submitButton = document.getElementById('button_M')
+
+
 submitButton.addEventListener("click",(e)=>{
+
 
     
     e.preventDefault();
@@ -25,8 +28,10 @@ submitButton.addEventListener("click",(e)=>{
         phone:phone_M
     })
 
+    spinnerWrapper.style.display= 'block';
 
-})
+
+});
 
 
 
@@ -59,4 +64,4 @@ const userEmail_M = document.getElementById('email_M').value;
 
 
 
-})
+});
