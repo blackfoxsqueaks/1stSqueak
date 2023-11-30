@@ -3,10 +3,16 @@
 
   const ref = database.ref("registeredUsers")
 
+
+
+
 var submitButton = document.getElementById('button_M')
 
 
 submitButton.addEventListener("click",(e)=>{
+
+
+
 
 
     
@@ -17,17 +23,29 @@ submitButton.addEventListener("click",(e)=>{
     const email_M = document.getElementById('email_M').value;
     const phone_M = document.getElementById('phone_M').value;
 
+
     
-    ref.push({
+    ref.push(
+
+    {
         firstName:firstName_M,
         lastName:lastName_M,
         area:area_M,
         email:email_M,
         phone:phone_M
-    })
+    }
+
+    ) 
 
 
-})
+    submitButton.style.background = "#83A5F4";
+
+
+
+}
+
+
+)
 
 
 
