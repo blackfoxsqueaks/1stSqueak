@@ -4084,10 +4084,14 @@ border-color: #2667ff;
       width: 40%;
       min-height: 50px;
       margin-left: 30%;
-      margin-top: 5px;
+      margin-top: 0px;
       font-family: Ridley Grotesk;
     }
 
+
+   #feedback_M {
+    	margin-top: 10px;
+    }
 
 
     #validationCustom01 {
@@ -4146,8 +4150,8 @@ border-color: #2667ff;
   </div>
   <div class="col-md-4">
     <input type="tel" class="form-control" id="validationCustom05" placeholder="Phone Number" pattern="[0-9]{11}" required>
-    <div class="invalid-feedback">
-      Please enter an 11 digit number (01xxxxxxxx)
+    <div id="feedback_M" class="invalid-feedback">
+      Kindly provide an 11-digit number that starts with '01'
     </div>
   </div>
   <p style="line-height: 20%;"></p>
@@ -4325,6 +4329,11 @@ border-color: #2667ff;
       font-family: Ridley Grotesk;
     }
 
+
+    .invalid-feedback {
+    	margin-top: 3px;
+    }
+
     #validationCustom10 {
       color: black;
       font-family: Ridley Grotesk;
@@ -4385,8 +4394,8 @@ border-color: #2667ff;
   </div>
   <div class="col-md-12">
     <input type="tel" class="form-control" id="validationCustom14" placeholder="Phone Number" pattern="[0-9]{11}" required>
-    <div class="invalid-feedback">
-      Please enter an 11 digit number (01xxxxxxxx)
+    <div id="feedback_D" class="invalid-feedback">
+      Kindly provide an 11-digit number that starts with '01'
     </div>
   </div>
   <p style="line-height: 20%;"></p>
