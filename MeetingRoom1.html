@@ -52,6 +52,14 @@
           window.onload = () => {
             const api = new JitsiMeetExternalAPI("8x8.vc", {
               roomName: "vpaas-magic-cookie-370cd3f174c6481da6d02e229648b210/Private Meeting",
+              configOverwrite: {
+           toolbarConfig: {
+               alwaysVisible: true,
+           },
+           prejoinConfig: {
+               enabled: false
+           }
+       },
               parentNode: document.querySelector('#jaas-container'),
 							// Make sure to include a JWT if you intend to record,
 							// make outbound calls or use any other premium features!
