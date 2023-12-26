@@ -50,14 +50,17 @@
         <style>html, body, #jaas-container { height: 100%; margin:0 }</style>
         <script type="text/javascript">
           window.onload = () => {
-            const api = new JitsiMeetExternalAPI("8x8.vc", {
+
+
+            var api = new JitsiMeetExternalAPI("8x8.vc", {
               roomName: "vpaas-magic-cookie-370cd3f174c6481da6d02e229648b210/Private Meeting",
               configOverwrite: {
            toolbarConfig: {
-               alwaysVisible: true,
+               alwaysVisible: false,
            },
            prejoinConfig: {
                enabled: false
+            
            }
        },
               parentNode: document.querySelector('#jaas-container'),
@@ -65,6 +68,10 @@
 							// make outbound calls or use any other premium features!
 							// jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtMzcwY2QzZjE3NGM2NDgxZGE2ZDAyZTIyOTY0OGIyMTAvZGViYjdiLVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE2ODU4NjQyNjYsImV4cCI6MTY4NTg3MTQ2NiwibmJmIjoxNjg1ODY0MjYxLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtMzcwY2QzZjE3NGM2NDgxZGE2ZDAyZTIyOTY0OGIyMTAiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsiaGlkZGVuLWZyb20tcmVjb3JkZXIiOmZhbHNlLCJtb2RlcmF0b3IiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIiLCJpZCI6ImF1dGgwfDY0N2MzZjE0ZWQwMzhlOGY4ODU4ZWNiYSIsImF2YXRhciI6IiIsImVtYWlsIjoidGVzdC51c2VyQGNvbXBhbnkuY29tIn19LCJyb29tIjoiKiJ9.L97mOh4tyuAVqOY0445TcZu4KIgcJtI43ffQqzu3pL1i9GPTWw_8fXq9dhSz-odROBTU4VjtZeEiGq23sPjuSh0XU8CRb2YjaD2n5JlWKSwLwbVV0iH9BOyRXK8SPJynvRgUHWc8fqJfACL6vkwaNOVrEtf_PEVrpig_0yryBfS4xfXHIpjvlJtFz2Z18I9V7-GRqd9PSPwFQ0eMR7sEJAEXH7V1DvsOsjqYk49-o9GuIk3NXodCYfvjpFRfJ402PH99P9WsAXfQDYvrVdnAyLNYwyGQNKQz7z-Xnfcj0t0GB38FoDqI24sG2nY94CJrkfjZ7S5x1szy4kBMzrO0qA"
             });
+
+            api.on('readyToClose', () =>{api.dispose(); api = null; window.location = "https://drop-eg.com/MeetingEnd";});
+
+
           }
         </script>
       </head>
