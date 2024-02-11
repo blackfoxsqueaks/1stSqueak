@@ -19,7 +19,7 @@ const ref = database.ref("registeredUsers");
     const area_M = document.getElementById('validationCustom03').value;
     const email_M = document.getElementById('validationCustom04').value;
     const phone_M = document.getElementById('validationCustom05').value;
-    const newUser = { name: firstName_M, email: email_M };
+    const newUser = { firstName: firstName_M, lastName:lastName_M, email: email_M, area:area_M, phone:phone_M };
 
 
     const sendtofirebase = () => ref.push(
@@ -35,7 +35,7 @@ const ref = database.ref("registeredUsers");
     );
 
     const sendtoretool = () => 
-     fetch('https://api.retool.com/v1/workflows/53c0c882-cb6a-428f-a111-ba04843e9a67/startTrigger?workflowApiKey=retool_wk_04c5817f31904aa0861d905104722734', {
+     fetch('https://us-central1-dropeg-website.cloudfunctions.net/app/api/earlyAccessForm', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json; charset=utf-8'
