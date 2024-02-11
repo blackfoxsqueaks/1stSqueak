@@ -23,6 +23,7 @@
       window.location.href = "EarlyAccess_Complete.html";
     });
   };
+  
 
   // Loop over forms and prevent submission
   Array.from(forms).forEach(form => {
