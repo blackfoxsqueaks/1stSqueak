@@ -4,7 +4,7 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
 const RESOURCES = {"version.json": "4718194b4e4912dd01aeeb545fd8bc2a",
-"app.html": "e2ca29929154329880b19ca008f971a8",
+"index.html": "e2ca29929154329880b19ca008f971a8",
 "/": "e2ca29929154329880b19ca008f971a8",
 "netlify.toml": "7e95ea2ac7e4feb0ce10455cd94464ae",
 "main.dart.js": "8650129d0f974be272e9059c4843850a",
@@ -71,7 +71,7 @@ const RESOURCES = {"version.json": "4718194b4e4912dd01aeeb545fd8bc2a",
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
-"app.html",
+"index.html",
 "assets/AssetManifest.bin.json",
 "assets/FontManifest.json"];
 
