@@ -26794,18 +26794,16 @@ _.Q=h
 _.c=i
 _.a=j},
 a72:function a72(a){this.a=a},
-FP:function FP(a,b,c,d,e,f,g,h,i,j,k){var _=this
+FP:function FP(a,b,c,d,e,f,g,h,i){var _=this
 _.c=a
 _.w=b
 _.as=c
-_.db=d
-_.fr=e
-_.id=f
-_.ok=g
-_.p1=h
-_.p4=i
-_.x1=j
-_.a=k},
+_.fr=d
+_.id=e
+_.ok=f
+_.p1=g
+_.x1=h
+_.a=i},
 K1:function K1(a,b,c,d,e){var _=this
 _.d=$
 _.e=!1
@@ -92732,13 +92730,12 @@ r.a.toString
 return new A.yi(q,r.x,r.w,s,r.gIe(),null)},
 $S:564}
 A.aCA.prototype={
-$1(a){var s,r,q=A.ah(a),p=this.a
-p.a.toString
-s=p.gl3()
-r=p.a
-r.toString
-q=q.ay.a===B.av?B.jI:B.f
-return new A.uA(q,r.db,p.x,p.w,B.it,p.gIe(),!1,null,s,null)},
+$1(a){var s,r=A.ah(a),q=this.a
+q.a.toString
+s=q.gl3()
+q.a.toString
+r=r.ay.a===B.av?B.jI:B.f
+return new A.uA(r,0.8,q.x,q.w,B.it,q.gIe(),!1,null,s,null)},
 $S:565}
 A.aCB.prototype={
 $0(){var s=this.a
@@ -99963,7 +99960,7 @@ case 1:return A.t(p,r)}})
 return A.v($async$eR,r)},
 Ij(){var s=null,r="RidleyGroteskMedium",q=this.y
 q===$&&A.b()
-if(q.a.a.length===0)return new A.aN(B.Hl,A.yI(new A.FP(A.a([A.aRs(B.A,A.J(s,A.bm(A.aZ("assets/Knowledge.png",s,s,24),s,s),B.e,s,s,B.eq,s,s,s,s,s,s,s,s),"Load Knowledge",B.f,A.bv(s,s,s,s,s,s,s,s,r,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),new A.asN()),A.aRs(B.A,A.J(s,A.bm(A.aZ("assets/Tools.png",s,s,22),s,s),B.e,s,s,B.eq,s,s,s,s,s,s,s,s),"Load Tools",B.f,A.bv(s,s,s,s,s,s,s,s,r,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),new A.asO())],t.TS),new A.y(4280707071),new A.O(40,40),1,B.IG,new A.dr(28,s,s,s,s,B.f,s,s,s),new A.asP(this),new A.asQ(this),!0,8,s)),s)
+if(q.a.a.length===0)return new A.aN(B.Hl,A.yI(new A.FP(A.a([A.aRs(B.A,A.J(s,A.bm(A.aZ("assets/Knowledge.png",s,s,24),s,s),B.e,s,s,B.eq,s,s,s,s,s,s,s,s),"Load Knowledge",B.f,A.bv(s,s,s,s,s,s,s,s,r,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),new A.asN()),A.aRs(B.A,A.J(s,A.bm(A.aZ("assets/Tools.png",s,s,22),s,s),B.e,s,s,B.eq,s,s,s,s,s,s,s,s),"Load Tools",B.f,A.bv(s,s,s,s,s,s,s,s,r,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),new A.asO())],t.TS),new A.y(4280707071),new A.O(40,40),B.IG,new A.dr(28,s,s,s,s,B.f,s,s,s),new A.asP(this),new A.asQ(this),8,s)),s)
 else return B.dp},
 FI(a){var s=null
 switch(a){case"All Modes Selected":return new A.aN(B.I_,A.aZ("assets/AllTools.png",s,s,s),s)
