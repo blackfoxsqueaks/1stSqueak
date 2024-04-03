@@ -14,7 +14,9 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/Aila/">
+
+    <base href="/Aila">
+
 
 
   <meta charset="UTF-8">
@@ -94,7 +96,32 @@
     animation: spin 0.7s linear infinite;
 }
 
+/* Style for the appbar */
+  .appbar {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Initially visible */
+    transition: opacity .4s ease-out; /* Fade-out transition */
+  }
 
+  /* Media query for tablets and mobiles */
+  @media only screen and (max-width: 768px) {
+    .appbar {
+      background-image: url('https://drop-eg.com/Aila/assets/assets/AilaHeader.png'); /* Background image for mobiles and tablets */
+      height: 135px; /* Adjust height as needed */
+
+    }
+  }
+
+  /* Media query for desktops */
+  @media only screen and (min-width: 769px) {
+    .appbar {
+      background-image: url('https://drop-eg.com/Aila/assets/assets/AppBar.png'); /* Background image for desktops */
+      height: 270px; /* Adjust height as needed */
+
+    }
+  }
 </style>
 
 
@@ -134,6 +161,7 @@
 
   window.addEventListener('load', async function(ev) { // Added async keyword
     var loaderContent = document.querySelector('#loader-content');
+    var appbar = document.querySelector('#appbar');
     _flutter.loader.loadEntrypoint({
       serviceWorker: {
         serviceWorkerVersion: serviceWorkerVersion,
@@ -143,8 +171,9 @@
           renderer: useHtml ? "html" : "canvaskit",
         };
         const appRunner = await engineInitializer.initializeEngine(config); // Define appRunner here
-        loaderContent.style.opacity = "0";
-        await delay(500);
+          loaderContent.style.opacity = "0";
+          appbar.style.opacity = "0";
+        await delay(400);
         appRunner.runApp();
       }
     });
@@ -173,13 +202,12 @@
 </script>
 
 
-
-
-
 <div class="main-content" id="loader-content">
+    <div class="appbar" id="appbar"></div> <!-- Added appbar -->
 <div class="loader">
     <img src="AilaLogo.png" alt="AilaLogo">
 </div>
 
 </body>
 </html>
+

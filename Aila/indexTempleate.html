@@ -96,6 +96,8 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.4s ease; /* Fade-out transition */
   }
 
   /* Media query for tablets and mobiles */
@@ -115,6 +117,12 @@
 
     }
   }
+
+  /* Hide appbar when loader content fades out */
+  .loading .appbar {
+    opacity: 0;
+  }
+
 </style>
 
 
@@ -164,8 +172,11 @@
         };
         const appRunner = await engineInitializer.initializeEngine(config); // Define appRunner here
         loaderContent.style.opacity = "0";
+        appbar.style.opacity = "0";
         await delay(396);
         appRunner.runApp();
+        loaderContent.style.display = "none"; // Hide loader
+        appbar.style.display = "none"; // Hide appbar
       }
     });
   });
