@@ -147,30 +147,10 @@
 
 
 
-<script>
-  if (
-    navigator.userAgent.indexOf("Safari") !== -1 &&
-    navigator.userAgent.indexOf("Chrome") === -1
-  ) {
-    var originalGetContext = HTMLCanvasElement.prototype.getContext;
-    HTMLCanvasElement.prototype.getContext = function () {
-      var contextType = arguments[0];
-      if (contextType === "webgl2") {
-        return;
-      }
-      return originalGetContext.apply(
-        this,
-        [contextType].concat(Array.prototype.slice.call(arguments, 1)),
-      );
-    };
-  }
-</script>
-
 <div class="main-content">
   <div id="loader-content" class="loader">
     <img src="https://drop-eg.com/Aila/AilaLogo.png" alt="AilaLogo"> <!-- Updated logo path -->
   </div>
 </div>
-
 </body>
 </html>
