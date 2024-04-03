@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/Aila/"> <!-- Updated base href -->
+  <base href="/Aila/">
 
 
   <meta charset="UTF-8">
@@ -24,9 +24,10 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Aila">
-  <link rel="apple-touch-icon" href="https://drop-eg.com/Aila/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="office_qr">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js"></script>
@@ -35,21 +36,23 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> <!-- Moved the defer attribute from this script -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> <!-- Moved the defer attribute from this script -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> <!-- Moved the defer attribute from this script -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://drop-eg.com/Aila/favicon.png"/> <!-- Updated favicon path -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#346df8"> <!-- Added theme_color -->
 
   <title>Drop - Aila</title>
-  <link rel="manifest" href="https://drop-eg.com/Aila/manifest.json"> <!-- Updated manifest path -->
+  <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3225656699";
+    const serviceWorkerVersion = "198283855";
   </script>
   <!-- This script adds the flutter initialization JS code -->
-  <script src="https://drop-eg.com/Aila/flutter.js" defer></script> <!-- Updated flutter.js path -->
+  <script src="flutter.js" defer></script>
 </head>
 
 <body>
@@ -66,30 +69,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* Added to stack elements vertically */
     transition: opacity .4s ease-out; /* Fixed typo in ease-out */
   }
 
-  /* ===== Loader CSS 👇 =====*/
+
+/* ===== Loader CSS 👇 =====*/
 
   @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-  .loader {
+        .loader {
     position: absolute; /* Position relative to its containing element */
     top: 50%; /* Position from the top */
     left: 50%; /* Position from the left */
     transform: translate(-50%, -50%); /* Center the loader */
     text-align: center;
-  }
+}
 
-  .loader img {
+.loader img {
     max-width: 16%; /* Ensure image doesn't exceed its container */
     max-height: 16%; /* Ensure image doesn't exceed its container */
     animation: spin 0.7s linear infinite;
-  }
+}
+
 
 </style>
 
@@ -140,7 +144,7 @@
         };
         const appRunner = await engineInitializer.initializeEngine(config); // Define appRunner here
         loaderContent.style.opacity = "0";
-        await delay(396);
+        await delay(500);
         appRunner.runApp();
       }
     });
@@ -149,10 +153,33 @@
 
 
 
-<div class="main-content">
-  <div id="loader-content" class="loader">
-    <img src="https://drop-eg.com/Aila/AilaLogo.png" alt="AilaLogo"> <!-- Updated logo path -->
-  </div>
+<script>
+  if (
+    navigator.userAgent.indexOf("Safari") !== -1 &&
+    navigator.userAgent.indexOf("Chrome") === -1
+  ) {
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function () {
+      var contextType = arguments[0];
+      if (contextType === "webgl2") {
+        return;
+      }
+      return originalGetContext.apply(
+        this,
+        [contextType].concat(Array.prototype.slice.call(arguments, 1)),
+      );
+    };
+  }
+</script>
+
+
+
+
+
+<div class="main-content" id="loader-content">
+<div class="loader">
+    <img src="AilaLogo.png" alt="AilaLogo">
 </div>
+
 </body>
 </html>
