@@ -84,7 +84,7 @@
             /* For mobile devices */
             #header {
                 height: 150px; /* Adjust height as needed */
-                background-image: url('assets/tinyDrop/Header.png');
+                background-image: url('Header.png');
             }
         }
 
@@ -92,7 +92,7 @@
             /* For desktop and tablet devices */
             #header {
                 height: 280px; /* Adjust height as needed */
-                background-image: url('assets/tinyDrop/WebHeader.png');
+                background-image: url('WebHeader.png');
             }
         }
 
@@ -100,51 +100,55 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <div id="redirectMessage">Fetching your digital asset...</div>
-    <div id="redirectSubMessage"></div>
-    <script>
-        // Function to get URL parameter by name
-        function getUrlParameter(name) {
-            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        };
+<script>
+    // Function to get URL parameter by name
+    function getUrlParameter(name) {
+        name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
 
-        // Function to fetch data from Firestore
-        function fetchFromFirestore(code) {
-            // Assume you have Firebase initialized
-            var db = firebase.firestore();
-            db.collection("tinyDrop").doc(code).get().then(function(doc) {
-                if (doc.exists) {
-                    var longUrl = doc.data().long_url;
-                    window.location.replace(longUrl);
-                } else {
-                    console.log("No such document!");
-                    // Handle error or redirect to an error page
-                }
-            }).catch(function(error) {
-                console.log("Error getting document:", error);
-                // Handle error or redirect to an error page
-            });
-        }
-
-        // Main function to handle redirection
-        function handleRedirection() {
-            var code = getUrlParameter('code');
-            if (code !== '') {
-                fetchFromFirestore(code);
+    // Function to fetch data from Firestore
+    function fetchFromFirestore(code) {
+        // Assume you have Firebase initialized
+        var db = firebase.firestore();
+        db.collection("tinyDrop").doc(code).get().then(function(doc) {
+            if (doc.exists) {
+                var longUrl = doc.data().long_url;
+                window.location.replace(longUrl); // Redirect immediately
             } else {
-                var redirectMessage = document.getElementById('redirectMessage');
-                redirectMessage.innerText = "Invalid TinyDrop code!";
-                redirectSubMessage.innerText = "This code is incorrect...";
+                console.log("No such document!");
+                // Handle error or redirect to an error page
+                redirectToErrorPage();
             }
-        }
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+            // Handle error or redirect to an error page
+            redirectToErrorPage();
+        });
+    }
 
-        // Call the main function when the page loads
-        window.onload = handleRedirection;
-    </script>
+    // Function to redirect to an error page
+    function redirectToErrorPage() {
+        // Redirect to an error page
+        window.location.replace("404.html");
+    }
+
+    // Main function to handle redirection
+    function handleRedirection() {
+        var code = getUrlParameter('code');
+        if (code !== '') {
+            fetchFromFirestore(code);
+        } else {
+            redirectToErrorPage();
+        }
+    }
+
+    // Call the main function when the page loads
+    window.onload = handleRedirection;
+</script>
+
 </body>
 
 </html>
