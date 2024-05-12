@@ -39,6 +39,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> <!-- Moved the defer attribute from this script -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> <!-- Moved the defer attribute from this script -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 
 
   <!-- Favicon -->
@@ -52,7 +53,7 @@
   <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2157987226";
+    const serviceWorkerVersion = "2320259321";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -97,32 +98,7 @@
     animation: spin 0.7s linear infinite;
 }
 
-/* Style for the appbar */
-  .appbar {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 1; /* Initially visible */
-    transition: opacity .4s ease-out; /* Fade-out transition */
-  }
 
-  /* Media query for tablets and mobiles */
-  @media only screen and (max-width: 768px) {
-    .appbar {
-      background-image: url('https://drop-eg.com/Aila/assets/assets/AilaHeader.png'); /* Background image for mobiles and tablets */
-      height: 135px; /* Adjust height as needed */
-
-    }
-  }
-
-  /* Media query for desktops */
-  @media only screen and (min-width: 769px) {
-    .appbar {
-      background-image: url('https://drop-eg.com/Aila/assets/assets/AppBar.png'); /* Background image for desktops */
-      height: 270px; /* Adjust height as needed */
-
-    }
-  }
 </style>
 
 
@@ -162,7 +138,6 @@
 
   window.addEventListener('load', async function(ev) { // Added async keyword
     var loaderContent = document.querySelector('#loader-content');
-    var appbar = document.querySelector('#appbar');
     _flutter.loader.loadEntrypoint({
       serviceWorker: {
         serviceWorkerVersion: serviceWorkerVersion,
@@ -172,9 +147,8 @@
           renderer: useHtml ? "html" : "canvaskit",
         };
         const appRunner = await engineInitializer.initializeEngine(config); // Define appRunner here
-        await delay(400);
-         loaderContent.style.opacity = "0";
-          appbar.style.opacity = "0";
+        loaderContent.style.opacity = "0";
+        await delay(500);
         appRunner.runApp();
       }
     });
@@ -203,12 +177,11 @@
 </script>
 
 
+
 <div class="main-content" id="loader-content">
-    <div class="appbar" id="appbar"></div> <!-- Added appbar -->
 <div class="loader">
     <img src="AilaLogo.png" alt="AilaLogo">
 </div>
 
 </body>
 </html>
-
