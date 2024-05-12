@@ -30252,7 +30252,7 @@ n=A.ap(["Authorization","Bearer "+(A.h($.qx().gtC().h(0,"AILA_KEY_PART1"))+A.h($
 m=A.ap(["model","tts-1","input",a,"voice","nova"],e,e)
 q=4
 s=7
-return A.k(A.v_(A.cF(o,0,null),B.ap.mp(m,null),n).uy(0,A.cw(0,0,60)),$async$Mv)
+return A.k(A.v_(A.cF(o,0,null),B.ap.mp(m,null),n).uy(0,A.cw(0,0,120)),$async$Mv)
 case 7:l=a3
 s=l.b===200?8:10
 break
