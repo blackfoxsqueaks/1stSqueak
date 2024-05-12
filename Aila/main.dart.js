@@ -30245,7 +30245,7 @@ Mv(a,b,c){return A.bgL(a,b,c)},
 bgL(a,b,c){var s=0,r=A.q(t.H),q=1,p,o,n,m,l,k,j,i,h,g,f,e
 var $async$Mv=A.m(function(d,a0){if(d===1){p=a0
 s=q}while(true)switch(s){case 0:s=2
-return A.k($.qx().yb(0,".env"),$async$Mv)
+return A.k($.qx().yb(0,"env"),$async$Mv)
 case 2:i=t.N
 h=A.ap(["Authorization","Bearer "+(A.h($.qx().gtC().h(0,"AILA_KEY_PART1"))+A.h($.qx().gtC().h(0,"AILA_KEY_PART2"))+A.h($.qx().gtC().h(0,"AILA_KEY_PART3"))),"Content-Type","application/json"],i,i)
 g=A.ap(["model","tts-1","input",a,"voice","nova"],i,i)
@@ -104335,7 +104335,7 @@ break
 case 3:p=h.w
 q.T(new A.aD1(q))
 s=6
-return A.k($.qx().yb(0,".env"),$async$no)
+return A.k($.qx().yb(0,"env"),$async$no)
 case 6:g=A.h($.qx().gtC().h(0,"AILA_KEY_PART1"))
 o=A.h($.qx().gtC().h(0,"AILA_KEY_PART2"))
 n=A.h($.qx().gtC().h(0,"AILA_KEY_PART3"))
