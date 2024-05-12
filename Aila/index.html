@@ -52,7 +52,7 @@
   <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1889540358";
+    const serviceWorkerVersion = "2185797931";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -153,6 +153,29 @@
     });
   });
 </script>
+
+
+
+<script>
+  if (
+    navigator.userAgent.indexOf("Safari") !== -1 &&
+    navigator.userAgent.indexOf("Chrome") === -1
+  ) {
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function () {
+      var contextType = arguments[0];
+      if (contextType === "webgl2") {
+        return;
+      }
+      return originalGetContext.apply(
+        this,
+        [contextType].concat(Array.prototype.slice.call(arguments, 1)),
+      );
+    };
+  }
+</script>
+
+
 
 
 
