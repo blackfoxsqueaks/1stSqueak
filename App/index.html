@@ -36,16 +36,19 @@
   <link rel="manifest" href="manifest.json">
 
   <script>
-    function getUrlParameter(name) {
-      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-      var results = regex.exec(location.search);
-      console.log('URL:', location.search); // Log the URL parameters
-      console.log('Parameter Name:', name); // Log the parameter name being searched for
-      console.log('Parameter Value:', results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '))); // Log the extracted value
-      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    }
-  </script>
+  function getUrlParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
+    var results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[1]) return '';
+    return decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  // Example usage:
+  var signalCode = getUrlParameter('SignalCode');
+  console.log('Signal Code:', signalCode);
+</script>
 
   <script type="application/javascript" src="https://drop-eg.com/App/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
 
