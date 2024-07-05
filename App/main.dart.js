@@ -63344,7 +63344,7 @@ $0(){A.oS(A.cI("https://drop-eg.com/App/?SignalCode="+this.a,0,null),B.jH)},
 $S:0}
 A.aVx.prototype={
 $0(){var s=this
-if(s.b)A.oS(A.cI("https://drop-eg.com/Signals?code="+s.c,0,null),B.jH)
+if(s.b)A.oS(A.cI("https://drop-eg.com/App/?SignalCode="+s.c,0,null),B.jH)
 else s.a.u3(15,J.E(s.d,"docId"))},
 $S:0}
 A.w9.prototype={
