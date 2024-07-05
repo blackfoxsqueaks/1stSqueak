@@ -63329,7 +63329,7 @@ q=A.a_(13)
 p=A.b([new A.ak(0,B.m,A.A(41,0,0,0),B.t,20)],t.V)
 o=A.cv("0xff"+A.f(d),h)
 n=A.aa("Your "+A.f(s)+" Code",h,h,h,h,B.p1,B.E,h)
-m=r?new A.aJ(B.mO,A.aN(h,A.bm(A.b([new A.aA(220,h,A.aa("https://drop-eg.com/Signals?code="+e,h,h,h,h,A.bv(h,h,B.bN,h,h,h,h,h,"RidleyGroteskRegular",h,h,h,h,h,h,h,h,!0,h,h,h,B.aO,h,h,h,h),h,h),h),B.iq,A.iE(B.ajz,B.bN,h,16)],t.p),B.p,B.N,B.l,h),B.o,!1,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,new A.aVw(e),h,h,h,h,h,h,h),h):B.cD
+m=r?new A.aJ(B.mO,A.aN(h,A.bm(A.b([new A.aA(220,h,A.aa("https://drop-eg.com/App/?SignalCode="+e,h,h,h,h,A.bv(h,h,B.bN,h,h,h,h,h,"RidleyGroteskRegular",h,h,h,h,h,h,h,h,!0,h,h,h,B.aO,h,h,h,h),h,h),h),B.iq,A.iE(B.ajz,B.bN,h,16)],t.p),B.p,B.N,B.l,h),B.o,!1,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,new A.aVw(e),h,h,h,h,h,h,h),h):B.cD
 l=A.a_(50)
 k=A.it(B.h,2)
 j=r?"Preview":"EGP15/Month"
