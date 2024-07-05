@@ -63340,7 +63340,7 @@ A.aVy.prototype={
 $0(){if(!this.b)this.a.u3(15,J.E(this.c,"docId"))},
 $S:0}
 A.aVw.prototype={
-$0(){A.oS(A.cI("https://drop-eg.com/Signals?code="+this.a,0,null),B.jH)},
+$0(){A.oS(A.cI("https://drop-eg.com/App/?SignalCode="+this.a,0,null),B.jH)},
 $S:0}
 A.aVx.prototype={
 $0(){var s=this
