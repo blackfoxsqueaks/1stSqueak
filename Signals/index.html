@@ -252,6 +252,7 @@ function displayCarInfo() {
 
 async function sendSignal() {
     const message = document.getElementById('message').value;
+    const messageTextarea = document.getElementById('message'); // Reference to the textarea element
     const date = new Date().toISOString().split('T')[0];
     const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
 
@@ -259,6 +260,15 @@ async function sendSignal() {
         alert('Your message is empty.');
         return;
     }
+
+    const hateSpeechDetected = await detectHateSpeech(message);
+        if (hateSpeechDetected) {
+            // Handle hate speech detection here (e.g., show a warning)
+            console.log('Handle hate speech detection.');
+            alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت', 'Please try to calm down and use a less aggressive tone. We cannot accept hate speech.');
+            messageTextarea.value = ''
+            return;
+        }
 
     try {
         await addDoc(collection(db, 'dropSignals'), {
@@ -275,6 +285,51 @@ async function sendSignal() {
         console.error('Error sending signal:', error);
         alert('Error sending signal.');
     }
+}
+
+async function detectHateSpeech(text) {
+    try {
+        const apiUrl = 'https://api-inference.huggingface.co/models/IbrahimAmin/marbertv2-finetuned-egyptian-hate-speech-detection';
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer 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', // Replace with your actual token
+            },
+            body: JSON.stringify({
+                inputs: text,
+                wait_for_model: true,
+            }),
+        });
+
+        if (response.ok) {
+            const jsonResponse = await response.json();
+
+            // Assuming jsonResponse is in the format: [[{label: 'Hate', score: 0.9991}, {label: 'Neutral', score: 0.0009}]]
+            if (Array.isArray(jsonResponse) && jsonResponse.length > 0 && Array.isArray(jsonResponse[0])) {
+                const predictions = jsonResponse[0];
+
+                for (const prediction of predictions) {
+                    const label = prediction.label;
+                    const score = prediction.score;
+
+                    // Check if 'Hate' label has a high score
+                    if (label === 'Hate' && score >= 0.5) {
+                        console.log('Hate speech detected.');
+                        return true; // Indicate hate speech detected
+                    }
+                }
+            } else {
+                console.log('No valid predictions found.');
+            }
+        } else {
+            console.error('Failed to fetch from Hugging Face API:', response.status);
+        }
+    } catch (error) {
+        console.error('Error detecting hate speech:', error);
+    }
+    
+    return false; // Default to false if no hate speech detected or error occurred
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
