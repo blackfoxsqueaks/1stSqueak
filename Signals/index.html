@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Theme Color -->
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
+
+  <title>Drop | Your All-in-One Car App</title>
+  <link rel="manifest" href="manifest.json">
+    <style>
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+        @font-face {
+  font-family: 'RidleyGroteskBold';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("truetype");
+    font-weight: Bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RidleyGroteskMedium';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("truetype");
+}
+
+
+@font-face {
+  font-family: 'RidleyGroteskRegular';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Regular.woff") format("truetype");
+    font-weight: normal;
+  font-style: normal;
+}
+        body {
+    font-family: 'Arial, sans-serif';
+    background-color: white;
+    color: black;
+    margin: 0;
+    margin-right: -1px;
+    padding: 0;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+.appbar {
+    width: 100%;
+    text-align: center;
+    padding: 0px 0;
+    height: 40px; /* Adjust the height based on your appbar design */
+    background-color: #346df8; /* Example background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure appbar is on top of content */
+}
+
+.appbar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 16px;
+    padding-top: 80px; /* Height of the appbar + additional padding */
+    overflow-y: auto; /* Enable vertical scrolling for content */
+}
+        .header {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 16%;
+            margin-bottom: 2px;
+            font-family: 'RidleyGroteskBold';
+        }
+        .subheader {
+            font-size: 14px;
+            color: grey;
+            margin-bottom: 16px;
+            font-family: 'RidleyGroteskRegular';
+        }
+        .card {
+            background-color: white;
+            border-radius: 13px;
+            box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);
+            padding: 20px 16px;
+            margin-bottom: 16px;
+            font-family: 'RidleyGroteskMedium';
+        }
+        .input-field {
+        width: 92%;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid transparent; /* Set initial border as transparent */
+        padding-top: 16px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        margin-right: 18px;
+        margin-bottom: 16px;
+        font-family: 'RidleyGroteskRegular';
+        font-size: 16px;
+        background-color: white;
+        border-radius: 13px;
+        box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);
+            outline: none; /* Remove browser default outline */
+
+        transition: border-color 0.2s ease; /* Smooth transition for border color change */
+    }
+
+    .input-field::selection {
+    outline: none; /* Remove browser default outline */
+    border: 2px solid #2667ff;
+    }
+    .input-field::highlight {
+     outline: none; /* Remove browser default outline */
+    border: 2px solid #2667ff;
+    }
+    .input-field:focus {
+    outline: none; /* Remove browser default outline */
+    border: 2px solid #2667ff;
+}
+        .button {
+            display: block;
+            width: 100%;
+            padding: 32px;
+            background-color: #2667ff;
+            color: white;
+            margin-bottom: 40px;
+            border: none;
+            border-radius: 22px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'RidleyGroteskBold';
+        }
+        .button:disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        }
+        .plate-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .plate {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getFirestore, collection, doc, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew",
+  authDomain: "dropapp-ede3c.firebaseapp.com",
+  projectId: "dropapp-ede3c",
+  storageBucket: "dropapp-ede3c.appspot.com",
+  messagingSenderId: "1072229363531",
+  appId: "1:1072229363531:web:fcfd2ee6e78ee59566c2ce",
+  measurementId: "G-QREVZK8BY6"
+        };
+
+        // Initialize Firebase
+        // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let UID = '';
+let foundCars = [];
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
+    const results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[1]) return '';
+
+    // DecodeURIComponent to handle URL decoding
+    return decodeURIComponent(results[1].replace(' ', /\+/g));
+}
+
+function decryptString(encryptedString, key) {
+    if (!encryptedString) {
+        throw new Error('Encrypted string is empty.');
+    }
+
+    try {
+        const decodedString = atob(encryptedString);
+        console.log('Decoded string:', decodedString);
+                
+        const bytes = decodedString.split('').map(char => char.charCodeAt(0));
+        const decryptedBytes = bytes.map(byte => byte ^ key);
+        return new TextDecoder().decode(new Uint8Array(decryptedBytes));
+    } catch (error) {
+        console.error('Failed to decode string:', error);
+        throw new Error('Failed to decode string.');
+    }
+}
+
+async function getCarByID(input) {
+    const parts = input.split(', ');
+    const uid = parts[0];
+    const licenseNumber = parts[1];
+
+    const carSnapshot = await getDocs(collection(db, 'users', uid, 'cars'));
+    const allCars = carSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+    foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
+    console.log(foundCars[0].model);
+
+    // Call displayCarInfo only if foundCars has elements
+    if (foundCars.length > 0) {
+        UID = uid;
+        displayCarInfo();
+    } else {
+        console.log('Car not found');
+    }
+}
+
+function displayCarInfo() {
+    // Ensure elements exist before accessing them
+    const carBrandElement = document.getElementById('car-brand-card');
+    const carBrandTextElement = document.getElementById('car-brand');
+    const carModelElement = document.getElementById('car-model-card');
+    const licenseNumberElement = document.getElementById('license-number');
+    const licensePlateElement = document.getElementById('license-plate');
+    const sendButton = document.getElementById('send-button');
+
+    if (!carBrandElement || !carModelElement || !licenseNumberElement || !licensePlateElement || !sendButton) {
+        console.error('One or more required elements not found.');
+        return;
+    }
+
+    // Set innerText and style properties
+    carBrandElement.innerText = foundCars[0].brand;
+    carModelElement.innerText = foundCars[0].model;
+    carBrandTextElement.innerText = foundCars[0].brand;
+    licenseNumberElement.innerText = foundCars[0].licenseNumber;
+    licensePlateElement.innerText = foundCars[0].licensePlate;
+    sendButton.style.backgroundColor = `#${foundCars[0].color.substring(2)}`;
+    sendButton.disabled = false;
+}
+
+
+async function sendSignal() {
+    const message = document.getElementById('message').value;
+    const date = new Date().toISOString().split('T')[0];
+    const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
+
+    if (!message) {
+        alert('Your message is empty.');
+        return;
+    }
+
+    try {
+        await addDoc(collection(db, 'dropSignals'), {
+            uid: UID,
+            signalTitle: message,
+            signalID: `${date}_${time}`,
+            date,
+            time
+        });
+
+        document.getElementById('message').value = '';
+        alert('Signal sent successfully!');
+    } catch (error) {
+        console.error('Error sending signal:', error);
+        alert('Error sending signal.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const encryptedCode = getUrlParameter('SignalCode');
+    try {
+        const decryptedCode = decryptString(encryptedCode, 1997);
+        console.log('Decrypted code:', decryptedCode);
+        getCarByID(decryptedCode);
+        const sendButton = document.getElementById('send-button');
+        sendButton.addEventListener('click', sendSignal);
+    } catch (error) {
+        console.error('Error decrypting code:', error);
+        alert('Invalid SignalCode parameter.');
+    }
+});
+    </script>
+</head>
+<body>
+    <!-- Appbar -->
+    <div class="appbar">
+        <img src="https://drop-eg.com/App/assets/assets/DHeader.png" alt="Appbar Image">
+    </div>
+
+    <div class="container">
+        <!-- Your content here -->
+        <div class="header">Send a Signal / إبعت إشارة</div>
+        <div class="subheader">Message the owner of this <span id="car-brand"></span></div>
+        <div class="card" id="car-brand-card"></div>
+        <div class="card" id="car-model-card"></div>
+
+        <!-- License Number and Plate with Images -->
+        <div style="position: relative; width: 100%;">
+            <div style="position: relative; width: 100%; margin-top: 16px; margin-bottom: 16px; border-radius: 13px; overflow: hidden; box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);">
+                <img src="https://drop-eg.com/App/assets/assets/EgyptPlates.png" alt="Egypt Plates" style="width: 100%; display: block;">
+                <div id="license-number" class="plate" style="position: absolute; left: 0%; top: 40%; width: 50%; height: 60px; display: flex; justify-content: center; align-items: center; font-family: 'RidleyGroteskBold';">
+                    <!-- Dynamic text loaded here -->
+                </div>
+                <div id="license-plate" class="plate" style="position: absolute; left: 55%; top: 40%; width: 43%; height: 60px; display: flex; justify-content: center; align-items: center; font-family: 'RidleyGroteskBold';">
+                    <!-- Dynamic text loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <textarea id="message" class="input-field" rows="3" placeholder="Your message to the vehicle owner..................................رسالتك لصاحب المركبة"></textarea>
+        <button id="send-button" class="button" disabled>Send Signal / ابعت الإشارة</button>
+    </div>
+</body>
+</html>
