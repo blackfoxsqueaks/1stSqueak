@@ -174,6 +174,39 @@
             font-weight: bold;
             font-size: 24px;
         }
+        .spinner {
+            width: 30px;
+            height: 30px;
+            animation: rotate 2s linear infinite;
+            display: none; /* Initially hide the spinner */
+        }
+
+        .path {
+            stroke: white;
+            stroke-linecap: round;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 150;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -35;
+            }
+            100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -124;
+            }
+        }
     </style>
     <!-- Firebase App (the core Firebase SDK) -->
     <script type="module">
@@ -303,32 +336,39 @@ async function sendSignal() {
     const message = document.getElementById('message').value;
     const carBrand = document.getElementById('car-brand-card').innerText;
     const sendButton = document.getElementById('send-button');
+    const spinner = document.querySelector('.spinner');
     const messageTextarea = document.getElementById('message'); // Reference to the textarea element
     const date = new Date().toISOString().split('T')[0];
     const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
 
     sendButton.disabled = true;
-    sendButton.innerText = 'Sending Signal...';
+    spinner.style.display = 'inline-block'; // Show the spinner
+    sendButton.querySelector('.english-text').style.display = 'none'; // Hide English text
+    sendButton.querySelector('.arabic-text-button').style.display = 'none'; // Hide Arabic text
 
     if (!message) {
         alert('Your message is empty.');
+        sendButton.disabled = false;
+        spinner.style.display = 'none'; // Hide the spinner
+        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
+        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
         return;
     }
 
     // Detect hate speech
     const hateSpeechDetected = await detectHateSpeech(message);
 
-        if (hateSpeechDetected) {
-            // Handle hate speech detection here (e.g., show a warning)
-            console.log('Handle hate speech detection.');
-            alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت', 'Please try to calm down and use a less aggressive tone. We cannot accept hate speech.');
-            sendButton.disabled = false;
-            messageTextarea.value = ''
-            sendButton.innerText = 'Send Signal / ابعت الإشارة';
-            return;
-        }
+    if (hateSpeechDetected) {
+        // Handle hate speech detection here (e.g., show a warning)
+        console.log('Handle hate speech detection.');
+        alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت');
+        sendButton.disabled = false;
+        spinner.style.display = 'none'; // Hide the spinner
+        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
+        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
+        return;
+    }
 
-    // Send Signal
     try {
         await addDoc(collection(db, 'dropSignals'), {
             uid: UID,
@@ -340,30 +380,38 @@ async function sendSignal() {
 
         document.getElementById('message').value = '';
 
-        // Send Notifiction
+        // Send Notification
         const encryptedCode = getUrlParameter('SignalCode');
         const decryptedCode = decryptString(encryptedCode, 1997);
-        getCarDocumentId(decryptedCode).then(carDocId => {
-          if (carDocId) {
-            sendNotificationRequest(carDocId, message, carBrand);
+        const carDocId = await getCarDocumentId(decryptedCode); // Wait for this to complete
+        if (carDocId) {
+            await sendNotificationRequest(carDocId, message, carBrand); // Wait for notification to be sent
             console.log(`Owner of this ${carBrand} has been notified`);
-          } else {
+        } else {
             console.log('This car was not found');
-          }
-        });
+        }
 
-        alert('Signal sent successfully!');
-      
         // Re-enable button
         sendButton.disabled = false;
-        sendButton.innerText = 'Send Signal / ابعت الإشارة';
+        spinner.style.display = 'none'; // Hide the spinner
+        messageTextarea.value = '';
+        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
+        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
+
+        // Show alert after everything completes
+        alert('Signal sent successfully!');
     } catch (error) {
         console.error('Error sending signal:', error);
         alert('Error sending signal.');
         sendButton.disabled = false;
-        sendButton.innerText = 'Send Signal / ابعت الإشارة';
+        spinner.style.display = 'none'; // Hide the spinner
+        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
+        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
     }
 }
+
+
+
 
 async function detectHateSpeech(text) {
     try {
@@ -496,7 +544,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         <textarea id="message" class="input-field" rows="3" placeholder="Your message to the vehicle owner..................................رسالتك لصاحب المركبة"></textarea>
         <button id="send-button" class="button" disabled>
-          <span class="english-text">Send Signal</span> / <span class="arabic-text-button">ابعت الإشارة</span>
+            <span class="text-container">
+                <span class="english-text">Send Signal / </span>
+                <span class="arabic-text-button">ابعت الإشارة</span>
+                <svg class="spinner" viewBox="0 0 50 50">
+                    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="10"></circle>
+                </svg>
+            </span>
         </button>
             </div>
 </body>
