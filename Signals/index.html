@@ -250,6 +250,30 @@ async function getCarByID(input) {
     }
 }
 
+async function getCarDocumentId(input) {
+  const parts = input.split(', ');
+  const uid = parts[0];
+  const licenseNumber = parts[1];
+
+  try {
+    const carSnapshot = await getDocs(collection(db, 'users', uid, 'cars'));
+    const allCars = carSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+    const foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
+    
+    if (foundCars.length > 0) {
+      console.log('Car found:', foundCars[0].model);
+      return foundCars[0].id; // Return the document ID of the found car
+    } else {
+      console.log('Car not found');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error getting car document:', error);
+    throw error;
+  }
+}
+
 function displayCarInfo() {
     // Ensure elements exist before accessing them
     const carBrandElement = document.getElementById('car-brand-card');
@@ -277,29 +301,34 @@ function displayCarInfo() {
 
 async function sendSignal() {
     const message = document.getElementById('message').value;
+    const carBrand = document.getElementById('car-brand-card').innerText;
     const sendButton = document.getElementById('send-button');
     const messageTextarea = document.getElementById('message'); // Reference to the textarea element
     const date = new Date().toISOString().split('T')[0];
     const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
 
     sendButton.disabled = true;
+    sendButton.innerText = 'Sending Signal...';
 
     if (!message) {
         alert('Your message is empty.');
         return;
     }
 
-
+    // Detect hate speech
     const hateSpeechDetected = await detectHateSpeech(message);
+
         if (hateSpeechDetected) {
             // Handle hate speech detection here (e.g., show a warning)
             console.log('Handle hate speech detection.');
             alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت', 'Please try to calm down and use a less aggressive tone. We cannot accept hate speech.');
             sendButton.disabled = false;
             messageTextarea.value = ''
+            sendButton.innerText = 'Send Signal / ابعت الإشارة';
             return;
         }
 
+    // Send Signal
     try {
         await addDoc(collection(db, 'dropSignals'), {
             uid: UID,
@@ -310,12 +339,29 @@ async function sendSignal() {
         });
 
         document.getElementById('message').value = '';
+
+        // Send Notifiction
+        const encryptedCode = getUrlParameter('SignalCode');
+        const decryptedCode = decryptString(encryptedCode, 1997);
+        getCarDocumentId(decryptedCode).then(carDocId => {
+          if (carDocId) {
+            sendNotificationRequest(carDocId, message, carBrand);
+            console.log(`Owner of this ${carBrand} has been notified`);
+          } else {
+            console.log('This car was not found');
+          }
+        });
+
         alert('Signal sent successfully!');
+      
+        // Re-enable button
         sendButton.disabled = false;
+        sendButton.innerText = 'Send Signal / ابعت الإشارة';
     } catch (error) {
         console.error('Error sending signal:', error);
         alert('Error sending signal.');
         sendButton.disabled = false;
+        sendButton.innerText = 'Send Signal / ابعت الإشارة';
     }
 }
 
@@ -365,6 +411,47 @@ async function detectHateSpeech(text) {
     
     return false; // Default to false if no hate speech detected or error occurred
 }
+
+
+
+async function sendNotificationRequest(carDocId, messageBody, carBrand) {
+  const url = 'https://us-central1-dropeg-website.cloudfunctions.net/app/api/sendSignalNotification';
+
+  const payload = {
+    carDocId: carDocId,
+    body: messageBody,
+    carBrand: carBrand
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const contentType = response.headers.get('content-type');
+    let data;
+
+    if (contentType && contentType.indexOf('application/json') !== -1) {
+      data = await response.json();
+    } else {
+      data = await response.text();
+    }
+
+    console.log('Notification sent successfully:', data);
+  } catch (error) {
+    console.error('Error sending notification:', error);
+  }
+}
+
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const encryptedCode = getUrlParameter('SignalCode');
