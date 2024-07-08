@@ -273,6 +273,7 @@ async function sendSignal() {
             // Handle hate speech detection here (e.g., show a warning)
             console.log('Handle hate speech detection.');
             alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت', 'Please try to calm down and use a less aggressive tone. We cannot accept hate speech.');
+            sendButton.disabled = false;
             messageTextarea.value = ''
             return;
         }
