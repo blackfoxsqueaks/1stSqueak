@@ -135,8 +135,9 @@
             font-family: 'RidleyGroteskBold';
         }
         .button:disabled {
-            background-color: grey;
+            background-color: #2667ff;
             cursor: not-allowed;
+            color: white;
         }
         .plate-container {
             display: flex;
@@ -298,7 +299,9 @@ async function detectHateSpeech(text) {
             },
             body: JSON.stringify({
                 inputs: text,
-                wait_for_model: true,
+                options: {
+                wait_for_model: true  // Set to true to wait for the model if it's not ready
+            }
             }),
         });
 
