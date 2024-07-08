@@ -131,6 +131,7 @@
             border-radius: 22px;
             font-weight: bold;
             text-align: center;
+            font-size: 16px;
             cursor: pointer;
             font-family: 'RidleyGroteskBold';
         }
@@ -138,6 +139,7 @@
             background-color: #2667ff;
             cursor: not-allowed;
             color: white;
+            font-size: 16px;
         }
         .plate-container {
             display: flex;
@@ -253,14 +255,18 @@ function displayCarInfo() {
 
 async function sendSignal() {
     const message = document.getElementById('message').value;
+    const sendButton = document.getElementById('send-button');
     const messageTextarea = document.getElementById('message'); // Reference to the textarea element
     const date = new Date().toISOString().split('T')[0];
     const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
+
+    sendButton.disabled = true;
 
     if (!message) {
         alert('Your message is empty.');
         return;
     }
+
 
     const hateSpeechDetected = await detectHateSpeech(message);
         if (hateSpeechDetected) {
@@ -282,9 +288,11 @@ async function sendSignal() {
 
         document.getElementById('message').value = '';
         alert('Signal sent successfully!');
+        sendButton.disabled = false;
     } catch (error) {
         console.error('Error sending signal:', error);
         alert('Error sending signal.');
+        sendButton.disabled = false;
     }
 }
 
