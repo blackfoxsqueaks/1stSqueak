@@ -35,6 +35,13 @@
     font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'HacenMaghrebBold';
+  src: url("fonts/Hacen_Maghreb_Bold.woff") format("truetype");
+    font-weight: normal;
+  font-style: normal;
+}
         body {
     font-family: 'Arial, sans-serif';
     background-color: white;
@@ -74,11 +81,26 @@
             margin-bottom: 2px;
             font-family: 'RidleyGroteskBold';
         }
+
         .subheader {
             font-size: 14px;
             color: grey;
             margin-bottom: 16px;
             font-family: 'RidleyGroteskRegular';
+        }
+
+        .arabic-text {
+            font-family: 'HacenMaghrebBold';
+            font-size: 21px;
+        }
+
+        .arabic-text-button {
+            font-family: 'HacenMaghrebBold';
+            font-size: 16px;
+        }
+
+        .english-text {
+            font-family: 'RidleyGroteskBold';
         }
         .card {
             background-color: white;
@@ -367,7 +389,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     <div class="container">
         <!-- Your content here -->
-        <div class="header">Send a Signal / إبعت إشارة</div>
+        <div class="header">Send a Signal / <span class="arabic-text">إبعت إشارة</span></div>
         <div class="subheader">Message the owner of this <span id="car-brand"></span></div>
         <div class="card" id="car-brand-card"></div>
         <div class="card" id="car-model-card"></div>
@@ -386,7 +408,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         </div>
 
         <textarea id="message" class="input-field" rows="3" placeholder="Your message to the vehicle owner..................................رسالتك لصاحب المركبة"></textarea>
-        <button id="send-button" class="button" disabled>Send Signal / ابعت الإشارة</button>
-    </div>
+        <button id="send-button" class="button" disabled>
+          <span class="english-text">Send Signal</span> / <span class="arabic-text-button">ابعت الإشارة</span>
+        </button>
+            </div>
 </body>
 </html>
