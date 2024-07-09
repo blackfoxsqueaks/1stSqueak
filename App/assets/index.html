@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/App/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="The All-In-One Car App">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Drop | Your All-in-One Car App">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
+
+  <title>Drop | Your All-in-One Car App</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      console.log('URL:', location.search); // Log the URL parameters
+      console.log('Parameter Name:', name); // Log the parameter name being searched for
+      console.log('Parameter Value:', results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '))); // Log the extracted value
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+  </script>
+
+  <script type="application/javascript" src="https://drop-eg.com/App/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
+
+
+  <script>
+    if (
+      navigator.userAgent.indexOf("Safari") !== -1 &&
+      navigator.userAgent.indexOf("Chrome") === -1
+    ) {
+      var originalGetContext = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function () {
+        var contextType = arguments[0];
+        if (contextType === "webgl2") {
+          return;
+        }
+        return originalGetContext.apply(
+          this,
+          [contextType].concat(Array.prototype.slice.call(arguments, 1)),
+        );
+      };
+    }
+  </script>
+
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js'
+  </script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew&libraries=drawing,visualization,places" async></script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
