@@ -233,6 +233,7 @@ const db = getFirestore(app);
 
 let UID = '';
 let foundCars = [];
+let isSignalActive = true;
 
 function getUrlParameter(name) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -322,6 +323,7 @@ function displayCarInfo() {
     }
 
     // Set innerText and style properties
+    console.log(foundCars[0]);
     carBrandElement.innerText = foundCars[0].brand;
     carModelElement.innerText = foundCars[0].model;
     carBrandTextElement.innerText = foundCars[0].brand;
@@ -329,6 +331,13 @@ function displayCarInfo() {
     licensePlateElement.innerText = foundCars[0].licensePlate;
     sendButton.style.backgroundColor = `#${foundCars[0].color.substring(2)}`;
     sendButton.disabled = false;
+    if (foundCars[0].signalActive == true) {
+    console.log(foundCars[0].signalActive); // Log the value of signalActive
+    isSignalActive = true;
+    } else {
+        isSignalActive = false;
+    }
+
 }
 
 
@@ -340,6 +349,11 @@ async function sendSignal() {
     const messageTextarea = document.getElementById('message'); // Reference to the textarea element
     const date = new Date().toISOString().split('T')[0];
     const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
+
+    if (isSignalActive==false){
+        alert(`Signals is not active for this ${carBrand} / صاحب المركبة مفعلش الكود الخص بالمركبة دي`);
+        return;
+    }
 
     sendButton.disabled = true;
     spinner.style.display = 'inline-block'; // Show the spinner
@@ -519,7 +533,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <body>
     <!-- Appbar -->
     <div class="appbar">
-        <img src="https://drop-eg.com/App/assets/assets/DHeader.png" alt="Appbar Image">
+        <img src="assets/DHeader.png" alt="Appbar Image">
     </div>
 
     <div class="container">
