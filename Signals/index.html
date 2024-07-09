@@ -394,12 +394,12 @@ async function sendSignal() {
         // Re-enable button
         sendButton.disabled = false;
         spinner.style.display = 'none'; // Hide the spinner
-        messageTextarea.value = '';
         sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
         sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
 
         // Show alert after everything completes
         alert('Signal sent successfully!');
+        messageTextarea.value = '';
     } catch (error) {
         console.error('Error sending signal:', error);
         alert('Error sending signal.');
