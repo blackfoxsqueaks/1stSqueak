@@ -1,7 +1,7 @@
 function shortenUrl() {
     var longUrl = document.getElementById("longUrlInput").value;
 
-    fetch("https://tny-drop.vercel.app/tny-drp", {
+    fetch("https://tny-drop.vercel.app/tny_drp", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
