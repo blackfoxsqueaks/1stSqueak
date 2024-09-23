@@ -1,7 +1,7 @@
 function shortenUrl() {
     var longUrl = document.getElementById("longUrlInput").value;
 
-    fetch("https://us-central1-ana-drop-9fb07.cloudfunctions.net/tny-drp", {
+    fetch("https://tny-drop.vercel.app/tny-drp", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
