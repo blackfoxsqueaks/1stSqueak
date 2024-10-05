@@ -62931,7 +62931,7 @@ return A.o($async$zN,r)},
 Gj(a,b){return this.aHs(a,b)},
 aHs(a,b){var s=0,r=A.p(t.nc),q,p=2,o,n,m,l,k,j,i,h,g,f,e
 var $async$Gj=A.q(function(c,d){if(c===1){o=d
-s=p}while(true)switch(s){case 0:f="https://drop-eg.com/Signals?SignalCode="+a
+s=p}while(true)switch(s){case 0:f="https://getdrop.app/Signals?SignalCode="+a
 p=4
 j=A.cv("https://us-central1-ana-drop-9fb07.cloudfunctions.net/drop_signals_qr",0,null)
 i=t.N
@@ -63242,7 +63242,7 @@ p=A.b([new A.ak(0,B.n,A.A(41,0,0,0),B.u,20)],t.V)
 o=A.c2("0xff"+A.f(a3),d)
 n=A.f(J.ze(J.bQ(s)," ")[0])
 n=A.aa("Your "+n+" Signal",d,d,d,d,A.bo(d,d,new A.a(A.c2("0xff"+A.f(a3),d)>>>0).iY()>0.5?B.q:B.h,d,d,d,d,d,c,d,d,18,d,d,d,d,d,!0,d,d,d,d,d,d,d,d),B.E,d)
-m=A.aa("https://drop-eg.com/Signals?SignalCode="+a2,d,d,d,d,A.bo(d,d,new A.a(A.c2("0xff"+A.f(a3),d)>>>0).iY()>0.5?B.c6:B.bN,d,d,d,d,d,"RidleyGroteskRegular",d,d,d,d,d,d,d,d,!0,d,d,d,B.aO,d,d,d,d),d,d)
+m=A.aa("https://getdrop.app/Signals?SignalCode="+a2,d,d,d,d,A.bo(d,d,new A.a(A.c2("0xff"+A.f(a3),d)>>>0).iY()>0.5?B.c6:B.bN,d,d,d,d,d,"RidleyGroteskRegular",d,d,d,d,d,d,d,d,!0,d,d,d,B.aO,d,d,d,d),d,d)
 l=t.p
 m=A.aM(d,A.bh(A.b([new A.ay(220,d,m,d),B.it,A.iD(B.ajy,new A.a(A.c2("0xff"+A.f(a3),d)>>>0).iY()>0.5?B.c6:B.bN,d,16)],l),B.o,B.N,B.k,d),B.p,!1,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,new A.aVj(a2),d,d,d,d,d,d,d)
 k=r?0:16
@@ -63268,21 +63268,21 @@ a0=A.aM(d,A.D(d,A.bgX(n,d,d),B.e,d,d,d,d,d,d,B.O,d,d,d,1/0),B.p,!1,d,d,d,d,d,d,d
 return A.D(d,A.b_(A.b([o,a0,A.D(d,A.aa("*Drop users will be able to send you Signals by scanning this encrypted code.",d,d,d,d,A.bo(d,d,new A.a(A.c2("0xff"+A.f(a3),d)>>>0).iY()>0.5?B.q:new A.a(A.c2("0xff"+A.f(a3),d)>>>0),d,d,d,d,d,a,d,d,12,d,d,d,d,d,!0,d,d,d,d,d,d,d,d),B.E,d),B.e,d,d,d,d,d,d,B.ahZ,d,d,d,d)],l),B.o,B.t,B.k),B.x,d,d,new A.a4(B.h,d,d,q,p,d,B.j),d,d,d,B.ai9,d,d,d,a1*0.86)},
 $S:516}
 A.aVj.prototype={
-$0(){A.m5(A.cv("https://drop-eg.com/Signals?SignalCode="+this.a,0,null),B.fy)},
+$0(){A.m5(A.cv("https://getdrop.app/Signals?SignalCode="+this.a,0,null),B.fy)},
 $S:0}
 A.aVk.prototype={
 $0(){var s=this
-if(s.b)A.m5(A.cv("https://drop-eg.com/Signals?SignalCode="+s.c,0,null),B.fy)
+if(s.b)A.m5(A.cv("https://getdrop.app/Signals?SignalCode="+s.c,0,null),B.fy)
 else s.a.qP(15,J.F(s.d,"docId"))},
 $S:0}
 A.aVl.prototype={
 $0(){var s=this
-if(s.b)A.m5(A.cv("https://drop-eg.com/Signals?SignalCode="+s.c,0,null),B.fy)
+if(s.b)A.m5(A.cv("https://getdrop.app/Signals?SignalCode="+s.c,0,null),B.fy)
 else s.a.qP(165,J.F(s.d,"docId"))},
 $S:0}
 A.aVm.prototype={
 $0(){var s=this
-if(s.b)A.m5(A.cv("https://drop-eg.com/Signals?SignalCode="+s.c,0,null),B.fy)
+if(s.b)A.m5(A.cv("https://getdrop.app/Signals?SignalCode="+s.c,0,null),B.fy)
 else s.a.qP(15,J.F(s.d,"docId"))},
 $S:0}
 A.b7R.prototype={
