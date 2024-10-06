@@ -28,7 +28,7 @@ Array.from(formss).forEach(form_D => {
     });
 
     const sendtoretool_D = () => 
-      fetch('https://us-central1-dropeg-website.cloudfunctions.net/app/api/earlyAccessForm', {
+      fetch('https://drop-server.vercel.app/api/earlyAccessForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
