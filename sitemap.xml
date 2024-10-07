@@ -5,20 +5,20 @@
 
     <url>
         <loc>https://getdrop.app</loc>
-        <lastmod>2024-10-07</lastmod> <!-- Updated date -->
-        <changefreq>daily</changefreq> <!-- More realistic change frequency -->
-        <priority>1.0</priority> <!-- Increased priority -->
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://getdrop.app/PrivacyPolicy</loc>
         <lastmod>2024-10-07</lastmod>
-        <changefreq>monthly</changefreq> <!-- Adjusted frequency -->
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/WashDrop</loc>
         <lastmod>2024-10-07</lastmod>
-        <changefreq>monthly</changefreq> <!-- Adjusted frequency -->
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
@@ -36,19 +36,19 @@
     <url>
         <loc>https://getdrop.app/Blog</loc>
         <lastmod>2024-10-07</lastmod>
-        <changefreq>weekly</changefreq> <!-- Adjusted frequency -->
+        <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://getdrop.app/The_Ultimate_Guide_to_Exterior_Car_Washing</loc>
         <lastmod>2024-10-07</lastmod>
-        <changefreq>yearly</changefreq> <!-- Adjusted frequency -->
+        <changefreq>yearly</changefreq>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://getdrop.app/is_it_safe_to_clean_cars_engine</loc>
         <lastmod>2024-10-07</lastmod>
-        <changefreq>yearly</changefreq> <!-- Adjusted frequency -->
+        <changefreq>yearly</changefreq>
         <priority>0.4</priority>
     </url>
 
