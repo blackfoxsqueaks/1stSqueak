@@ -5,145 +5,151 @@
 
     <url>
         <loc>https://getdrop.app</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod> <!-- Updated date -->
+        <changefreq>daily</changefreq> <!-- More realistic change frequency -->
+        <priority>1.0</priority> <!-- Increased priority -->
     </url>
     <url>
         <loc>https://getdrop.app/PrivacyPolicy</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq> <!-- Adjusted frequency -->
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://getdrop.app/WashDrop</loc>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq> <!-- Adjusted frequency -->
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://getdrop.app/InvestorRelations</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/AboutUs</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/Blog</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>weekly</changefreq> <!-- Adjusted frequency -->
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://getdrop.app/The_Ultimate_Guide_to_Exterior_Car_Washing</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>yearly</changefreq> <!-- Adjusted frequency -->
+        <priority>0.4</priority>
     </url>
     <url>
         <loc>https://getdrop.app/is_it_safe_to_clean_cars_engine</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>yearly</changefreq> <!-- Adjusted frequency -->
+        <priority>0.4</priority>
     </url>
 
     <!-- Grouped URLs under "getdrop.app/Carwash_Egypt_Areas/" -->
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Cairo.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Cairo.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_القاهرة.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Maadi.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Maadi.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_المعادي.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_NasrCity.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_NasrCity.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_مدينة_نصر.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_AlRehab.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_AlRehab.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_الرحاب.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Madinaty.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Madinaty.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_مدينتي.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Zamalek.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Zamalek.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_الزمالك.html"/>
     </url>
     <url>
         <loc>https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Mohandeseen.html</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://getdrop.app/Carwash_Egypt_Areas/WashDrop_Mohandeseen.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://getdrop.app/Carwash_Egypt_Areas/واش_دروب_المهندسين.html"/>
     </url>
 
     <url>
         <loc>https://getdrop.app/Coverage</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/SteamTech</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/Partners</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/Join_Drop</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/Flipbook</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/GetDrop</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://getdrop.app/Early_Access</loc>
-        <lastmod>2023-09-03</lastmod>
-        <changefreq>always</changefreq>
+        <lastmod>2024-10-07</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 </urlset>

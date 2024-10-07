@@ -61,100 +61,123 @@ src="https://www.facebook.com/tr?id=194609353204345&ev=PageView&noscript=1"
 
 
 
-<!-- Start Schema Markup-------------------------------------------------->
+<!-- Start Schema Markup -->
 
-
-
-<!-- Schema-Add Logo -->
-
-
-
-<script type="application/ld+json">
-{"@context" : "http://schema.org",
- "@type" : "Corporation",
-  "name" : "Drop App",
-  "alternateName": "Drop LLC.",
-  "url" : "https://getdrop.app",
-  "image": "https://getdrop.app/GoogleSearchImage.png",
-  "logo": "https://getdrop.app/GoogleSearchImage.png"
-}
-</script>
-
-
-
-
-<!-- Schema-Add Breadcrumbs -->
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Home",
-    "item": "https://getdrop.app/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "WashDrop",
-    "item": "https://getdrop.app/WashDrop.html"
-   },{
-    "@type": "ListItem",
-    "position": 3,
-    "name": "SteamTech",
-    "item": "https://getdrop.app/SteamTech.html"
-   },{
-    "@type": "ListItem",
-    "position": 4,
-    "name": "WashDrop - Coverage",
-    "item": "https://getdrop.app/Coverage.html"
-    },{
-    "@type": "ListItem",
-    "position": 5,
-    "name": "Egypt's Top Workshops & Service-Centers",
-    "item": "https://getdrop.app/Partners.html"
-      },{
-    "@type": "ListItem",
-    "position": 6,
-    "name": "Blog",
-    "item": "https://getdrop.app/Blog.html"
-  },{
-    "@type": "ListItem",
-    "position": 7,
-    "name": "Investor Relations",
-    "item": "https://getdrop.app/InvestorRelations.html"
-    },{
-    "@type": "ListItem",
-    "position": 7,
-    "name": "Founder's Letter",
-    "item": "https://getdrop.app/FounderLetter.html"
-  }]
-}
-</script>
-
-<!-- Schema-Add Organization -->
-
+<!-- Schema - Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Corporation",
+  "@type": "Organization",
   "name": "Drop",
   "legalName": "Drop Programming LLC.",
   "url": "https://getdrop.app",
-  "email": "hello@drop-eg,com",
   "logo": "https://getdrop.app/GoogleSearchImage.png",
-  "founder": "Youssef Moustafa Elhossary",
+  "founder": {
+    "@type": "Person",
+    "name": "Youssef Moustafa Elhossary"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+20-XXXX-XXXX",  // Replace with your actual phone number
+    "contactType": "Customer Support",
+    "areaServed": "EG",  // Country code for Egypt
+    "availableLanguage": ["Arabic", "English"]
+  },
+  "sameAs": [
+    "https://facebook.com/drivewithdrop",
+    "https://instagram.com/drivewithdrop",
+    "https://linkedin.com/company/drivewithdrop",
+    "https://getdrop.app"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cairo, Egypt, Zahraa Maadi",
+    "addressLocality": "Cairo",
+    "addressRegion": "Cairo",
+    "postalCode": "11841", 
+    "addressCountry": "EG"
+  },
   "areaServed": "Egypt",
   "duns": "848980981",
-  "sameAs": [
-    "https://facebook.com/dropapp.eg",
-    "https://instagram.com/dropapp.eg",
-    "https://linkedin.com/company/dropeg",
-    "https://getdrop.app"
+  "description": "Drop App allows users to wash their cars anywhere, providing services at Egypt's top-rated workshops and service centers."
+}
+</script>
+
+<!-- Schema - Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getdrop.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "WashDrop",
+      "item": "https://getdrop.app/WashDrop.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SteamTech",
+      "item": "https://getdrop.app/SteamTech.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coverage",
+      "item": "https://getdrop.app/Coverage.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Partners",
+      "item": "https://getdrop.app/Partners.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Blog",
+      "item": "https://getdrop.app/Blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Investor Relations",
+      "item": "https://getdrop.app/InvestorRelations.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Founder's Letter",
+      "item": "https://getdrop.app/FounderLetter.html"
+    }
   ]
+}
+</script>
+
+<!-- Schema - WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Drop App",
+  "url": "https://getdrop.app",
+  "sameAs": [
+    "https://facebook.com/drivewithdrop",
+    "https://instagram.com/drivewithdrop",
+    "https://linkedin.com/company/drivewithdrop"
+  ],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://getdrop.app/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 
@@ -249,7 +272,7 @@ document.addEventListener("gestureend", function (e) {
 <meta name="twitter:image" content="https://blackfoxsqueaks.github.io/1stSqueak/SEOimage.png">
 
 
-<link rel="canonical" href="http://getdrop.app/" />
+<link rel="canonical" href="https://getdrop.app/" />
 
 
 <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
@@ -16918,15 +16941,15 @@ window.application = new Application();
 			</div>
 		</div>
 		<div id="Group_3761">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341" src="assets/home_trial/Image_341.webp" srcset="assets/home_trial/Image_341.webp 1x, assets/home_trial/Image_341@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342" src="assets/home_trial/Image_342.webp" srcset="assets/home_trial/Image_342.webp 1x, assets/home_trial/Image_342@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343" src="assets/home_trial/Image_343.webp" srcset="assets/home_trial/Image_343.webp 1x, assets/home_trial/Image_343@2x.webp 2x">
 				
 			</a>
@@ -17325,15 +17348,15 @@ window.application = new Application();
 			</div>
 		</div>
 		<div id="Group_3761_ie">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_if" src="assets/home_trial/Image_341_if.webp" srcset="assets/home_trial/Image_341_if.webp 1x, assets/home_trial/Image_341_if@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_ig" src="assets/home_trial/Image_342_ig.webp" srcset="assets/home_trial/Image_342_ig.webp 1x, assets/home_trial/Image_342_ig@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_ih" src="assets/home_trial/Image_343_ih.webp" srcset="assets/home_trial/Image_343_ih.webp 1x, assets/home_trial/Image_343_ih@2x.webp 2x">
 				
 			</a>
@@ -17718,15 +17741,15 @@ window.application = new Application();
 			</div>
 		</div>
 		<div id="Group_3761_mc">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_md" src="assets/home_trial/Image_341_md.webp" srcset="assets/home_trial/Image_341_md.webp 1x, assets/home_trial/Image_341_md@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_me" src="assets/home_trial/Image_342_me.webp" srcset="assets/home_trial/Image_342_me.webp 1x, assets/home_trial/Image_342_me@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_mf" src="assets/home_trial/Image_343_mf.webp" srcset="assets/home_trial/Image_343_mf.webp 1x, assets/home_trial/Image_343_mf@2x.webp 2x">
 				
 			</a>
@@ -18125,15 +18148,15 @@ window.application = new Application();
 			</div>
 		</div>
 		<div id="Group_3706">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_qi" src="assets/home_trial/Image_341_qi.webp" srcset="assets/home_trial/Image_341_qi.webp 1x, assets/home_trial/Image_341_qi@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_qj" src="assets/home_trial/Image_342_qj.webp" srcset="assets/home_trial/Image_342_qj.webp 1x, assets/home_trial/Image_342_qj@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_qk" src="assets/home_trial/Image_343_qk.webp" srcset="assets/home_trial/Image_343_qk.webp 1x, assets/home_trial/Image_343_qk@2x.webp 2x">
 				
 			</a>
@@ -18624,15 +18647,15 @@ document.getElementById("Group_4203").addEventListener("click", share2);
 			</div>
 		</div>
 		<div id="Group_3706_vd">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_ve" src="assets/home_trial/Image_341_ve.webp" srcset="assets/home_trial/Image_341_ve.webp 1x, assets/home_trial/Image_341_ve@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_vf" src="assets/home_trial/Image_342_vf.webp" srcset="assets/home_trial/Image_342_vf.webp 1x, assets/home_trial/Image_342_vf@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_vg" src="assets/home_trial/Image_343_vg.webp" srcset="assets/home_trial/Image_343_vg.webp 1x, assets/home_trial/Image_343_vg@2x.webp 2x">
 				
 			</a>
@@ -19123,15 +19146,15 @@ document.getElementById("Group_4203_xx").addEventListener("click", share3);
 			</div>
 		</div>
 		<div id="Group_3706_a">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_b" src="assets/home_trial/Image_341_b.webp" srcset="assets/home_trial/Image_341_b.webp 1x, assets/home_trial/Image_341_b@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_c" src="assets/home_trial/Image_342_c.webp" srcset="assets/home_trial/Image_342_c.webp 1x, assets/home_trial/Image_342_c@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_d" src="assets/home_trial/Image_343_d.webp" srcset="assets/home_trial/Image_343_d.webp 1x, assets/home_trial/Image_343_d@2x.webp 2x">
 				
 			</a>
@@ -19622,15 +19645,15 @@ document.getElementById("Group_4203_").addEventListener("click", share1);
 			</div>
 		</div>
 		<div id="Group_3706_">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_" src="assets/home_trial/Image_341_.webp" srcset="assets/home_trial/Image_341_.webp 1x, assets/home_trial/Image_341_@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_" src="assets/home_trial/Image_342_.webp" srcset="assets/home_trial/Image_342_.webp 1x, assets/home_trial/Image_342_@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_" src="assets/home_trial/Image_343_.webp" srcset="assets/home_trial/Image_343_.webp 1x, assets/home_trial/Image_343_@2x.webp 2x">
 				
 			</a>
@@ -20103,15 +20126,15 @@ document.getElementById("Group_4203_x").addEventListener("click", share4);
 			</div>
 		</div>
 		<div id="Group_3761_u">
-			<a href="https://facebook.com/dropapp.eg">
+			<a href="https://facebook.com/drivewithdrop">
 			<img id="Image_341_v" src="assets/home_trial/Image_341_v.webp" srcset="assets/home_trial/Image_341_v.webp 1x, assets/home_trial/Image_341_v@2x.webp 2x">
 				
 			</a>
-			<a href="https://instagram.com/dropapp.eg">
+			<a href="https://instagram.com/drivewithdrop">
 			<img id="Image_342_w" src="assets/home_trial/Image_342_w.webp" srcset="assets/home_trial/Image_342_w.webp 1x, assets/home_trial/Image_342_w@2x.webp 2x">
 				
 			</a>
-			<a href="https://twitter.com/dropapp.eg">
+			<a href="https://twitter.com/drivewithdrop">
 			<img id="Image_343_x" src="assets/home_trial/Image_343_x.webp" srcset="assets/home_trial/Image_343_x.webp 1x, assets/home_trial/Image_343_x@2x.webp 2x">
 				
 			</a>
