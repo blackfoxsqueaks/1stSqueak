@@ -1,4 +1,15 @@
 <body style="font-size:10pt;font-family:'Ridley Grotesk',sans-serif;">
+  <style>
+    .banner-image {
+      max-width: 500px;
+      border-radius: 16px;
+      filter: drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));
+      height: auto;
+      border: 0;
+    }
+    @media (prefers-color-scheme: light) { .banner-image { content: url('https://getdrop.app/24_Mail_Signature/Drop_Mail_Banner_Light.png'); } }
+    @media (prefers-color-scheme: dark) { .banner-image { content: url('https://getdrop.app/24_Mail_Signature/Drop_Mail_Banner_Dark.png'); } }
+  </style>
   <table cellspacing="0" cellpadding="0" border="0" style="color:#000;max-width:500px;background:transparent;">
     <tbody>
       <tr>
@@ -12,7 +23,7 @@
       </tr>
       <tr>
         <td width="100" style="padding:16px 0;">
-          <img alt="Photo" src="https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png" style="max-width:90px;height:auto;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));">
+          <img alt="Photo" src="https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png" style="background-color:#f8f8f8; max-width:90px;height:auto;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));">
         </td>
         <td colspan="2" style="padding-top:0;">
           <div style="background-color:#f8f8f8;padding:6px 16px;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));max-width:400px;margin:8px 0;">
@@ -31,7 +42,7 @@
       <tr>
         <td colspan="2" style="padding-top:8px;">
           <a href="https://app.getdrop.app/" target="_blank" rel="noopener">
-            <img alt="Banner" src="https://getdrop.app/24_Mail_Signature/Drop_Mail_Banner.png" style="max-width:500px;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));height:auto;border:0;">
+            <img alt="Banner" class="banner-image" src="https://getdrop.app/24_Mail_Signature/Drop_Mail_Banner_Light.png">
           </a>
         </td>
       </tr>
