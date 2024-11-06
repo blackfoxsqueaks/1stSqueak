@@ -1,0 +1,492 @@
+<div id="Home_Desktop">
+	<img id="DHeaderWeb_e" src="assets/home/DHeaderWeb_e.webp" srcset="assets/home/DHeaderWeb_e.webp 1x, assets/home/DHeaderWeb_e@2x.webp 2x" alt="Web header image for Drop, visually representing the brand's theme and services offered in Egypt.">
+
+<img id="Rectangle_2980" src="assets/home/Rectangle_2980.webp" srcset="assets/home/Rectangle_2980.webp 1x, assets/home/Rectangle_2980@2x.webp 2x" alt="Decorative rectangle graphic for Drop App webpage, enhancing the visual appeal of the layout.">
+
+<img id="Image_374" src="assets/home/Image_374.webp" srcset="assets/home/Image_374.webp 1x, assets/home/Image_374@2x.webp 2x" alt="Illustrative image related to Drop's services, aimed at engaging users in Cairo, Egypt.">
+
+		
+	<a href="index.html">
+	<div id="Home">
+		<span>Home</span>
+	</div>
+	</a>
+	<a href="https://getdrop.app/blog.html">
+	<div id="Blog_e">
+		<span>Blog</span>
+	</div>
+	</a>
+	<a href="investor-relations.html">
+	<div id="Investor_Relations">
+		<span>Investor Relations</span>
+	</div>
+	</a>
+	<div id="Group_3972">
+		<div id="Group_3715">
+			<div id="Group_595">
+				<svg class="Rectangle_96_fe">
+					<rect id="Rectangle_96_fe" rx="0" ry="0" x="0" y="0" width="1366" height="498">
+					</rect>
+				</svg>
+				<div id="Group_625">
+					<a href="investor-relations.html">
+					<div id="About_Us">
+						<span>Investor Relations</span>
+					</div>
+					</a>
+					<a href="https://getdrop.app/blog.html">
+					<div id="Blog_fh">
+						<span>Blog</span>
+					</div>
+					</a>
+					<div id="Company_fi">
+						<span>Company</span>
+					</div>
+				</div>
+				<div id="Group_627">
+					<div id="Group_626">
+						<a href="https://getdrop.app/join-drop.html">
+						<div id="Join_Us_fl">
+							<span>Join Us!</span>
+						</div>
+						</a>
+						<div id="For_Workshops_fm">
+							<span>For Workshops</span>
+						</div>
+						<a href="Flipbook.html">
+						<div id="Interactive_Flipbook_fn">
+							<span>Interactive Flipbook</span>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div id="Group_4017">
+					<div id="All_Copyrights_Reserved__Drop_fp">
+						<span>All Copyrights Reserved © Drop</span>
+					</div>
+					<a href="privacy-policy.html">
+					<div id="Privacy_Policy">
+						<span>Privacy Policy</span>
+					</div>
+					</a>
+					<div id="Terms_of_Use">
+						<span>Terms of Use</span>
+					</div>
+					<svg class="Ellipse_1">
+						<ellipse id="Ellipse_1" rx="2.5" ry="2.5" cx="2.5" cy="2.5">
+						</ellipse>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="Group_3761">
+    <a href="https://www.facebook.com/drivewithdrop/">
+        <img id="Image_341_fu" src="assets/home/Image_341_fu.webp" srcset="assets/home/Image_341_fu.webp 1x, assets/home/Image_341_fu@2x.webp 2x" alt="Facebook icon linking to Drop's official page in Egypt.">
+    </a>
+    <a href="https://www.instagram.com/drivewithdrop/">
+        <img id="Image_342_fv" src="assets/home/Image_342_fv.webp" srcset="assets/home/Image_342_fv.webp 1x, assets/home/Image_342_fv@2x.webp 2x" alt="Instagram icon linking to Drop's official profile in Egypt.">
+    </a>
+    <a href="https://twitter.com/dropapp.eg">
+        <img id="Image_343_fw" src="assets/home/Image_343_fw.webp" srcset="assets/home/Image_343_fw.webp 1x, assets/home/Image_343_fw@2x.webp 2x" alt="Twitter icon linking to Drop's official account in Egypt.">
+    </a>
+    <a href="https://linkedin.com/company/drivewithdrop/">
+        <img id="Image_344_fx" src="assets/home/Image_344_fx.webp" srcset="assets/home/Image_344_fx.webp 1x, assets/home/Image_344_fx@2x.webp 2x" alt="LinkedIn icon linking to Drop's official company page.">
+    </a>
+</div>
+
+		<img id="Screenshot_2023-01-03_at_31257_fy" src="assets/home/Screenshot_2023-01-03_at_31257_fy.webp" srcset="assets/home/Screenshot_2023-01-03_at_31257_fy.webp 1x, assets/home/Screenshot_2023-01-03_at_31257_fy@2x.webp 2x" alt="Drop app Downlaod Drop, featuring car wash and car repair services in Egypt, available on Android Play Store and iOS App Store.">
+
+			
+	</div>
+	<div id="Group_3904">
+		<div id="All_You_Cars_Needs_Are_Here">
+			<span>All You Car’s Needs Are Here.</span>
+		</div>
+		<div id="Group_3890">
+			<div id="Whatever_you_need_to_service_a_f">
+				<span>Whatever you need to service, and maintain your car is here. Served only by the best workshops and service-centers in Egypt. Ensuring your vehicle’s top-notch performance.</span>
+			</div>
+		</div>
+	</div>
+	<div id="Group_4018">
+		<div id="Group_3968">
+			<div id="Group_3890_f">
+				<div id="Transform_your_car_into_a_refl_f">
+					<span>Transform your car into a reflection of you. From body mods to eye-catching interiors, Drop always has the coolest, and latest customizations for your whip. <br/><br/>Get ready to turn some heads on the road.</span>
+				</div>
+			</div>
+		</div>
+		<img id="wrapcartransparent" src="assets/home/wrapcartransparent.webp" srcset="assets/home/wrapcartransparent.webp 1x, assets/home/wrapcartransparent@2x.webp 2x" alt="Car wrap showcasing customizable car wrap designs for vehicles in Egypt, promoting the car customization services offered by Drop.">
+
+			
+		<img id="n_596e2f9f9b4a4b0e217188b469eb" src="assets/home/n_596e2f9f9b4a4b0e217188b469eb.webp" srcset="assets/home/n_596e2f9f9b4a4b0e217188b469eb.webp 1x, assets/home/n_596e2f9f9b4a4b0e217188b469eb@2x.webp 2x">
+			
+	</div>
+	<svg class="Line_20" viewBox="0 0 71 3">
+		<path id="Line_20" d="M 0 0 L 71 0">
+		</path>
+	</svg>
+	<a href="https://getdrop.app">
+	<img id="Drop_Logo_White_vectorized" src="assets/home/Drop_Logo_White_vectorized.webp" srcset="assets/home/Drop_Logo_White_vectorized.webp 1x, assets/home/Drop_Logo_White_vectorized@2x.webp 2x" alt="Vectorized white logo of Drop, representing a leading car service app in Egypt offering car washing, repair, and customization services.">
+		
+	</a>
+	<a href="early-access/register.html">
+	<div id="Group_4070">
+		<a href="early-access/register.html">
+		<div id="Group_569_gc">
+			<svg class="Rectangle_2886">
+				<rect id="Rectangle_2886" rx="15" ry="15" x="0" y="0" width="214.763" height="58.256">
+				</rect>
+			</svg>
+			<div id="Get_Exclusive_Access">
+				<span>Get Early Access!</span>
+			</div>
+		</div>
+		</a>
+	</div>
+	</a>
+	<div id="Group_4079">
+		<div id="Group_4019">
+    <div id="Group_3970">
+        <svg class="Rectangle_2972_gi">
+            <rect id="Rectangle_2972_gi" rx="20" ry="20" x="0" y="0" width="566" height="464.222">
+            </rect>
+        </svg>
+        <div id="Secure_Payment__Installments_gj">
+            <span>Secure Payment & Installments</span>
+        </div>
+        <div id="Make_online_payments_seamlessl_gk">
+            <span>Make online payments seamlessly or choose flexible installments within the app, ensuring a worry-free transaction every single time.</span>
+        </div>
+    </div>
+    <img id="PaymentGIF_gl" src="assets/home/PaymentGIF.gif" srcset="assets/home/PaymentGIF.gif 1x, assets/home/PaymentGIF.gif 2x" alt="Animated GIF showcasing secure payment options and flexible installments for car services in Cairo, Egypt, via the Drop app." loading="lazy">
+</div>
+<div id="Group_4077">
+    <div id="Group_4044_gn">
+        <img id="n_e1adb8f67180-1578818447-w31D" src="assets/home/n_e1adb8f67180-1578818447-w31D.webp" srcset="assets/home/n_e1adb8f67180-1578818447-w31D.webp 1x, assets/home/n_e1adb8f67180-1578818447-w31D@2x.webp 2x" alt="Visual representation of secure online payment options available in the Drop app for carwash and car repair services in Cairo, Egypt.">
+        
+        <img id="n_e1adb8f67180-1578818447-w31D_gp" src="assets/home/n_e1adb8f67180-1578818447-w31D_gp.webp" srcset="assets/home/n_e1adb8f67180-1578818447-w31D_gp.webp 1x, assets/home/n_e1adb8f67180-1578818447-w31D_gp@2x.webp 2x" alt="Image depicting the convenience of flexible payment plans for car repair services in Cairo offered by the Drop app, enhancing the car maintenance experience.">
+        
+        <img id="n_e1adb8f67180-1578818447-w31D_gq" src="assets/home/n_e1adb8f67180-1578818447-w31D_gq.webp" srcset="assets/home/n_e1adb8f67180-1578818447-w31D_gq.webp 1x, assets/home/n_e1adb8f67180-1578818447-w31D_gq@2x.webp 2x" alt="Image illustrating various payment methods available in the Drop app for carwash and car repair services in Cairo, Egypt, ensuring hassle-free transactions for users.">
+    </div>
+</div>
+
+	</div>
+	<div id="Group_4078">
+		<div id="Group_4015">
+			<div id="Group_3970_gt">
+				<svg class="Rectangle_2972_gu">
+					<rect id="Rectangle_2972_gu" rx="20" ry="20" x="0" y="0" width="566" height="464.222">
+					</rect>
+				</svg>
+				<div id="Real-Time_Support">
+					<span>Real-Time Support</span>
+				</div>
+				<div id="Our_dedicated_team_is_a_tap_aw">
+					<span>Our dedicated team is a tap away ready to answer your questions, provide guidance, and address any concerns you may have.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Scroll_Group_23">
+		<img id="Group_4058" src="assets/home/Group_4058.webp" srcset="assets/home/Group_4058.webp 1x, assets/home/Group_4058@2x.webp 2x">
+			
+		<img id="Group_4058_gz" src="assets/home/Group_4058_gz.webp" srcset="assets/home/Group_4058_gz.webp 1x, assets/home/Group_4058_gz@2x.webp 2x">
+			
+		<img id="Group_4058_g" src="assets/home/Group_4058_g.webp" srcset="assets/home/Group_4058_g.webp 1x, assets/home/Group_4058_g@2x.webp 2x">
+			
+		<img id="Group_4058_ha" src="assets/home/Group_4058_ha.webp" srcset="assets/home/Group_4058_ha.webp 1x, assets/home/Group_4058_ha@2x.webp 2x">
+			
+		<img id="Group_4058_hb" src="assets/home/Group_4058_hb.webp" srcset="assets/home/Group_4058_hb.webp 1x, assets/home/Group_4058_hb@2x.webp 2x">
+			
+	</div>
+	<div id="Scroll_Group_24">
+		<img id="Group_4058_hc" src="assets/home/Group_4058_hc.webp" srcset="assets/home/Group_4058_hc.webp 1x, assets/home/Group_4058_hc@2x.webp 2x">
+			
+		<img id="Group_4058_hd" src="assets/home/Group_4058_hd.webp" srcset="assets/home/Group_4058_hd.webp 1x, assets/home/Group_4058_hd@2x.webp 2x">
+			
+		<img id="Group_4058_he" src="assets/home/Group_4058_he.webp" srcset="assets/home/Group_4058_he.webp 1x, assets/home/Group_4058_he@2x.webp 2x">
+			
+		<img id="Group_4058_hf" src="assets/home/Group_4058_hf.webp" srcset="assets/home/Group_4058_hf.webp 1x, assets/home/Group_4058_hf@2x.webp 2x">
+			
+		<img id="Group_4058_hg" src="assets/home/Group_4058_hg.webp" srcset="assets/home/Group_4058_hg.webp 1x, assets/home/Group_4058_hg@2x.webp 2x">
+			
+	</div>
+	<div id="Group_4083">
+		<img id="Group_4058_hh" src="assets/home/Group_4058_hh.webp" srcset="assets/home/Group_4058_hh.webp 1x, assets/home/Group_4058_hh@2x.webp 2x">
+			
+		<img id="Group_4058_hi" src="assets/home/Group_4058_hi.webp" srcset="assets/home/Group_4058_hi.webp 1x, assets/home/Group_4058_hi@2x.webp 2x">
+			
+		<img id="Group_4058_hj" src="assets/home/Group_4058_hj.webp" srcset="assets/home/Group_4058_hj.webp 1x, assets/home/Group_4058_hj@2x.webp 2x">
+			
+		<a href="early-access/register.html">
+			<div>
+		<img id="Group_4075" src="assets/home/Group_4075.webp" srcset="assets/home/Group_4075.webp 1x, assets/home/Group_4075@2x.webp 2x">
+			</div>
+		</a>
+	</div>
+	<div id="Group_3973">
+		<div id="Group_3963">
+			<div id="Group_540">
+				<div id="Your_All-in-one_Car_App_hh">
+					<span>Your All-in-one Car App.</span>
+				</div>
+				<div id="Wash_service_repair_customize__hi">
+					<span>Wash, service, repair, customize, and much more…</span>
+				</div>
+			</div>
+		</div>
+		<a href="early-access/register.html">
+		<div id="Group_3815">
+        <img id="flag" src="assets/home/flag.webp" srcset="assets/home/flag.webp 1x, assets/home/flag@2x.webp 2x" alt="Flag symbolizing early access registration for automotive services provided by Drop App Egypt.">
+				
+			<a href="early-access/register.html">
+			<div id="Group_569_hl">
+				<svg class="Rectangle_2886_hm">
+					<rect id="Rectangle_2886_hm" rx="20" ry="20" x="0" y="0" width="257.982" height="69.979">
+					</rect>
+				</svg>
+				<div id="Get_Early_Access_hn">
+					<span>Get Early Access!</span>
+				</div>
+			</div>
+			</a>
+		</div>
+		</a>
+	</div>
+	<div id="Group_4323">
+		<svg class="Drop_App_Button_Rectangle_3_hp">
+			<rect id="Drop_App_Button_Rectangle_3_hp" rx="20" ry="20" x="0" y="0" width="1247" height="289">
+			</rect>
+		</svg>
+<img id="Comp_1_hq" src="assets/home/WashDropGIF.gif" srcset="assets/home/WashDropGIF.gif 1x, assets/home/WashDropGIF.gif 2x" alt="Animated GIF showcasing the WashDrop Carwash in Egypt service by Drop App.">			
+		<div id="Carwash_Anywhere">
+			<span>Carwash, Anywhere!</span>
+		</div>
+		<div id="WashDrop_is_Egypts_carwash_app_hs">
+			<span>WashDrop is Egypt’s carwash app that brings the car wash to you, making it effortless to keep your car shining and clean.</span>
+		</div>
+		<a href="egypt/carwash/washdrop.html">
+		<div id="Group_4218">
+			<div id="Group_3913">
+				<a href="egypt/carwash/washdrop.html">
+				<div id="Group_3921">
+					<svg class="Rectangle_2968_hw">
+						<rect id="Rectangle_2968_hw" rx="20" ry="20" x="0" y="0" width="163" height="51.031">
+						</rect>
+					</svg>
+					<div id="Group_4221">
+						<div id="WASH_hy">
+							<span>WASH</span>
+						</div>
+						<div id="DROP_hz">
+							<span>DROP</span>
+						</div>
+					</div>
+				</div>
+				</a>
+			</div>
+			<img id="XA3Ld46P7c_h" src="assets/home/XA3Ld46P7c_h.webp" srcset="assets/home/XA3Ld46P7c_h.webp 1x, assets/home/XA3Ld46P7c_h@2x.webp 2x" alt="Arrow pointing to the WashDrop service page, directing users to explore car washing options on Drop App Egypt.">
+				
+		</div>
+		</a>
+	</div>
+	<div id="Group_4212">
+		<div id="Swirl_free">
+			<span>*Swirl free*</span>
+		</div>
+		<div id="Deep_Shines">
+			<span>Deep Shines</span>
+		</div>
+	</div>
+	<div id="Group_4322">
+		<svg class="Drop_App_Button_Rectangle_3_h">
+			<rect id="Drop_App_Button_Rectangle_3_h" rx="20" ry="20" x="0" y="0" width="1247" height="353">
+			</rect>
+		</svg>
+		<div id="Egypts_Top_Workshops_in_a_Tap_h">
+			<span>Egypt’s Top Workshops in a Tap!</span>
+		</div>
+		<div id="Weve_added_the_best_workshops__h">
+			<span>We’ve added the best workshops and service centers in Egypt. So you’ll be able to get all of your car’s needs hassle-free.</span>
+		</div>
+		<a href="under-construction.html">
+		<div id="Group_4321">
+			<svg class="Rectangle_2968_h">
+				<rect id="Rectangle_2968_h" rx="20" ry="20" x="0" y="0" width="221.007" height="51.348">
+				</rect>
+			</svg>
+			<div id="Explore_Workshops_ia">
+				<span>Explore Workshops</span>
+			</div>
+		</div>
+		</a>
+		<img id="Car_Repair_Shop2_1" src="assets/home/CarRepairShop.gif" srcset="assets/home/CarRepairShop.gif 1x, assets/home/CarRepairShop.gif 2x" alt="Animated GIF showcasing car repair services offered by Drop App Egypt, illustrating the expertise in automotive repair." loading="lazy">
+
+			
+	</div>
+	<img id="Drop_App_Mockup_ic" src="assets/home/Drop_App_Mockup_ic.webp" srcset="assets/home/Drop_App_Mockup_ic.webp 1x, assets/home/Drop_App_Mockup_ic@2x.webp 2x" alt="Mockup of the Drop App interface, demonstrating the user-friendly design and features for car repair services in Egypt.">
+		
+	<div id="Group_4214_id">
+		<div id="Group_4202_ie">
+			<div id="Group_4194_if">
+				<div id="Group_3397_ig">
+					<div id="Group_181_ih">
+						<div id="Group_182_ii">
+							<div id="Mobile-chart-background_Copy_3_ij">
+								<svg class="Drop_App_Button_Rectangle_4_ik">
+									<rect id="Drop_App_Button_Rectangle_4_ik" rx="20" ry="20" x="0" y="0" width="599" height="223">
+									</rect>
+								</svg>
+							</div>
+							<h3 id="Gift_a_Loved_One_il">
+								<span>Gift a Loved One</span>
+							</h3>
+							<span id="Invite_friends_and_get_a_Free__im">
+								<span>Invite friends and get a Free Wash</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img id="WashDropGiftGIF_in" src="assets/home/WashDropGiftGIF.gif" srcset="assets/home/WashDropGiftGIF.gif 1x, assets/home/WashDropGiftGIF.gif 2x" alt="Animated GIF showcasing the WashDrop service, highlighting its features and benefits for convenient car cleaning and maintenance." loading="lazy">
+				
+		</div>
+		<div id="Group_4324">
+			<svg class="Rectangle_2968_ip">
+				<rect id="Rectangle_2968_ip" rx="20" ry="20" x="0" y="0" width="145.551" height="51.348">
+				</rect>
+			</svg>
+			<div id="Share">
+				<span>Share</span>
+			</div>
+		</div>
+	</div>
+	<div id="Group_4325">
+		<svg class="Drop_App_Button_Rectangle_3_is">
+			<rect id="Drop_App_Button_Rectangle_3_is" rx="20" ry="20" x="0" y="0" width="1247" height="353">
+			</rect>
+		</svg>
+		<img id="iPhone_14_Mockup2" src="assets/home/iPhone_14_Mockup2.webp" srcset="assets/home/iPhone_14_Mockup2.webp 1x, assets/home/iPhone_14_Mockup2@2x.webp 2x" alt="Phone mockup displaying the Drop App interface, showcasing its user-friendly design and features for car maintenance services.">
+		<div id="Group_4314">
+			<div id="Group_4312">
+				<div id="Easily_schedule_repairs_and_ke_iw">
+					<span>Easily schedule repairs and keep track of their progress, ensuring your car gets the care it deserves. Trust Drop for a reliable, timely and convenient repair journey.</span>
+				</div>
+				<div id="Just_Book_Track__Drop">
+					<span>Just Book, Track & Drop</span>
+				</div>
+			</div>
+			<a href="early-access/register.html">
+			<div id="Group_4313">
+				<a href="early-access/register.html">
+				<div id="Group_569_iz">
+					<svg class="Rectangle_2886_i">
+						<rect id="Rectangle_2886_i" rx="20" ry="20" x="0" y="0" width="212.627" height="57.251">
+						</rect>
+					</svg>
+					<div id="Get_Exclusive_Access_i">
+						<span>Get Early Access!</span>
+					</div>
+				</div>
+				</a>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div id="Group_4329">
+		<svg class="Drop_App_Button_Rectangle_3_i">
+			<rect id="Drop_App_Button_Rectangle_3_i" rx="20" ry="20" x="0" y="0" width="1247" height="353">
+			</rect>
+		</svg>
+		<div id="Group_4314_i">
+			<div id="Group_4312_i">
+				<div id="Feel_safe_wherever_your_car_is">
+					<span>Feel safe wherever your car is parked with peer to peer on-road communications.</span>
+				</div>
+				<div id="Signals">
+					<span>Signals</span>
+				</div>
+			</div>
+			<a href="early-access/register.html">
+			<div id="Group_4313_i">
+				<a href="early-access/register.html">
+				<div id="Group_569_i">
+					<svg class="Rectangle_2886_ja">
+						<rect id="Rectangle_2886_ja" rx="20" ry="20" x="0" y="0" width="212.627" height="57.251">
+						</rect>
+					</svg>
+					<div id="Get_Your_Signal_Code_jb">
+						<span>Get Your Signal Code</span>
+					</div>
+				</div>
+				</a>
+			</div>
+			</a>
+		</div>
+		<img id="Car_window_decal_mockup_1_1" src="assets/home/Car_window_decal_mockup_1_1.webp" srcset="assets/home/Car_window_decal_mockup_1_1.webp 1x, assets/home/Car_window_decal_mockup_1_1@2x.webp 2x" alt="Car window tint featuring the Drop App logo, illustrating branding and promotional use on vehicles.">
+	</div>
+<img id="ChillGIF_jd" src="assets/home/ChillGIF.gif" srcset="assets/home/ChillGIF.gif 1x, assets/home/ChillGIF.gif 2x" alt="Animated GIF of Aila Drop App AI customer service showcasing a friendly and responsive virtual assistant providing assistance in Egypt." loading="lazy">		
+	<div id="Group_4328">
+		<div id="Group_4084">
+			<div id="Group_3963_jg">
+				<div id="Group_540_jh">
+					<div id="Your_All-in-one_Car_App_ji">
+						<span>Your All-in-one Car App.</span>
+					</div>
+					<div id="Wash_service_repair_customize__jj">
+						<span>Wash, service, repair, customize, and much more…</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="early-access/register.html">
+		<div id="Group_4327">
+        <img id="flag_jl" src="assets/home/flag_jl.webp" srcset="assets/home/flag_jl.webp 1x, assets/home/flag_jl@2x.webp 2x" alt="Visual representation of a flag indicating early access registration for the Drop App Egypt.">
+				
+			<a href="early-access/register.html">
+			<div id="Group_569_jm">
+				<svg class="Rectangle_2886_jn">
+					<rect id="Rectangle_2886_jn" rx="20" ry="20" x="0" y="0" width="257.982" height="69.979">
+					</rect>
+				</svg>
+				<div id="Get_Early_Access_jo">
+					<span>Get Early Access!</span>
+				</div>
+			</div>
+			</a>
+		</div>
+		</a>
+	</div>
+	<div id="Group_4330">
+    <svg class="Drop_App_Button_Rectangle_3_jq">
+        <rect id="Drop_App_Button_Rectangle_3_jq" rx="20" ry="20" x="0" y="0" width="1247" height="353"></rect>
+    </svg>
+    <div id="Group_4314_jr">
+        <div id="Group_4312_js">
+            <div id="Music_made_specifically_to_enh_jt">
+                <span>Music made specifically to enhance your drive while cruising Cairo’s streets</span>
+            </div>
+            <div id="DROPFM">
+                <span>DROPFM</span>
+            </div>
+        </div>
+        <div id="Group_4313_jv">
+            <a href="https://dropfm.onrender.com/stream" target="_blank">
+                <div id="Group_569_jw">
+                    <svg class="Rectangle_2886_jx">
+                        <rect id="Rectangle_2886_jx" rx="20" ry="20" x="0" y="0" width="212.627" height="57.251"></rect>
+                    </svg>
+                    <div id="Listen_Now_jy">
+                        <span>Listen Now!</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <img id="Drop_App_Button_Rectangle_5_jz" 
+         src="https://getdrop.app/assets/AppGifs/DropFM.gif" 
+         srcset="https://getdrop.app/assets/AppGifs/DropFM.gif 1x, https://getdrop.app/assets/AppGifs/DropFM.gif 2x" 
+         alt="Animated promotional graphic for DropFM, showcasing vibrant music for cruising Cairo's streets." loading="lazy">
+</div>
+</div>

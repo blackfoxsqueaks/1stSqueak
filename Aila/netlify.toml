@@ -1,6 +1,0 @@
-[[headers]]
-  for = "/*"
-    [headers.Access-Control-Allow-Origin]
-    origin = "*"
-    [headers.Access-Control-Allow-Headers]
-    headers = "*"
