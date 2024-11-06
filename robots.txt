@@ -1,6 +1,0 @@
-# Allow all web crawlers to index the site
-User-agent: *
-Disallow:
-
-# Sitemap location
-Sitemap: https://getdrop.app/sitemap.xml
