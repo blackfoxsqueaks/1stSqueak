@@ -155,30 +155,53 @@
 		window.addEventListener("resize", loadContentBasedOnScreenSize);
 		</script>
 
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const video = document.getElementById('Drop_App_Mockup');
-		
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		// Function to check elements based on viewport size
+		const checkElements = () => {
+			const elements = ['Drop_App_Mockup', 'Drop_App_Mockup_ic', 'ChillGIF', 'ChillGIF_jd', 'PaymentGIF', 'PaymentGIF_gl']
+				.map(id => document.getElementById(id))
+				.filter(element => element !== null); // Filter out null elements
+
 			// Check if the browser supports Intersection Observer
 			if ('IntersectionObserver' in window) {
 				const observer = new IntersectionObserver((entries) => {
 					entries.forEach(entry => {
+						const element = entry.target;
 						if (entry.isIntersecting) {
-							video.play(); // Play when video enters viewport
+							element.play();
 						} else {
-							video.pause();
-							video.currentTime = 0; // Reset to beginning when it leaves
+							element.pause();
+							element.currentTime = 0;
 						}
 					});
 				});
-		
-				observer.observe(video);
+
+				// Observe each element, ensuring all are valid
+				elements.forEach(element => {
+					if (element) {
+						observer.observe(element);
+					}
+				});
 			} else {
 				// Fallback for browsers that don't support Intersection Observer
-				video.setAttribute('autoplay', 'true');
+				elements.forEach(element => {
+					if (element) {
+						element.setAttribute('autoplay', 'true');
+					}
+				});
 			}
+		};
+
+		// Initial check when the page loads
+		checkElements();
+
+		// Recheck on window resize
+		window.addEventListener('resize', () => {
+			checkElements();
 		});
-		</script>
+	});
+</script>
 	
 	<!--------------------------------------------->
 
@@ -2058,6 +2081,7 @@
 		left: 0px;
 		top: 0px;
 		overflow: visible;
+		z-index: 1;
 	}
 	#Rectangle_2980 {
 		opacity: 0.997;
@@ -2091,6 +2115,7 @@
 		font-weight: normal;
 		font-size: 18px;
 		color: rgba(255,255,255,1);
+		z-index: 2;
 	}
 	#Blog_e {
 		left: 692.978px;
@@ -2107,6 +2132,7 @@
 		font-weight: normal;
 		font-size: 18px;
 		color: rgba(255,255,255,1);
+		z-index: 2;
 	}
 	#Investor_Relations {
 		left: 816.36px;
@@ -2123,6 +2149,7 @@
 		font-weight: normal;
 		font-size: 18px;
 		color: rgba(255,255,255,1);
+		z-index: 2;
 	}
 	#Group_3972 {
 		position: absolute;
@@ -2490,6 +2517,7 @@
 		stroke-linecap: round;
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
+		z-index: 2;
 	}
 	.Line_20 {
 		overflow: visible;
@@ -2499,6 +2527,7 @@
 		left: 554.311px;
 		top: 103.5px;
 		transform: matrix(1,0,0,1,0,0);
+		z-index: 2;
 	}
 	#Drop_Logo_White_vectorized {
 		position: absolute;
@@ -2507,6 +2536,7 @@
 		left: 74px;
 		top: 63px;
 		overflow: visible;
+		z-index: 2;
 	}
 	#Group_4070 {
 		position: absolute;
@@ -2515,6 +2545,7 @@
 		left: 1054px;
 		top: 60.232px;
 		overflow: visible;
+		z-index: 2;
 	}
 	#Group_569_gc {
 		position: absolute;
@@ -3015,6 +3046,7 @@
 		left: 60px;
 		top: 681px;
 		overflow: visible;
+		z-index: 1;
 	}
 	#Drop_App_Button_Rectangle_3_hp {
 		opacity: 0.997;
@@ -3310,11 +3342,11 @@
 	}
 	#Drop_App_Mockup_ic {
 		position: absolute;
-		width: 501px;
-		height: 798px;
-		left: 865px;
-		top: 157px;
-		overflow: visible;
+        width: 841px;
+        height: 768px;
+        left: 585px;
+        top: 61px;
+        overflow: visible;
 	}
 	#Group_4214_id {
 		position: absolute;
@@ -3989,6 +4021,8 @@
 		<video id="Drop_App_Mockup" src="assets/home/Wesbite AnimationFC.mp4" poster="assets/home/video-poster.png" playsinline autoplay muted>
 			Your browser does not support the video tag.
 		</video>
+
+
 	
 		<div id="Drop_App_Header">
 			<h1 id="Your_All-in-one_Car_App">
@@ -4137,8 +4171,10 @@
 				<div id="Make_online_payments_seamlessl">
 		<span>Make online payments seamlessly or choose flexible installments within the app, ensuring a worry-free transaction every single time.</span>
 	</div>
-	<img id="PaymentGIF" src="assets/home/PaymentGIF.gif" srcset="assets/home/PaymentGIF.gif 1x, assets/home/PaymentGIF.gif 2x" alt="Animation showing seamless online payment process within the Drop App." loading="lazy">
-	</div>
+	<video id="PaymentGIF" src="assets/home/Payment.mp4" playsinline autoplay muted>
+		Your browser does not support the video tag.
+	</video>
+</div>
 	<div id="Group_4044">
 		<img id="ValU_Installments" src="assets/home/ValU_Installments.webp" srcset="assets/home/ValU_Installments.webp 1x, assets/home/ValU_Installments@2x.webp 2x" alt="ValU installments logo indicating flexible payment options.">
 		
@@ -4376,8 +4412,9 @@
 		<img id="Burger" onclick="window.location.href='side-menu.html';" src="assets/home/Burger.webp" srcset="assets/home/Burger.webp 1x, assets/home/Burger@2x.webp 2x" alt="Menu icon for accessing the side menu on Drop's website.">
 			
 		<div id="Egypt_Music_To_Drive_To_On_Dro">
-			<img id="Drop_App_Button_Rectangle_5" src="https://getdrop.app/assets/AppGifs/DropFM.gif" srcset="https://getdrop.app/assets/AppGifs/DropFM.gif 1x, https://getdrop.app/assets/AppGifs/DropFM.gif 2x" alt="Animated graphic of Drop FM, a music streaming service designed to enhance driving experiences in Cairo." loading="lazy">
-				
+			<video id="Drop_App_Button_Rectangle_5" src="assets/home/DropFM.mp4" playsinline autoplay muted loop>
+				Your browser does not support the video tag.
+			</video>
 			<div id="Group_4316">
 				<h2 id="Drop_FM">
 					<span>DROP</span><span style="font-style:normal;font-weight:normal;">FM</span>
@@ -4427,8 +4464,9 @@
 		</div>
 	</a>
 	</a>
-		<img id="ChillGIF" src="assets/home/ChillGIF.gif" srcset="assets/home/ChillGIF.gif 1x, assets/home/ChillGIF.gif 2x" alt="Animoji GIF representing Aila Drop's customer service, showcasing a friendly character to enhance user engagement in the app." loading="lazy">
-			
+			<video id="ChillGIF" src="assets/home/ChillGIF.mp4" playsinline autoplay muted>
+			Your browser does not support the video tag.
+		</video>
 	</div>
 </template>
 
@@ -4594,7 +4632,9 @@
 				<span>Make online payments seamlessly or choose flexible installments within the app, ensuring a worry-free transaction every single time.</span>
 			</div>
 		</div>
-		<img id="PaymentGIF_gl" src="assets/home/PaymentGIF.gif" srcset="assets/home/PaymentGIF.gif 1x, assets/home/PaymentGIF.gif 2x" alt="Animated GIF showcasing secure payment options and flexible installments for car services in Cairo, Egypt, via the Drop app." loading="lazy">
+		<video id="PaymentGIF_gl" src="assets/home/Payment.mp4" playsinline autoplay muted>
+			Your browser does not support the video tag.
+		</video>
 	</div>
 	<div id="Group_4077">
 		<div id="Group_4044_gn">
@@ -4760,8 +4800,9 @@
 	
 				
 		</div>
-		<img id="Drop_App_Mockup_ic" src="assets/home/Drop_App_Mockup_ic.webp" srcset="assets/home/Drop_App_Mockup_ic.webp 1x, assets/home/Drop_App_Mockup_ic@2x.webp 2x" alt="Mockup of the Drop App interface, demonstrating the user-friendly design and features for car repair services in Egypt.">
-			
+		<video id="Drop_App_Mockup_ic" src="assets/home/Wesbite AnimationFC.mp4" poster="assets/home/video-poster.png" playsinline autoplay muted>
+			Your browser does not support the video tag.
+		</video>
 		<div id="Group_4214_id">
 			<div id="Group_4202_ie">
 				<div id="Group_4194_if">
@@ -4860,8 +4901,10 @@
 			</div>
 			<img id="Car_window_decal_mockup_1_1" src="assets/home/Car_window_decal_mockup_1_1.webp" srcset="assets/home/Car_window_decal_mockup_1_1.webp 1x, assets/home/Car_window_decal_mockup_1_1@2x.webp 2x" alt="Car window tint featuring the Drop App logo, illustrating branding and promotional use on vehicles.">
 		</div>
-	<img id="ChillGIF_jd" src="assets/home/ChillGIF.gif" srcset="assets/home/ChillGIF.gif 1x, assets/home/ChillGIF.gif 2x" alt="Animated GIF of Aila Drop App AI customer service showcasing a friendly and responsive virtual assistant providing assistance in Egypt." loading="lazy">		
-		<div id="Group_4328">
+	<video id="ChillGIF_jd" src="assets/home/ChillGIF.mp4" playsinline autoplay muted>
+		Your browser does not support the video tag.
+	</video>
+	<div id="Group_4328">
 			<div id="Group_4084">
 				<div id="Group_3963_jg">
 					<div id="Group_540_jh">
@@ -4918,10 +4961,9 @@
 				</a>
 			</div>
 		</div>
-		<img id="Drop_App_Button_Rectangle_5_jz" 
-			 src="https://getdrop.app/assets/AppGifs/DropFM.gif" 
-			 srcset="https://getdrop.app/assets/AppGifs/DropFM.gif 1x, https://getdrop.app/assets/AppGifs/DropFM.gif 2x" 
-			 alt="Animated promotional graphic for DropFM, showcasing vibrant music for cruising Cairo's streets." loading="lazy">
+			 <video id="Drop_App_Button_Rectangle_5_jz" src="assets/home/DropFM.mp4" playsinline autoplay muted loop>
+				Your browser does not support the video tag.
+			</video>
 	</div>
 	</div>	
 </template>
