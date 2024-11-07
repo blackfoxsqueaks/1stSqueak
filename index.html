@@ -71,7 +71,7 @@
 
 
 <!-- Tidio -->
-<script src="//code.tidio.co/75rcymrtaeq7bigagiglidbbyy6yawo7.js" async></script>
+<script src="https://code.tidio.co/75rcymrtaeq7bigagiglidbbyy6yawo7.js" async></script>
 <!-------------------------------------->
 
 
@@ -202,6 +202,78 @@
 		});
 	});
 </script>
+
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	   // Ensure the DOM is fully loaded before trying to access the elements
+	   const scrollGroups = ['Scroll_Group_48', 'Scroll_Group_49', 'Scroll_Group_50'];
+	   const activeIntervals = {}; // Store references to active intervals
+ 
+	   // Function to start observing elements when they are in the viewport
+	   function observeScrollGroup(scrollGroup, id) {
+		  const observer = new IntersectionObserver((entries) => {
+			 entries.forEach(entry => {
+				if (entry.isIntersecting) {
+				   // Start scrolling the container when it's in the viewport
+				   if (!activeIntervals[id]) {
+					  activeIntervals[id] = autoScroll(scrollGroup, id);
+				   }
+				}
+			 });
+		  }, {
+			 threshold: 0.5 // Trigger when 50% of the element is in the viewport
+		  });
+ 
+		  // Start observing the element
+		  observer.observe(scrollGroup);
+	   }
+ 
+	   // Start observing each scroll group
+	   scrollGroups.forEach(id => {
+		  const scrollGroup = document.getElementById(id);
+		  if (scrollGroup) {
+			 observeScrollGroup(scrollGroup, id);
+		  } else {
+			 console.error(`Element with id "${id}" not found.`);
+		  }
+	   });
+ 
+	   // Function to scroll the container automatically
+	   function autoScroll(scrollGroup, id) {
+		  // Set a smooth scrolling interval with a faster speed
+		  let scrollInterval = setInterval(() => {
+			 scrollGroup.scrollLeft += 3; // Increased scroll speed (was 2px, now 3px)
+			 
+			 // When reaching the end, reset the scroll position instantly and start again
+			 if (scrollGroup.scrollLeft + scrollGroup.offsetWidth >= scrollGroup.scrollWidth) {
+				scrollGroup.scrollLeft = 0; // Reset to the start
+			 }
+		  }, 20); // Decreased interval (was 30ms, now 20ms for faster scrolling)
+ 
+		  // Stop scrolling after a certain period (e.g., 10 seconds)
+		  setTimeout(() => {
+			 clearInterval(scrollInterval);
+			 delete activeIntervals[id]; // Remove the interval reference when done
+		  }, 10000); // Stops scrolling after 10 seconds
+ 
+		  return scrollInterval; // Return the interval reference
+	   }
+ 
+	   // Resize event listener to restart scrolling on resize
+	   window.addEventListener('resize', () => {
+		  // When resizing, reset the scroll and restart the auto-scroll process for visible elements
+		  scrollGroups.forEach(id => {
+			 const scrollGroup = document.getElementById(id);
+			 if (scrollGroup && !activeIntervals[id]) {
+				observeScrollGroup(scrollGroup, id);
+			 }
+		  });
+	   });
+	});
+ </script> 
+ 
 	
 	<!--------------------------------------------->
 
