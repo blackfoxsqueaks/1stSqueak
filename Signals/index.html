@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
 
+    <link rel="prerender" href="https://getdrop.app/side-menu">
+    <iframe src="https://getdrop.app/side-menu" style="display:none;"></iframe>
+
   <title>Drop | Your All-in-One Car App</title>
   <link rel="manifest" href="manifest.json">
     <style>
@@ -55,19 +58,28 @@
 .appbar {
     width: 100%;
     text-align: center;
-    padding: 0px 0;
+    padding: 0;
     height: 40px; /* Adjust the height based on your appbar design */
     background-color: #346df8; /* Example background color */
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure appbar is on top of content */
+    z-index: 1; /* Ensure appbar is on top of content */
+}
+
+.burger-icon {
+    position: absolute; /* Position it absolutely within the appbar */
+    top: 34px;
+    left: 27px; /* Position it 10px from the left edge */
+    width: 40px; /* Adjust icon size as needed */
+    height: auto;
 }
 
 .appbar img {
     max-width: 100%;
     height: auto;
 }
+
 
 .container {
     padding: 16px;
@@ -533,6 +545,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <body>
     <!-- Appbar -->
     <div class="appbar">
+        <a href="https://getdrop.app/side-menu">
+        <img src="assets/burger.png" alt="Burger Icon" class="burger-icon">
+    </a>
         <img src="assets/DHeader.png" alt="Appbar Image">
     </div>
 
@@ -546,7 +561,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         <!-- License Number and Plate with Images -->
         <div style="position: relative; width: 100%;">
             <div style="position: relative; width: 100%; margin-top: 16px; margin-bottom: 16px; border-radius: 13px; overflow: hidden; box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);">
-                <img src="https://blackfoxsqueaks.github.io/1stSqueak/App/assets/assets/EgyptPlates.png" alt="Egypt Plates" style="width: 100%; display: block;">
+                <img src="assets/EgyptPlates.png" alt="Egypt Plates" style="width: 100%; display: block;">
                 <div id="license-number" class="plate" style="position: absolute; left: 0%; top: 40%; width: 50%; height: 60px; display: flex; justify-content: center; align-items: center; font-family: 'RidleyGroteskBold';">
                     <!-- Dynamic text loaded here -->
                 </div>
