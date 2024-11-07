@@ -159,7 +159,7 @@
 	document.addEventListener("DOMContentLoaded", () => {
 		// Function to check elements based on viewport size
 		const checkElements = () => {
-			const elements = ['Drop_App_Mockup', 'Drop_App_Mockup_ic', 'ChillGIF', 'ChillGIF_jd', 'PaymentGIF', 'PaymentGIF_gl']
+			const elements = ['Drop_App_Mockup', 'Drop_App_Mockup_ic', 'ChillGIF', 'ChillGIF_jd', 'PaymentGIF', 'PaymentGIF_gl', 'Car_Repair_Egypt', 'Car_Repair_Shop2_1']
 				.map(id => document.getElementById(id))
 				.filter(element => element !== null); // Filter out null elements
 
@@ -1692,7 +1692,7 @@
 		overflow: visible;
 	}
 	#Rectangle_2972_ea {
-		fill: url(#Rectangle_2972_ea);
+		fill: rgb(255, 255, 255);
 	}
 	.Rectangle_2972_ea {
 		filter: drop-shadow(-2px 3px 20px rgba(0, 0, 0, 0.161));
@@ -1717,7 +1717,7 @@
 		font-style: normal;
 		font-weight: bold;
 		font-size: 24px;
-		color: rgba(255,255,255,1);
+		color: black;
 		letter-spacing: -0.1px;
 	}
 	#Weve_added_the_best_workshops_ {
@@ -1734,15 +1734,15 @@
 		font-style: normal;
 		font-weight: normal;
 		font-size: 13px;
-		color: rgba(235,235,235,1);
+		color: rgb(145, 145, 145);
 	}
 	#Car_Repair_Egypt {
 		position: absolute;
-		width: 365px;
-		height: 151px;
-		left: 0px;
-		top: 249px;
-		overflow: visible;
+        width: 329px;
+        height: 142px;
+        left: 18px;
+        top: 254px;
+        overflow: hidden;
 	}
 	#Explore_Workshops_Service_Cent {
 		position: absolute;
@@ -3336,7 +3336,7 @@
 		position: absolute;
 		width: 609px;
 		height: 252px;
-		left: 624px;
+		left: 637px;
 		top: 49px;
 		overflow: visible;
 	}
@@ -4376,10 +4376,6 @@
 		</div>
 		<div id="Egypt_Top_Car_Repair_Service_C">
 			<svg class="Rectangle_2972_ea">
-				<linearGradient id="Rectangle_2972_ea" spreadMethod="pad" x1="-0.065" x2="1.058" y1="-0.101" y2="1.117">
-					<stop offset="0" stop-color="#2667ff" stop-opacity="1"></stop>
-					<stop offset="1" stop-color="#fff" stop-opacity="1"></stop>
-				</linearGradient>
 				<rect id="Rectangle_2972_ea" rx="20" ry="20" x="0" y="0" width="355" height="395">
 				</rect>
 			</svg>
@@ -4389,8 +4385,10 @@
 			<div id="Weve_added_the_best_workshops_">
 				<span>We’ve added the best workshops and service centers in Egypt. So you’ll be able to get all of your car’s needs hassle-free.</span>
 			</div>
-			<img id="Car_Repair_Egypt" src="assets/home/CarRepairShop.gif" alt="Animated GIF of a car repair shop illustrating vehicle maintenance and repair services available in Cairo, Egypt, highlighting WashDrop's expertise in car care." loading="lazy">
-				<a href="under-construction.html">
+			<video id="Car_Repair_Egypt" src="assets/home/CarRepairShop.mp4" playsinline autoplay muted>
+				Your browser does not support the video tag.
+			</video>
+			<a href="under-construction.html">
 			<div id="Explore_Workshops_Service_Cent">
 				<svg class="Rectangle_2968_ee">
 					<rect id="Rectangle_2968_ee" rx="20" ry="20" x="0" y="0" width="188" height="51.031">
@@ -4796,8 +4794,9 @@
 				</div>
 			</div>
 			</a>
-			<img id="Car_Repair_Shop2_1" src="assets/home/CarRepairShop.gif" alt="Animated GIF showcasing car repair services offered by Drop App Egypt, illustrating the expertise in automotive repair." loading="lazy">
-	
+			<video id="Car_Repair_Shop2_1" src="assets/home/CarRepairShop.mp4" playsinline autoplay muted>
+				Your browser does not support the video tag.
+			</video>
 				
 		</div>
 		<video id="Drop_App_Mockup_ic" src="assets/home/Wesbite AnimationFC.mp4" poster="assets/home/video-poster.png" playsinline autoplay muted>
