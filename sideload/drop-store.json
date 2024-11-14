@@ -1,9 +1,9 @@
 {
     "name": "Drop LLC.",
-    "subtitle": "Your All-in-One Car App.",
-    "description": "Welcome to my Drop's Repo",
+    "subtitle": "Your All-in-One Car App",
+    "description": "We're here to make car ownership simpler and more enjoyable by providing all the services you need in one app. From keeping your car clean to connecting with workshops and creating safer roads with Signals, we’re here to enhance your driving experience.",
     "iconURL": "https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png",
-    "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
+    "headerURL": "https://getdrop.app/sideload/header.png",
     "website": "https://getdrop.app",
     "tintColor": "#2667ff",
     "featuredApps": [
@@ -18,13 +18,22 @@
             "localizedDescription": "Your All-in-One Car App.",
             "iconURL": "https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png",
             "tintColor": "#2667ff",
+            "screenshots": [
+                "https://getdrop.app/sideload/screen-shots/1.webp",
+                "https://getdrop.app/sideload/screen-shots/2.webp",
+                "https://getdrop.app/sideload/screen-shots/3.webp",
+                "https://getdrop.app/sideload/screen-shots/4.webp",
+                "https://getdrop.app/sideload/screen-shots/5.webp",
+                "https://getdrop.app/sideload/screen-shots/6.webp",
+                "https://getdrop.app/sideload/screen-shots/7.webp",
+            ],
             "versions": [
                 {
-                    "version": "1.0.1",
+                    "version": "1.0.0",
                     "date": "2022-05-01T09:00:00-08:00",
                     "size": 100000000,
                     "downloadURL": "https://getdrop.app/sideload/drop_v1.0.1.ipa",
-                    "localizedDescription": "First Release.",
+                    "localizedDescription": "Drop is the all-in-one app designed for car owners, simplifying car care and enhancing your driving experience. With Drop, you get access to a variety of essential services all in one place, making car ownership more convenient, enjoyable, and efficient.",
                     "minOSVersion": "14.0"
                 },
             ],
@@ -34,9 +43,13 @@
                     "com.apple.developer.siri"
                 ],
                 "privacy": {
-                    "NSPhotoLibraryUsageDescription": "App saves photos to your Photo Library.",
-                    "NSCameraUsageDescription": "App uses camera to take photos.",
-                    "NSMicrophoneUsageDescription": "App uses microphone to record video."
+                    "NSPhotoLibraryUsageDescription": "Drop needs to access your photos to upload images.",
+                    "NSCameraUsageDescription": "Drop needs limited access to your camera.",
+                    "NSMicrophoneUsageDescription": "Drop needs to access your microphone.",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription": "Drop needs access to your location while placing orders.",
+                    "NSLocationAlwaysUsageDescription": "Drop needs access to your location while in the background to make auto-orders.",
+                    "NSLocationWhenInUseUsageDescription": "Drop needs to access your location to make orders.",
+                    "NSFileProviderDomainUsageDescription": "Drop needs to access your mic to record audio."
                 }
             }
         }
