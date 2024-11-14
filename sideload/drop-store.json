@@ -1,0 +1,46 @@
+{
+    "name": "Drop LLC.",
+    "subtitle": "Your All-in-One Car App.",
+    "description": "Welcome to my Drop's Repo",
+    "iconURL": "https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png",
+    "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
+    "website": "https://getdrop.app",
+    "tintColor": "#2667ff",
+    "featuredApps": [
+        "com.dropcarapp.dropcarapp"
+    ],
+    "apps": [
+        {
+            "name": "Drop",
+            "bundleIdentifier": "com.dropcarapp.dropcarapp",
+            "developerName": "Drop LLC.",
+            "subtitle": "Your All-in-One Car App.",
+            "localizedDescription": "Your All-in-One Car App.",
+            "iconURL": "https://getdrop.app/24_Mail_Signature/Drop_Mail_Logo.png",
+            "tintColor": "#2667ff",
+            "versions": [
+                {
+                    "version": "1.0.1",
+                    "date": "2022-05-01T09:00:00-08:00",
+                    "size": 100000000,
+                    "downloadURL": "https://getdrop.app/sideload/drop_v1.0.1.ipa",
+                    "localizedDescription": "First Release.",
+                    "minOSVersion": "14.0"
+                },
+            ],
+            "appPermissions": {
+                "entitlements": [
+                    "com.apple.security.application-groups",
+                    "com.apple.developer.siri"
+                ],
+                "privacy": {
+                    "NSPhotoLibraryUsageDescription": "App saves photos to your Photo Library.",
+                    "NSCameraUsageDescription": "App uses camera to take photos.",
+                    "NSMicrophoneUsageDescription": "App uses microphone to record video."
+                }
+            }
+        }
+    ],
+    "news": [
+    ]
+}
