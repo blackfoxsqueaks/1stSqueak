@@ -288,11 +288,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		entries.forEach(entry => {
 		  if (entry.isIntersecting) {
 			// Video is in the viewport
-			console.log("Video is in the viewport!");
 			enableScrollControl(); // Enable the scroll functionality when in view
 		  } else {
 			// Video is out of the viewport
-			console.log("Video is out of the viewport!");
 			disableScrollControl(); // Disable the scroll functionality when out of view
 		  }
 		});
@@ -332,63 +330,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	});
   </script>
 
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-	  const video = document.getElementById('Customize_Cars_in_Egypt');
-  
-	  if (!video) {
-		console.error("Video element not found!");
-		return;
-	  }
-  
-	  // Create an intersection observer to check if the video is in the viewport
-	  const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-		  if (entry.isIntersecting) {
-			// Video is in the viewport
-			console.log("Video is in the viewport!");
-			enableScrollControl(); // Enable the scroll functionality when in view
-		  } else {
-			// Video is out of the viewport
-			console.log("Video is out of the viewport!");
-			disableScrollControl(); // Disable the scroll functionality when out of view
-		  }
-		});
-	  }, { threshold: 0.8 }); // Trigger when at least 10% of the video is in view
-  
-	  // Start observing the video element
-	  observer.observe(video);
-  
-	  // Functions to handle scroll control
-	  let isScrollingEnabled = false;
-  
-	  function enableScrollControl() {
-		if (isScrollingEnabled) return; // Avoid adding multiple listeners
-		isScrollingEnabled = true;
-  
-		// Listen for the scroll event to control video playback
-		window.addEventListener('wheel', handleScroll);
-	  }
-  
-	  function disableScrollControl() {
-		if (!isScrollingEnabled) return; // Avoid removing listeners if not enabled
-		isScrollingEnabled = false;
-  
-		// Remove the scroll event listener when out of view
-		window.removeEventListener('wheel', handleScroll);
-	  }
-  
-	  function handleScroll(event) {
-		if (event.deltaY > 0) {
-		  // Scroll down, move the video forward
-		  video.currentTime += 0.2; // Advance 2 seconds
-		} else {
-		  // Scroll up, move the video backward
-		  video.currentTime -= 0.2; // Go back 2 seconds
-		}
-	  }
-	});
-  </script>
 
 
 
@@ -1431,11 +1372,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	#Customize_Cars_in_Egypt {
 		position: absolute;
-        width: 356.364px;
-        height: 188.639px;
-        left: 0px;
-        top: 154.742px;
-        overflow: visible;
+		width: 444.364px;
+		height: 188.639px;
+		left: 0px;
+		top: 154.742px;
+		overflow: visible;
 	}
 	#Scroll_Group_50 {
 		mix-blend-mode: normal;
@@ -4442,9 +4383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<img id="Customize_Cars_Egypt" src="assets/home/Customize_Cars_Egypt.webp" srcset="assets/home/Customize_Cars_Egypt.webp 1x, assets/home/Customize_Cars_Egypt@2x.webp 2x" alt="Custom car modifications and stylish upgrades available in Egypt through Drop App.">
 				</div>
 			</div>
-			<video id="Customize_Cars_in_Egypt" src="assets/home/CarCloth.mp4" playsinline muted style="clip-path: inset(0px 2px 0px 2px);">
-				Your browser does not support the video tag.
-			</video>
+			<img id="Customize_Cars_in_Egypt" src="assets/home/Customize_Cars_in_Egypt.webp" srcset="assets/home/Customize_Cars_in_Egypt.webp 1x, assets/home/Customize_Cars_in_Egypt@2x.webp 2x" alt="Diverse car customization options in Egypt offered by Drop App, showcasing modern and trendy vehicle enhancements.">
 		</div>
 		<div id="Scroll_Group_50">
 			<img id="Exhaust_Tuning_Egypt" src="assets/home/Exhaust_Tuning_Egypt.webp" srcset="assets/home/Exhaust_Tuning_Egypt.webp 1x, assets/home/Exhaust_Tuning_Egypt@2x.webp 2x" alt="High-performance exhaust tuning services in Egypt by Drop App for enhanced vehicle sound and efficiency.">
