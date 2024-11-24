@@ -40,7 +40,7 @@
             "appPermissions": {
                 "entitlements": [
                     "com.apple.security.application-groups",
-                    "com.apple.developer.siri"
+                    "com.apple.developer.siri",
                     "get-task-allow"
                 ],
                 "privacy": {
