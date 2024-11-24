@@ -41,6 +41,7 @@
                 "entitlements": [
                     "com.apple.security.application-groups",
                     "com.apple.developer.siri"
+                    "get-task-allow"
                 ],
                 "privacy": {
                     "NSPhotoLibraryUsageDescription": "Drop needs to access your photos to upload images.",
