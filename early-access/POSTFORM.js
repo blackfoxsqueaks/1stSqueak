@@ -5,7 +5,7 @@
   const forms = document.querySelectorAll('.needs-validationM');
 
   const firestore = firebase.firestore(); // Get Firestore reference
-  const usersRef = firestore.collection("EarlyAccessUsers"); // Reference to the Firestore collection
+  const usersRef = firestore.collection("earlyAccessUsers"); // Reference to the Firestore collection
 
   // Function to change the button text to a spinner
   const showSpinner = (button) => {
