@@ -265,7 +265,6 @@ function decryptString(encryptedString, key) {
 
     try {
         const decodedString = atob(encryptedString);
-        console.log('Decoded string:', decodedString);
                 
         const bytes = decodedString.split('').map(char => char.charCodeAt(0));
         const decryptedBytes = bytes.map(byte => byte ^ key);
@@ -285,7 +284,6 @@ async function getCarByID(input) {
     const allCars = carSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
     foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
-    console.log(foundCars[0].model);
 
     // Call displayCarInfo only if foundCars has elements
     if (foundCars.length > 0) {
@@ -308,10 +306,8 @@ async function getCarDocumentId(input) {
     const foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
     
     if (foundCars.length > 0) {
-      console.log('Car found:', foundCars[0].model);
       return foundCars[0].id; // Return the document ID of the found car
     } else {
-      console.log('Car not found');
       return null;
     }
   } catch (error) {
@@ -335,7 +331,6 @@ function displayCarInfo() {
     }
 
     // Set innerText and style properties
-    console.log(foundCars[0]);
     carBrandElement.innerText = foundCars[0].brand;
     carModelElement.innerText = foundCars[0].model;
     carBrandTextElement.innerText = foundCars[0].brand;
@@ -343,8 +338,8 @@ function displayCarInfo() {
     licensePlateElement.innerText = foundCars[0].licensePlate;
     sendButton.style.backgroundColor = `#${foundCars[0].color.substring(2)}`;
     sendButton.disabled = false;
-    if (foundCars[0].signalActive == true) {
-    console.log(foundCars[0].signalActive); // Log the value of signalActive
+    if (foundCars[0]['signals'].signalActive == true) {
+    console.log(`Signal is Active for ${foundCars[0].brand} ${foundCars[0].model}`);// Log the value of signalActive
     isSignalActive = true;
     } else {
         isSignalActive = false;
@@ -386,7 +381,6 @@ async function sendSignal() {
 
     if (hateSpeechDetected) {
         // Handle hate speech detection here (e.g., show a warning)
-        console.log('Handle hate speech detection.');
         alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت');
         sendButton.disabled = false;
         spinner.style.display = 'none'; // Hide the spinner
@@ -424,7 +418,7 @@ async function sendSignal() {
         sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
 
         // Show alert after everything completes
-        alert('Signal sent successfully!');
+        alert('Owner has been notified / تم إخطار صاحب المركبة');
         messageTextarea.value = '';
     } catch (error) {
         console.error('Error sending signal:', error);
@@ -497,8 +491,6 @@ async function sendNotificationRequest(carDocId, messageBody, carBrand) {
     carBrand: carBrand
   };
 
-  console.log('Sending payload:', payload); // Log payload for debugging
-
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -522,7 +514,7 @@ async function sendNotificationRequest(carDocId, messageBody, carBrand) {
       data = await response.text();
     }
 
-    console.log('Notification sent successfully:', data);
+    console.log('Notification sent successfully');
     return data; // Return response for further use if needed
   } catch (error) {
     console.error('Error sending notification:', error);
@@ -537,7 +529,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const encryptedCode = getUrlParameter('SignalCode');
     try {
         const decryptedCode = decryptString(encryptedCode, 1997);
-        console.log('Decrypted code:', decryptedCode);
         getCarByID(decryptedCode);
         const sendButton = document.getElementById('send-button');
         sendButton.addEventListener('click', sendSignal);
