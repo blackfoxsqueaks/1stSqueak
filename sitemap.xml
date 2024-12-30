@@ -1,120 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://getdrop.app/</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/early-access/register.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/investor-relations.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/blog/</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/washdrop.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/under-construction.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/index.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/privacy-policy.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/side-menu.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/blog/is-it-safe-to-wash-cars-engine.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/blog/the-ultimate-guide-exterior-car-washing.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/blog/the-ultimate-guide-interior-car-washing.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/washdrop-coverage.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/blog/index.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- created with Scrutiny from https://peacockmedia.software -->
 
-<!-- New URLs -->
-<url>
-  <loc>https://getdrop.app/egypt/carwash/new-cairo/carwash-in-new-cairo.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/nasr-city/carwash-in-nasr-city.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/mohandessin/carwash-in-mohandessin.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/maadi/carwash-in-maadi.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/heliopolis/carwash-in-heliopolis.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/6th-of-october/carwash-in-6th-of-october.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/sheikh-zayed/carwash-in-sheikh-zayed.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://getdrop.app/egypt/carwash/zamalek/carwash-in-zamalek.html</loc>
-  <lastmod>2024-11-06T19:15:47+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
+	<url>
+		<loc>https://getdrop.app</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/side-menu.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/early-access/register.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/investor-relations.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/blog/</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/washdrop.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/under-construction.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/privacy-policy.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/blog/the-ultimate-guide-exterior-car-washing.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/blog/is-it-safe-to-wash-cars-engine.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/blog/the-ultimate-guide-interior-car-washing.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/washdrop-coverage.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/new-cairo/carwash-in-new-cairo.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/nasr-city/carwash-in-nasr-city.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/mohandessin/carwash-in-mohandessin.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/maadi/carwash-in-maadi.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/heliopolis/carwash-in-heliopolis.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/6th-of-october/carwash-in-6th-of-october.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/sheikh-zayed/carwash-in-sheikh-zayed.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/egypt/carwash/zamalek/carwash-in-zamalek.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://getdrop.app/explore-workshops.html</loc>
+		<lastmod>2026-12-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
 
 </urlset>
