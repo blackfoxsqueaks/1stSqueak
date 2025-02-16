@@ -7,9 +7,9 @@ const organizationSchema = `
   "@type": "Organization",
   "name": "Drop",
   "description": "Drop - All-in-One Car App in Egypt",
-  "url": "https://getdrop.app/",
-  "logo": "https://getdrop.app/GoogleSearchImage.png",
-  "image": "https://getdrop.app/SEOimage.png",
+  "url": "https://drop-eg.com/",
+  "logo": "https://drop-eg.com/GoogleSearchImage.png",
+  "image": "https://drop-eg.com/SEOimage.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+201271152411",
@@ -63,7 +63,7 @@ const organizationSchema = `
     "Automotive startups",
     "Car detailing app"
     ],
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://getdrop.app/" }
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://drop-eg.com/" }
 }`;
 
 // Breadcrumb Schema
@@ -76,67 +76,67 @@ const breadcrumbSchema = `
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://getdrop.app/"
+      "item": "https://drop-eg.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "WashDrop",
-      "item": "https://getdrop.app/egypt/carwash/washdrop"
+      "item": "https://drop-eg.com/egypt/carwash/washdrop"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "WashDrop Coverage",
-      "item": "https://getdrop.app/egypt/carwash/washdrop-coverage"
+      "item": "https://drop-eg.com/egypt/carwash/washdrop-coverage"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Early Access Registration",
-      "item": "https://getdrop.app/early-access/register"
+      "item": "https://drop-eg.com/early-access/register"
     },
     {
       "@type": "ListItem",
       "position": 5,
       "name": "Investor Relations",
-      "item": "https://getdrop.app/investor-relations"
+      "item": "https://drop-eg.com/investor-relations"
     },
     {
       "@type": "ListItem",
       "position": 6,
       "name": "Blog",
-      "item": "https://getdrop.app/blog"
+      "item": "https://drop-eg.com/blog"
     },
     {
       "@type": "ListItem",
       "position": 7,
       "name": "Is It Safe to Wash Cars Engine?",
-      "item": "https://getdrop.app/blog/is-it-safe-to-wash-cars-engine"
+      "item": "https://drop-eg.com/blog/is-it-safe-to-wash-cars-engine"
     },
     {
       "@type": "ListItem",
       "position": 8,
       "name": "The Ultimate Guide to Exterior Car Washing",
-      "item": "https://getdrop.app/blog/the-ultimate-guide-exterior-car-washing"
+      "item": "https://drop-eg.com/blog/the-ultimate-guide-exterior-car-washing"
     },
     {
       "@type": "ListItem",
       "position": 9,
       "name": "The Ultimate Guide to Interior Car Washing",
-      "item": "https://getdrop.app/blog/the-ultimate-guide-interior-car-washing"
+      "item": "https://drop-eg.com/blog/the-ultimate-guide-interior-car-washing"
     },
     {
       "@type": "ListItem",
       "position": 10,
       "name": "Top Workshops in Egypt",
-      "item": "https://getdrop.app/under-construction"
+      "item": "https://drop-eg.com/under-construction"
     },
     {
       "@type": "ListItem",
       "position": 11,
       "name": "Navigation Menu",
-      "item": "https://getdrop.app/side-menu.html"
+      "item": "https://drop-eg.com/side-menu.html"
     }
   ]
 }`;

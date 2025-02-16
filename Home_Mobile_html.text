@@ -83,7 +83,7 @@
 					<span>Investor Relations</span>
 				</div>
 				</a>
-				<a href="https://getdrop.app/blog">
+				<a href="https://drop-eg.com/blog">
 				<div id="Blog">
 					<span>Blog</span>
 				</div>
@@ -93,7 +93,7 @@
 				</div>
 			</div>
 			<div id="Group_352">
-				<a href="https://getdrop.app/join-drop.html">
+				<a href="https://drop-eg.com/join-drop.html">
 				<div id="Join_Us">
 					<span>Join Us!</span>
 				</div>
@@ -393,7 +393,7 @@
 	<img id="Burger" onclick="window.location.href='side-menu.html';" src="assets/home/Burger.webp" srcset="assets/home/Burger.webp 1x, assets/home/Burger@2x.webp 2x" alt="Menu icon for accessing the side menu on Drop's website.">
 		
 	<div id="Egypt_Music_To_Drive_To_On_Dro">
-		<img id="Drop_App_Button_Rectangle_5" src="https://getdrop.app/assets/AppGifs/DropFM.gif" srcset="https://getdrop.app/assets/AppGifs/DropFM.gif 1x, https://getdrop.app/assets/AppGifs/DropFM.gif 2x" alt="Animated graphic of Drop FM, a music streaming service designed to enhance driving experiences in Cairo." loading="lazy">
+		<img id="Drop_App_Button_Rectangle_5" src="https://drop-eg.com/assets/AppGifs/DropFM.gif" srcset="https://drop-eg.com/assets/AppGifs/DropFM.gif 1x, https://drop-eg.com/assets/AppGifs/DropFM.gif 2x" alt="Animated graphic of Drop FM, a music streaming service designed to enhance driving experiences in Cairo." loading="lazy">
 			
 		<div id="Group_4316">
 			<h2 id="Drop_FM">

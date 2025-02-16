@@ -11,7 +11,7 @@
 		<span>Home</span>
 	</div>
 	</a>
-	<a href="https://getdrop.app/blog">
+	<a href="https://drop-eg.com/blog">
 	<div id="Blog_e">
 		<span>Blog</span>
 	</div>
@@ -34,7 +34,7 @@
 						<span>Investor Relations</span>
 					</div>
 					</a>
-					<a href="https://getdrop.app/blog">
+					<a href="https://drop-eg.com/blog">
 					<div id="Blog_fh">
 						<span>Blog</span>
 					</div>
@@ -45,7 +45,7 @@
 				</div>
 				<div id="Group_627">
 					<div id="Group_626">
-						<a href="https://getdrop.app/join-drop.html">
+						<a href="https://drop-eg.com/join-drop.html">
 						<div id="Join_Us_fl">
 							<span>Join Us!</span>
 						</div>
@@ -126,7 +126,7 @@
 		<path id="Line_20" d="M 0 0 L 71 0">
 		</path>
 	</svg>
-	<a href="https://getdrop.app">
+	<a href="https://drop-eg.com">
 	<img id="Drop_Logo_White_vectorized" src="assets/home/Drop_Logo_White_vectorized.webp" srcset="assets/home/Drop_Logo_White_vectorized.webp 1x, assets/home/Drop_Logo_White_vectorized@2x.webp 2x" alt="Vectorized white logo of Drop, representing a leading car service app in Egypt offering car washing, repair, and customization services.">
 		
 	</a>
@@ -485,8 +485,8 @@
         </div>
     </div>
     <img id="Drop_App_Button_Rectangle_5_jz" 
-         src="https://getdrop.app/assets/AppGifs/DropFM.gif" 
-         srcset="https://getdrop.app/assets/AppGifs/DropFM.gif 1x, https://getdrop.app/assets/AppGifs/DropFM.gif 2x" 
+         src="https://drop-eg.com/assets/AppGifs/DropFM.gif" 
+         srcset="https://drop-eg.com/assets/AppGifs/DropFM.gif 1x, https://drop-eg.com/assets/AppGifs/DropFM.gif 2x" 
          alt="Animated promotional graphic for DropFM, showcasing vibrant music for cruising Cairo's streets." loading="lazy">
 </div>
 </div>
