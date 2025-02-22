@@ -1,91 +1,72 @@
 (() => {
   'use strict';
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validationD');
+  // Get form and elements
+  const form = document.querySelector('.needs-validationD');
+  const button = document.getElementById('button_DD'); // Submit button
 
-  const firestore = firebase.firestore(); // Get Firestore reference
-  const usersRef = firestore.collection("earlyAccessUsers"); // Reference to the Firestore collection
-
-  // Function to change the button text to a spinner
-  const showSpinner = (button) => {
+  // Function to show spinner
+  const showSpinner = () => {
     button.innerHTML = 'Submitting...';
-    button.disabled = true; // Optionally disable the button to prevent multiple clicks
+    button.disabled = true;
   };
 
-  // Function to check for existing user
-  const checkUserExists = (email, phone) => {
-    return usersRef.where("email", "==", email).get().then(emailSnapshot => {
-      if (!emailSnapshot.empty) {
-        // Email exists, return true
-        return true;
-      }
-      // Check for phone
-      return usersRef.where("phone", "==", phone).get().then(phoneSnapshot => {
-        return !phoneSnapshot.empty; // Return true if phone exists
-      });
-    });
+  // Function to restore button text
+  const restoreButton = () => {
+    button.innerHTML = 'Submit';
+    button.disabled = false;
   };
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-
-      const firstName_D = document.getElementById('validationCustom10').value;
-      const lastName_D = document.getElementById('validationCustom11').value;
-      const area_D = document.getElementById('validationCustom12').value;
-      const email_D = document.getElementById('validationCustom13').value;
-      const phone_D = document.getElementById('validationCustom14').value;
-      const newUser_D = { 
-        firstName: firstName_D, 
-        lastName: lastName_D, 
-        area: area_D, 
-        email: email_D, 
-        phone: phone_D 
-      };
-
-      // Prevent form submission if it is invalid
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      } else {
-        event.preventDefault();
-        
-        // Check if user with the same email or phone exists
-        checkUserExists(email_D, phone_D).then(userExists => {
-          if (userExists) {
-            // Show a popup alert that the user is already registered
-            alert("You are already registered with this email or phone number.");
-          } else {
-            const button_DD = document.getElementById('button_DD'); // Get the button element
-            showSpinner(button_DD); // Change the button text to "Submitting..."
-
-            // Save to Firestore and then send to Retool
-            usersRef.add(newUser_D)
-              .then(() => {
-                console.log('User saved to Firestore successfully.');
-                return fetch('https://drop-server.vercel.app/api/earlyAccessForm', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json; charset=utf-8'
-                  },
-                  body: JSON.stringify(newUser_D), // Send the same user data to Retool
-                });
-              })
-              .then(response => response.text())
-              .then(result => {
-                console.log('Form submitted to retool:', result);
-                // Redirect to the completion page regardless of success or failure
-                window.location.href = "early-access-form-complete.html";
-              })
-              .catch(error => {
-                console.error('Error submitting form:', error);
-              });
-          }
-        });
-      }
-
+  // Form submit event
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    if (!form.checkValidity()) {
       form.classList.add('was-validated');
-    }, false);
+      return;
+    }
+
+    // Get form values
+    const firstName = document.getElementById('validationCustom10').value;
+    const lastName = document.getElementById('validationCustom11').value;
+    const area = document.getElementById('validationCustom12').value;
+    const email = document.getElementById('validationCustom13').value;
+    const phone = document.getElementById('validationCustom14').value;
+
+    const userData = { firstName, lastName, area, email, phone };
+
+    // Show spinner on button
+    showSpinner();
+
+    // Send request to Vercel function
+    fetch('https://drop-server.vercel.app/api/earlyAccessForm', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(userData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        if (data.error === "User already registered") {
+          alert("You are already registered with this email or phone number.");
+        } else {
+          alert("An error occurred. Please try again in a few.");
+        }
+      } else {
+        console.log('Form submitted successfully:', data.message);
+        window.location.href = "early-access-form-complete.html"; // Redirect on success
+      }
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      alert("An error occurred. Please try again in a few.");
+    })
+    .finally(() => {
+      restoreButton();
+    });
+
+    form.classList.add('was-validated');
   });
 })();
