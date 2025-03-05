@@ -7,13 +7,13 @@
     "website": "https://drop-eg.com",
     "tintColor": "#2667ff",
     "featuredApps": [
-        "com.dropcarapp.dropcarapp",
+        "com.dropllc.dropapp",
         "com.dropappegypt.anadrop.anaDrop"
     ],
     "apps": [
         {
             "name": "Drop",
-            "bundleIdentifier": "com.dropcarapp.dropcarapp",
+            "bundleIdentifier": "com.dropllc.dropapp",
             "developerName": "Drop LLC.",
             "subtitle": "Your All-in-One Car App.",
             "localizedDescription": "Your All-in-One Car App.",
