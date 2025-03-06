@@ -125,24 +125,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="view-settings.js"></script>
 <script src="no-zoom.js"></script>
 <script>
-    function redirectUser() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-        setTimeout(function() {
+    window.onload = function () {
+        setTimeout(function () {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             let url = "https://app.drop-eg.com"; // Default for desktop
-            
+
             if (/android/i.test(userAgent)) {
                 url = "https://play.google.com/store/apps/details?id=com.dropappegypt.dropapplication&hl=en";
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 url = "https://app.drop-eg.com";
             }
 
-            window.open(url, "_blank"); // Open in new tab
-        }, 800); // 3-second delay
-    }
-
-    window.onload = redirectUser;
+            let newTab = window.open(); // Open a new blank tab first
+            if (newTab) {
+                newTab.location.href = url; // Redirect the new tab
+            } else {
+                // Fallback in case popup blocking happens
+                window.location.href = url;
+            }
+        }, 1100); // Small delay to ensure page is fully loaded
+    };
 </script>
+
 
 <script>
     function openApp() {
