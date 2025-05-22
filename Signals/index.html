@@ -3,15 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Drop | Send a Signal</title>
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="60x60" href="https://drop-eg.com/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://drop-eg.com/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://drop-eg.com/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://drop-eg.com/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://drop-eg.com/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://drop-eg.com/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://drop-eg.com/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://drop-eg.com/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://drop-eg.com/icons/safari-pinned-tab.svg" color="#2667ff">
+    <link rel="shortcut icon" href="https://drop-eg.com/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://drop-eg.com/icons/browserconfig.xml">
+
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Drop App">
+    <meta property="og:url" content="https://drop-eg.com">
+    <meta property="og:title" content="Drop: Your All-In-One Car App in Egypt for Car Wash, Repairs, & More...">
+    <meta property="og:description" content="Experience a seamless car ownership in Egypt! Enjoy car washes right at home with WashDrop in areas like New Cairo, Maadi, Madinaty, and beyond. Easily book appointments for repairs, maintenance, and customizations at top-notch car workshops and automotive service centers in Egypt. Plus, explore exciting features like Signals for seamless peer-to-peer communication and DropFM for music streaming while cruising through Cairo's streets. Whether you need a quick wash or comprehensive car services, Drop App is your ultimate solution for all your car needs in Egypt!">
+    <meta property="og:image" content="open-graph/open-graph-banner.png">
+    <meta property="og:logo" content="open-graph/drop-app-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+
+<!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Drop: Your All-In-One Car App in Egypt for Car Wash, Repairs, & More...">
+    <meta name="twitter:description" content="Experience a seamless car ownership in Egypt! Enjoy car washes right at home with WashDrop in areas like New Cairo, Maadi, Madinaty, and beyond. Easily book appointments for repairs, maintenance, and customizations at top-notch car workshops and automotive service centers in Egypt. Plus, explore exciting features like Signals for seamless peer-to-peer communication and DropFM for music streaming while cruising through Cairo's streets. Whether you need a quick wash or comprehensive car services, Drop App is your ultimate solution for all your car needs in Egypt!">
+    <meta name="twitter:image" content="open-graph/open-graph-banner.png">
+
+<!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Drop App">
+    <meta itemprop="description" content="Experience a seamless car ownership in Egypt! Enjoy car washes right at home with WashDrop in areas like New Cairo, Maadi, Madinaty, and beyond. Easily book appointments for repairs, maintenance, and customizations at top-notch car workshops and automotive service centers in Egypt. Plus, explore exciting features like Signals for seamless peer-to-peer communication and DropFM for music streaming while cruising through Cairo's streets. Whether you need a quick wash or comprehensive car services, Drop App is your ultimate solution for all your car needs in Egypt!">
+    <meta itemprop="image" content="open-graph/open-graph-banner.png">
+
+
+
+
     <!-- Theme Color -->
-  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
+
 
     <link rel="prerender" href="https://drop-eg.com/side-menu">
     <iframe src="https://drop-eg.com/side-menu" style="display:none;"></iframe>
 
-  <title>Drop | Your All-in-One Car App</title>
-  <link rel="manifest" href="manifest.json">
     <style>
 
 ::-webkit-scrollbar {
@@ -42,6 +86,13 @@
 @font-face {
   font-family: 'HacenMaghrebBold';
   src: url("fonts/Hacen_Maghreb_Bold.woff") format("truetype");
+    font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HacenMaghrebRegular';
+  src: url("https://drop-eg.com/fonts/Hacen_Lt.woff") format("truetype");
     font-weight: normal;
   font-style: normal;
 }
@@ -81,6 +132,13 @@
 }
 
 
+a {
+    text-decoration: none;
+}
+
+
+
+
 .container {
     padding: 16px;
     padding-top: 80px; /* Height of the appbar + additional padding */
@@ -97,8 +155,15 @@
         .subheader {
             font-size: 14px;
             color: grey;
-            margin-bottom: 16px;
+            margin-top: 4px;
+            margin-bottom: 6px;
             font-family: 'RidleyGroteskRegular';
+        }
+        .subheaderـar {
+            font-size: 14px;
+            color: grey;
+            margin-bottom: 16px;
+            font-family: 'HacenMaghrebRegular';
         }
 
         .arabic-text {
@@ -333,16 +398,16 @@ function displayCarInfo() {
     // Set innerText and style properties
     carBrandElement.innerText = foundCars[0].brand;
     carModelElement.innerText = foundCars[0].model;
-    carBrandTextElement.innerText = foundCars[0].brand;
     licenseNumberElement.innerText = foundCars[0].licenseNumber;
     licensePlateElement.innerText = foundCars[0].licensePlate;
     sendButton.style.backgroundColor = `#${foundCars[0].color.substring(2)}`;
     sendButton.disabled = false;
-    if (foundCars[0]['signals'].signalActive == true) {
+    if (foundCars[0].signalActive == true) {
     console.log(`Signal is Active for ${foundCars[0].brand} ${foundCars[0].model}`);// Log the value of signalActive
     isSignalActive = true;
     } else {
         isSignalActive = false;
+        console.log(`Signal is NOT Active for ${foundCars[0].brand} ${foundCars[0].model}`);// Log the value of signalActive
     }
 
 }
@@ -405,7 +470,7 @@ async function sendSignal() {
         const decryptedCode = decryptString(encryptedCode, 1997);
         const carDocId = await getCarDocumentId(decryptedCode); // Wait for this to complete
         if (carDocId) {
-            await sendNotificationRequest(carDocId, message, carBrand); // Wait for notification to be sent
+            await sendNotificationRequest(carDocId, message, carBrand, foundCars[0].brandImage); // Wait for notification to be sent
             console.log(`Owner of this ${carBrand} has been notified`);
         } else {
             console.log('This car was not found');
@@ -482,14 +547,17 @@ async function detectHateSpeech(text) {
 
 
 
-async function sendNotificationRequest(carDocId, messageBody, carBrand) {
+async function sendNotificationRequest(carDocId, messageBody, carBrand, imgUrl) {
   const url = 'https://signals-notifications.vercel.app/send-notification';
 
   const payload = {
     carDocId: carDocId,
-    messageBody: messageBody,  // Correct field name
-    carBrand: carBrand
+    messageBody: messageBody,
+    carBrand: carBrand,
+    imageUrl: imgUrl
   };
+
+  console.log(payload);
 
   try {
     const response = await fetch(url, {
@@ -515,10 +583,10 @@ async function sendNotificationRequest(carDocId, messageBody, carBrand) {
     }
 
     console.log('Notification sent successfully');
-    return data; // Return response for further use if needed
+    return data;
   } catch (error) {
     console.error('Error sending notification:', error);
-    throw error; // Re-throw to handle it upstream if needed
+    throw error;
   }
 }
 
@@ -555,7 +623,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <!-- Your content here -->
         <div class="header">Send a Signal / <span class="arabic-text">إبعت إشارة</span></div>
-        <div class="subheader">Message the owner of this <span id="car-brand"></span></div>
+        <div class="subheader">Message the owner of this vehicle</div>
+        <div class="subheaderـar">ابعت رسالة لصاحب المركبة</div>
         <div class="card" id="car-brand-card"></div>
         <div class="card" id="car-model-card"></div>
 
@@ -582,6 +651,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </svg>
             </span>
         </button>
+        <a href="https://drop-eg.com/download" target="_blank" rel="noopener noreferrer">
+    <button id="download-button" class="button">
+        <span class="text-container">
+            <span class="english-text">Need a Similar Code? / </span>
+            <br>
+            <span class="arabic-text-button">عايز كود زي دة؟</span>
+        </span>
+    </button>
+</a>
+
             </div>
 </body>
 </html>
