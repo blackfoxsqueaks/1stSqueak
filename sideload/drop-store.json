@@ -54,50 +54,6 @@
                     "NSFileProviderDomainUsageDescription": "Drop needs to access your mic to record audio."
                 }
             }
-        },
-        {
-            "name": "Ana Drop",
-            "bundleIdentifier": "com.dropappegypt.anadrop.anaDrop",
-            "developerName": "Drop LLC.",
-            "subtitle": "Drop's Internal Management App.",
-            "localizedDescription": "Drop's Internal Management App.",
-            "iconURL": "https://drop-eg.com/24_Mail_Signature/Ana_Drop_Logo.png",
-            "tintColor": "#2667ff",
-            "screenshots": [
-                "https://drop-eg.com/sideload/screen-shots/1.webp",
-                "https://drop-eg.com/sideload/screen-shots/2.webp",
-                "https://drop-eg.com/sideload/screen-shots/3.webp",
-                "https://drop-eg.com/sideload/screen-shots/4.webp",
-                "https://drop-eg.com/sideload/screen-shots/5.webp",
-                "https://drop-eg.com/sideload/screen-shots/6.webp",
-                "https://drop-eg.com/sideload/screen-shots/7.webp",
-            ],
-            "versions": [
-                {
-                    "version": "1.0.0",
-                    "date": "2024-11-15T00:03:54+0200",
-                    "size": 36200000,
-                    "downloadURL": "https://drop-eg.com/sideload/AnaDrop.ipa",
-                    "localizedDescription": "Drop is the all-in-one app designed for car owners, simplifying car care and enhancing your driving experience. With Drop, you get access to a variety of essential services all in one place, making car ownership more convenient, enjoyable, and efficient.",
-                    "minOSVersion": "14.0"
-                },
-            ],
-            "appPermissions": {
-                "entitlements": [
-                    "com.apple.security.application-groups",
-                    "com.apple.developer.siri",
-                    "get-task-allow"
-                ],
-                "privacy": {
-                    "NSPhotoLibraryUsageDescription": "Drop needs to access your photos to upload images.",
-                    "NSCameraUsageDescription": "Drop needs limited access to your camera.",
-                    "NSMicrophoneUsageDescription": "Drop needs to access your microphone.",
-                    "NSLocationAlwaysAndWhenInUseUsageDescription": "Drop needs access to your location while placing orders.",
-                    "NSLocationAlwaysUsageDescription": "Drop needs access to your location while in the background to make auto-orders.",
-                    "NSLocationWhenInUseUsageDescription": "Drop needs to access your location to make orders.",
-                    "NSFileProviderDomainUsageDescription": "Drop needs to access your mic to record audio."
-                }
-            }
         }
     ],
     "news": [
