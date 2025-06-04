@@ -71,12 +71,8 @@
 
   <script>
   function getUrlParameter(name) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    const regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
-    const results = regex.exec(window.location.href);
-    if (!results) return null;
-    if (!results[1]) return '';
-    return decodeURIComponent(results[1].replace(/\+/g, ' '));
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
   }
 
   function redirectToErrorPage() {
@@ -86,16 +82,18 @@
   function handleRedirection() {
     const code = getUrlParameter('code');
     if (code && code.length > 0) {
-      // Point to your locally-running Flask endpoint
-      const backendBase = "https://tny-drop.vercel.app/";
+      const backendBase = "https://tny-drop.vercel.app";
       window.location.replace(`${backendBase}/resolve/${encodeURIComponent(code)}`);
     } else {
       redirectToErrorPage();
     }
   }
 
-  window.onload = handleRedirection;
+  window.onload = () => {
+    setTimeout(handleRedirection, 0);
+  };
 </script>
+
 
 </body>
 </html>
