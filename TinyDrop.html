@@ -1,154 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> <!-- Moved the defer attribute from this script -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> <!-- Moved the defer attribute from this script -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> <!-- Moved the defer attribute from this script -->
-
-<script>
-    
-    const firebaseConfig = {
-    apiKey: "AIzaSyC8IsZptSyWHhRiCzeLXgMBHq-swjKHtb0",
-    authDomain: "ana-drop-9fb07.firebaseapp.com",
-    projectId: "ana-drop-9fb07",
-    storageBucket: "ana-drop-9fb07.appspot.com",
-    messagingSenderId: "650617518921",
-    appId: "1:650617518921:web:e9fcd3e6c86cd4d619f898",
-    measurementId: "G-513YS88V2G"
-};
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-</script>
-
-<style>
-        @font-face {
-  font-family: 'Ridley Grotesk';
-  src: url("fonts/Ridley_Grotesk_Bold.woff") format("truetype");
-    font-weight: Bold;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Ridley Grotesk';
-  src: url("fonts/Ridley_Grotesk_Medium.woff") format("truetype");
-    font-weight: Medium;
-  font-style: normal;
-}
-</style>
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinyDrop</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TinyDrop</title>
 
-        #header {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+  <style>
+    @font-face {
+      font-family: 'Ridley Grotesk';
+      src: url("fonts/Ridley_Grotesk_Bold.woff") format("truetype");
+      font-weight: Bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Ridley Grotesk';
+      src: url("fonts/Ridley_Grotesk_Medium.woff") format("truetype");
+      font-weight: Medium;
+      font-style: normal;
+    }
 
-        #redirectMessage {
-            text-align: center;
-            margin-top: 80px;
-            font-size: 24px;
-            color: #333;
-            font-family: 'Ridley Grotesk';
-            font-weight: bold;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
 
-        #redirectSubMessage {
-            text-align: center;
-            margin-top: 8px;
-            font-size: 18px;
-            color: #333;
-            font-family: 'Ridley Grotesk';
-            font-weight: medium;
-        }
+    #header {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-        @media only screen and (max-width: 768px) {
-            /* For mobile devices */
-            #header {
-                height: 150px; /* Adjust height as needed */
-                background-image: url('Header.png');
-            }
-        }
+    #redirectMessage {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 24px;
+      color: #333;
+      font-family: 'Ridley Grotesk';
+      font-weight: bold;
+    }
 
-        @media only screen and (min-width: 769px) {
-            /* For desktop and tablet devices */
-            #header {
-                height: 280px; /* Adjust height as needed */
-                background-image: url('WebHeader.png');
-            }
-        }
+    #redirectSubMessage {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 18px;
+      color: #333;
+      font-family: 'Ridley Grotesk';
+      font-weight: medium;
+    }
 
-    </style>
+    @media only screen and (max-width: 768px) {
+      #header {
+        height: 150px;
+        background-image: url('https://drop-eg.com/assets/tinyDrop/Header.png');
+      }
+    }
+    @media only screen and (min-width: 769px) {
+      #header {
+        height: 280px;
+        background-image: url('https://drop-eg.com/assets/tinyDrop/WebHeader.png');
+      }
+    }
+  </style>
 </head>
-
 <body>
-<script>
-    // Function to get URL parameter by name
-    function getUrlParameter(name) {
-        name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        var results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    };
 
-    // Function to fetch data from Firestore
-    function fetchFromFirestore(code) {
-        // Assume you have Firebase initialized
-        var db = firebase.firestore();
-        db.collection("tinyDrop").doc(code).get().then(function(doc) {
-            if (doc.exists) {
-                var longUrl = doc.data().long_url;
-                window.location.replace(longUrl); // Redirect immediately
-            } else {
-                console.log("No such document!");
-                // Handle error or redirect to an error page
-                redirectToErrorPage();
-            }
-        }).catch(function(error) {
-            console.log("Error getting document:", error);
-            // Handle error or redirect to an error page
-            redirectToErrorPage();
-        });
+  <div id="header"></div>
+  <div id="redirectMessage">Preparing Your Link...</div>
+
+  <script>
+  function getUrlParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
+    const results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[1]) return '';
+    return decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  function redirectToErrorPage() {
+    window.location.replace("404.html");
+  }
+
+  function handleRedirection() {
+    const code = getUrlParameter('code');
+    if (code && code.length > 0) {
+      // Point to your locally-running Flask endpoint
+      const backendBase = "https://tny-drop.vercel.app/";
+      window.location.replace(`${backendBase}/resolve/${encodeURIComponent(code)}`);
+    } else {
+      redirectToErrorPage();
     }
+  }
 
-    // Function to redirect to an error page
-    function redirectToErrorPage() {
-        // Redirect to an error page
-        window.location.replace("404.html");
-    }
-
-    // Main function to handle redirection
-    function handleRedirection() {
-        var code = getUrlParameter('code');
-        if (code !== '') {
-            fetchFromFirestore(code);
-        } else {
-            redirectToErrorPage();
-        }
-    }
-
-    // Call the main function when the page loads
-    window.onload = handleRedirection;
+  window.onload = handleRedirection;
 </script>
 
 </body>
-
 </html>

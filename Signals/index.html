@@ -286,33 +286,13 @@ a {
         }
     </style>
     <!-- Firebase App (the core Firebase SDK) -->
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-        import { getFirestore, collection, doc, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
-        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+<script type="module">
+  let encryptedCode = null;    // holds the “SignalCode” param
+  let foundCar = null;         // will store the car object returned by /get_car
+  let isSignalActive = false;  // tracks whether we can send a signal
 
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew",
-  authDomain: "dropapp-ede3c.firebaseapp.com",
-  projectId: "dropapp-ede3c",
-  storageBucket: "dropapp-ede3c.appspot.com",
-  messagingSenderId: "1072229363531",
-  appId: "1:1072229363531:web:fcfd2ee6e78ee59566c2ce",
-  measurementId: "G-QREVZK8BY6"
-        };
-
-        // Initialize Firebase
-        // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-let UID = '';
-let foundCars = [];
-let isSignalActive = true;
-
-function getUrlParameter(name) {
+  //─────────────────────────────────────────────────────────────────────────
+  function getUrlParameter(name) {
     name = name.replace(/[\[\]]/g, '\\$&');
     const regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
     const results = regex.exec(window.location.href);
@@ -323,289 +303,178 @@ function getUrlParameter(name) {
     return decodeURIComponent(results[1].replace(' ', /\+/g));
 }
 
-function decryptString(encryptedString, key) {
-    if (!encryptedString) {
-        throw new Error('Encrypted string is empty.');
-    }
-
+  //─────────────────────────────────────────────────────────────────────────
+  async function getCarByID(encryptedCode) {
     try {
-        const decodedString = atob(encryptedString);
-                
-        const bytes = decodedString.split('').map(char => char.charCodeAt(0));
-        const decryptedBytes = bytes.map(byte => byte ^ key);
-        return new TextDecoder().decode(new Uint8Array(decryptedBytes));
-    } catch (error) {
-        console.error('Failed to decode string:', error);
-        throw new Error('Failed to decode string.');
+      const resp = await fetch('https://signals-api-xi.vercel.app/get_car', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ encryptedCode }),
+      });
+      if (!resp.ok) {
+        console.error('get_car returned status', resp.status);
+        alert('Car not found or invalid SignalCode.');
+        return;
+      }
+      const carData = await resp.json();
+      /*
+        carData has:
+          {
+            carDocId: "...",
+            brand: "...",
+            model: "...",
+            licenseNumber: "...",
+            licensePlate: "...",
+            color: "0xFFaabbcc",
+            signalActive: true|false,
+            brandImage: "... or null"
+          }
+      */
+      foundCar = carData;
+      displayCarInfo();
+    } catch (e) {
+      console.error('Network error in getCarByID:', e);
+      alert('Unable to fetch car info.');
     }
-}
-
-async function getCarByID(input) {
-    const parts = input.split(', ');
-    const uid = parts[0];
-    const licenseNumber = parts[1];
-
-    const carSnapshot = await getDocs(collection(db, 'users', uid, 'cars'));
-    const allCars = carSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-    foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
-
-    // Call displayCarInfo only if foundCars has elements
-    if (foundCars.length > 0) {
-        UID = uid;
-        displayCarInfo();
-    } else {
-        console.log('Car not found');
-    }
-}
-
-async function getCarDocumentId(input) {
-  const parts = input.split(', ');
-  const uid = parts[0];
-  const licenseNumber = parts[1];
-
-  try {
-    const carSnapshot = await getDocs(collection(db, 'users', uid, 'cars'));
-    const allCars = carSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-    const foundCars = allCars.filter(car => car.licenseNumber === licenseNumber);
-    
-    if (foundCars.length > 0) {
-      return foundCars[0].id; // Return the document ID of the found car
-    } else {
-      return null;
-    }
-  } catch (error) {
-    console.error('Error getting car document:', error);
-    throw error;
   }
-}
 
-function displayCarInfo() {
-    // Ensure elements exist before accessing them
-    const carBrandElement = document.getElementById('car-brand-card');
-    const carBrandTextElement = document.getElementById('car-brand');
-    const carModelElement = document.getElementById('car-model-card');
-    const licenseNumberElement = document.getElementById('license-number');
-    const licensePlateElement = document.getElementById('license-plate');
-    const sendButton = document.getElementById('send-button');
+  //─────────────────────────────────────────────────────────────────────────
+  function displayCarInfo() {
+    const carBrandElement   = document.getElementById('car-brand-card');
+    const carModelElement   = document.getElementById('car-model-card');
+    const licenseNumberElem = document.getElementById('license-number');
+    const licensePlateElem  = document.getElementById('license-plate');
+    const sendButton        = document.getElementById('send-button');
 
-    if (!carBrandElement || !carModelElement || !licenseNumberElement || !licensePlateElement || !sendButton) {
-        console.error('One or more required elements not found.');
-        return;
+    if (
+      !carBrandElement ||
+      !carModelElement ||
+      !licenseNumberElem ||
+      !licensePlateElem ||
+      !sendButton
+    ) {
+      console.error('One or more required elements not found.');
+      return;
     }
 
-    // Set innerText and style properties
-    carBrandElement.innerText = foundCars[0].brand;
-    carModelElement.innerText = foundCars[0].model;
-    licenseNumberElement.innerText = foundCars[0].licenseNumber;
-    licensePlateElement.innerText = foundCars[0].licensePlate;
-    sendButton.style.backgroundColor = `#${foundCars[0].color.substring(2)}`;
-    sendButton.disabled = false;
-    if (foundCars[0].signalActive == true) {
-    console.log(`Signal is Active for ${foundCars[0].brand} ${foundCars[0].model}`);// Log the value of signalActive
-    isSignalActive = true;
+    // Populate fields from foundCar
+    carBrandElement.innerText   = foundCar.brand;
+    carModelElement.innerText   = foundCar.model;
+    licenseNumberElem.innerText = foundCar.licenseNumber;
+    licensePlateElem.innerText  = foundCar.licensePlate;
+
+    if (typeof foundCar.color === "string") {
+  let raw = foundCar.color;
+
+  // Case 1: starts with "0x" and is 10 chars long (e.g. "0xFFaabbcc")
+  if (raw.startsWith("0x") && raw.length === 10) {
+    // skip "0xFF", keep the last 6 chars
+    raw = raw.slice(4); 
+  }
+  // Case 2: exactly 8 hex chars (e.g. "ffFFBE01")
+  else if (/^[0-9A-Fa-f]{8}$/.test(raw)) {
+    // skip the first 2 chars (alpha), keep the last 6
+    raw = raw.slice(2);
+  }
+  // Otherwise, fall back to using the entire string (may not be a valid 6-digit color)
+  
+  // Now `raw` should be exactly 6 hex digits (e.g. "aabbcc" or "FFBE01")
+  document
+    .getElementById("send-button")
+    .style.setProperty("background-color", `#${raw}`);
+}
+
+
+    // Enable or disable the Send button based on signalActive
+    if (foundCar.signalActive === true) {
+      isSignalActive = true;
+      sendButton.disabled = false;
+      console.log(`Signal is Active for ${foundCar.brand} ${foundCar.model}`);
     } else {
-        isSignalActive = false;
-        console.log(`Signal is NOT Active for ${foundCars[0].brand} ${foundCars[0].model}`);// Log the value of signalActive
+      isSignalActive = false;
+      sendButton.disabled = true;
+      console.log(`Signal is NOT Active for ${foundCar.brand} ${foundCar.model}`);
+      alert(`Signals are not active for this ${foundCar.brand} / صاحب المركبة مفعلش الكود`);
+    }
+  }
+
+  //─────────────────────────────────────────────────────────────────────────
+  async function sendSignal(encryptedCode) {
+    if (!foundCar) {
+      alert('No car selected.');
+      return;
     }
 
-}
-
-
-async function sendSignal() {
-    const message = document.getElementById('message').value;
-    const carBrand = document.getElementById('car-brand-card').innerText;
-    const sendButton = document.getElementById('send-button');
-    const spinner = document.querySelector('.spinner');
-    const messageTextarea = document.getElementById('message'); // Reference to the textarea element
-    const date = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString('en-GB').replace(/:/g, '');
-
-    if (isSignalActive==false){
-        alert(`Signals is not active for this ${carBrand} / صاحب المركبة مفعلش الكود الخص بالمركبة دي`);
-        return;
-    }
-
-    sendButton.disabled = true;
-    spinner.style.display = 'inline-block'; // Show the spinner
-    sendButton.querySelector('.english-text').style.display = 'none'; // Hide English text
-    sendButton.querySelector('.arabic-text-button').style.display = 'none'; // Hide Arabic text
-
+    const messageTextarea = document.getElementById('message');
+    const message = messageTextarea.value.trim();
     if (!message) {
-        alert('Your message is empty.');
-        sendButton.disabled = false;
-        spinner.style.display = 'none'; // Hide the spinner
-        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
-        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
-        return;
+      alert('Your message is empty.');
+      return;
     }
 
-    // Detect hate speech
-    const hateSpeechDetected = await detectHateSpeech(message);
-
-    if (hateSpeechDetected) {
-        // Handle hate speech detection here (e.g., show a warning)
-        alert('Please use appropriate language / استخدم لغة أقل حدة، لو سمحت');
-        sendButton.disabled = false;
-        spinner.style.display = 'none'; // Hide the spinner
-        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
-        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
-        return;
+    if (!isSignalActive) {
+      alert(`Cannot send: signal not active for this ${foundCar.brand}.`);
+      return;
     }
+
+    const sendButton = document.getElementById('send-button');
+    const spinner    = document.querySelector('.spinner');
+
+    // Disable UI while request is in flight
+    sendButton.disabled = true;
+    spinner.style.display = 'inline-block';
+    sendButton.querySelector('.english-text').style.display = 'none';
+    sendButton.querySelector('.arabic-text-button').style.display = 'none';
 
     try {
-        await addDoc(collection(db, 'dropSignals'), {
-            uid: UID,
-            signalTitle: message,
-            signalID: `${date}_${time}`,
-            date,
-            time
-        });
-
-        document.getElementById('message').value = '';
-
-        // Send Notification
-        const encryptedCode = getUrlParameter('SignalCode');
-        const decryptedCode = decryptString(encryptedCode, 1997);
-        const carDocId = await getCarDocumentId(decryptedCode); // Wait for this to complete
-        if (carDocId) {
-            await sendNotificationRequest(carDocId, message, carBrand, foundCars[0].brandImage); // Wait for notification to be sent
-            console.log(`Owner of this ${carBrand} has been notified`);
-        } else {
-            console.log('This car was not found');
-        }
-
-        // Re-enable button
-        sendButton.disabled = false;
-        spinner.style.display = 'none'; // Hide the spinner
-        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
-        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
-
-        // Show alert after everything completes
+      const resp = await fetch('https://signals-api-xi.vercel.app/send_signal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ encryptedCode, message }),
+      });
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        alert(err.error || 'Error sending signal');
+      } else {
+        const result = await resp.json();
+        console.log('Signal sent:', result.signalID);
         alert('Owner has been notified / تم إخطار صاحب المركبة');
         messageTextarea.value = '';
-    } catch (error) {
-        console.error('Error sending signal:', error);
-        alert('Error sending signal.');
-        sendButton.disabled = false;
-        spinner.style.display = 'none'; // Hide the spinner
-        sendButton.querySelector('.english-text').style.display = 'inline'; // Show English text
-        sendButton.querySelector('.arabic-text-button').style.display = 'inline'; // Show Arabic text
+      }
+    } catch (e) {
+      console.error('Network error in sendSignal:', e);
+      alert('Unable to send signal.');
+    } finally {
+      // Re‐enable UI
+      sendButton.disabled = false;
+      spinner.style.display = 'none';
+      sendButton.querySelector('.english-text').style.display = 'inline';
+      sendButton.querySelector('.arabic-text-button').style.display = 'inline';
     }
-}
-
-
-
-
-async function detectHateSpeech(text) {
-    try {
-        const apiUrl = 'https://api-inference.huggingface.co/models/IbrahimAmin/marbertv2-finetuned-egyptian-hate-speech-detection';
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer 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', // Replace with your actual token
-            },
-            body: JSON.stringify({
-                inputs: text,
-                options: {
-                wait_for_model: true  // Set to true to wait for the model if it's not ready
-            }
-            }),
-        });
-
-        if (response.ok) {
-            const jsonResponse = await response.json();
-
-            // Assuming jsonResponse is in the format: [[{label: 'Hate', score: 0.9991}, {label: 'Neutral', score: 0.0009}]]
-            if (Array.isArray(jsonResponse) && jsonResponse.length > 0 && Array.isArray(jsonResponse[0])) {
-                const predictions = jsonResponse[0];
-
-                for (const prediction of predictions) {
-                    const label = prediction.label;
-                    const score = prediction.score;
-
-                    // Check if 'Hate' label has a high score
-                    if (label === 'Hate' && score >= 0.5) {
-                        console.log('Hate speech detected.');
-                        return true; // Indicate hate speech detected
-                    }
-                }
-            } else {
-                console.log('No valid predictions found.');
-            }
-        } else {
-            console.error('Failed to fetch from Hugging Face API:', response.status);
-        }
-    } catch (error) {
-        console.error('Error detecting hate speech:', error);
-    }
-    
-    return false; // Default to false if no hate speech detected or error occurred
-}
-
-
-
-async function sendNotificationRequest(carDocId, messageBody, carBrand, imgUrl) {
-  const url = 'https://signals-notifications.vercel.app/send-notification';
-
-  const payload = {
-    carDocId: carDocId,
-    messageBody: messageBody,
-    carBrand: carBrand,
-    imageUrl: imgUrl
-  };
-
-  console.log(payload);
-
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.error || 'Network response was not ok');
-    }
-
-    const contentType = response.headers.get('content-type');
-    let data;
-
-    if (contentType && contentType.indexOf('application/json') !== -1) {
-      data = await response.json();
-    } else {
-      data = await response.text();
-    }
-
-    console.log('Notification sent successfully');
-    return data;
-  } catch (error) {
-    console.error('Error sending notification:', error);
-    throw error;
   }
-}
 
-
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const encryptedCode = getUrlParameter('SignalCode');
-    try {
-        const decryptedCode = decryptString(encryptedCode, 1997);
-        getCarByID(decryptedCode);
-        const sendButton = document.getElementById('send-button');
-        sendButton.addEventListener('click', sendSignal);
-    } catch (error) {
-        console.error('Error decrypting code:', error);
-        alert('Invalid SignalCode parameter.');
+  //─────────────────────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', (event) => {
+    encryptedCode = getUrlParameter('SignalCode');
+    console.log(encryptedCode);
+    if (!encryptedCode) {
+      console.error('No SignalCode in URL.');
+      alert('Invalid SignalCode parameter.');
+      return;
     }
-});
-    </script>
+
+    // Fetch car details (backend will decrypt & look up Firestore)
+    getCarByID(encryptedCode);
+
+    // Attach click handler: when clicked, pass encryptedCode so backend can re‐decrypt
+    const sendButton = document.getElementById('send-button');
+    sendButton.addEventListener('click', () => sendSignal(encryptedCode));
+  });
+</script>
+
+
+
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
