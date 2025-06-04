@@ -456,7 +456,6 @@ a {
   //─────────────────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', (event) => {
     encryptedCode = getUrlParameter('SignalCode');
-    console.log(encryptedCode);
     if (!encryptedCode) {
       console.error('No SignalCode in URL.');
       alert('Invalid SignalCode parameter.');
