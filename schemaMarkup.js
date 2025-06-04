@@ -1,154 +1,228 @@
 // schemaMarkup.js
 
-// Organization Schema
-const organizationSchema = `
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Drop",
-  "description": "Drop - All-in-One Car App in Egypt",
-  "url": "https://drop-eg.com/",
-  "logo": "https://drop-eg.com/GoogleSearchImage.png",
-  "image": "https://drop-eg.com/SEOimage.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+201271152411",
-    "contactType": "Customer Service",
-    "availableLanguage": ["English", "Arabic"]
-  },
-  "sameAs": [
-    "https://facebook.com/drivewithdrop",
-    "https://instagram.com/drivewithdrop",
-    "https://linkedin.com/company/drivewithdrop"
-  ],
-  "foundingDate": "2022",
-  "location": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cairo",
-      "addressCountry": "EG"
+;(function () {
+  // ───────────────────────────────────────────────────────────────────────────────
+  // 1) ORGANIZATION SCHEMA (dynamic mainEntityOfPage)
+  // ───────────────────────────────────────────────────────────────────────────────
+  function buildOrganizationSchema() {
+    const currentUrl = window.location.origin + window.location.pathname;
+
+    const org = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Drop",
+      "description": "Drop - All-in-One Car App in Egypt",
+      "url": "https://drop-eg.com/",
+      "logo": "https://drop-eg.com/GoogleSearchImage.png",
+      "image": "https://drop-eg.com/SEOimage.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+201271152411",
+        "contactType": "Customer Service",
+        "availableLanguage": ["English", "Arabic"]
+      },
+      "sameAs": [
+        "https://facebook.com/drivewithdrop",
+        "https://instagram.com/drivewithdrop",
+        "https://linkedin.com/company/drivewithdrop"
+      ],
+      "foundingDate": "2022",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cairo",
+          "addressCountry": "EG"
+        }
+      },
+      "areaServed": "EG",
+      "founder": {
+        "@type": "Person",
+        "name": "Youssef Elhossary"
+      },
+      "keywords": [
+        "Car wash Egypt",
+        "Car wash app",
+        "Car app",
+        "Car services Egypt",
+        "Car repair Egypt",
+        "Workshop owners",
+        "Investors",
+        "Startups Egypt",
+        "Mobile car wash",
+        "Vehicle detailing Egypt",
+        "Automotive services",
+        "Car maintenance Egypt",
+        "Car cleaning solutions",
+        "Eco-friendly car wash",
+        "On-demand car services",
+        "Car wash franchises",
+        "Car wash technology",
+        "Fleet car services",
+        "Car care app",
+        "Automobile repair solutions",
+        "Car service marketplace",
+        "Vehicle inspection Egypt",
+        "Roadside assistance Egypt",
+        "Car service booking",
+        "Automotive startups",
+        "Car detailing app"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": currentUrl
+      }
+    };
+
+    return JSON.stringify(org, null, 2);
+  }
+
+  // ───────────────────────────────────────────────────────────────────────────────
+  // 2) DYNAMIC BREADCRUMB SCHEMA BUILDER
+  // ───────────────────────────────────────────────────────────────────────────────
+  function buildBreadcrumbSchema() {
+  // Map URL‐segments (slugs) to friendly names.
+  // You can add entries here for things like “maadi” or “new-cairo” if you want exact custom names.
+  const breadcrumbNameMap = {
+    "": "Home",
+    "egypt": "Egypt",
+    "carwash": "Car Wash",
+    "washdrop": "WashDrop",
+    "washdrop-coverage": "WashDrop Coverage",
+    "early-access": "Early Access",
+    "register": "Register",
+    "investor-relations": "Investor Relations",
+    "blog": "Blog",
+    "is-it-safe-to-wash-cars-engine": "Is It Safe to Wash Cars Engine?",
+    "the-ultimate-guide-exterior-car-washing": "The Ultimate Guide to Exterior Car Washing",
+    "the-ultimate-guide-interior-car-washing": "The Ultimate Guide to Interior Car Washing",
+    "under-construction": "Top Workshops in Egypt",
+    "side-menu.html": "Navigation Menu",
+    
+    "6th-of-october":            "6th of October",
+    "carwash-in-6th-of-october": "Car Wash in 6th of October",
+
+    "heliopolis":            "Heliopolis",
+    "carwash-in-heliopolis": "Car Wash in Heliopolis",
+
+    "maadi":            "Maadi",
+    "carwash-in-maadi": "Car Wash in Maadi",
+
+    "mohandessin":            "Mohandessin",
+    "carwash-in-mohandessin": "Car Wash in Mohandessin",
+
+    "nasr-city":            "Nasr City",
+    "carwash-in-nasr-city": "Car Wash in Nasr City",
+
+    "new-cairo":            "New Cairo",
+    "carwash-in-new-cairo": "Car Wash in New Cairo",
+
+    "sheikh-zayed":            "Sheikh Zayed",
+    "carwash-in-sheikh-zayed": "Car Wash in Sheikh Zayed",
+
+    "zamalek":            "Zamalek",
+    "carwash-in-zamalek": "Car Wash in Zamalek"    
+  };
+
+  const rawPath = window.location.pathname;                 // e.g. "/egypt/carwash/maadi/carwash-in-maadi.html"
+  const segments = rawPath.split("/").filter(Boolean);      // ["egypt","carwash","maadi","carwash-in-maadi.html"]
+
+  // Always start with “Home” at position 1
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: breadcrumbNameMap[""] || "Home",
+      item: window.location.origin + "/"
     }
-  },
-  "areaServed": "EG",
-  "founder": {
-    "@type": "Person",
-    "name": "Youssef Elhossary"
-  },
-  "keywords": [
-    "Car wash Egypt",
-    "Car wash app",
-    "Car app",
-    "Car services Egypt",
-    "Car repair Egypt",
-    "Workshop owners",
-    "Investors",
-    "Startups Egypt",
-    "Mobile car wash",
-    "Vehicle detailing Egypt",
-    "Automotive services",
-    "Car maintenance Egypt",
-    "Car cleaning solutions",
-    "Eco-friendly car wash",
-    "On-demand car services",
-    "Car wash franchises",
-    "Car wash technology",
-    "Fleet car services",
-    "Car care app",
-    "Automobile repair solutions",
-    "Car service marketplace",
-    "Vehicle inspection Egypt",
-    "Roadside assistance Egypt",
-    "Car service booking",
-    "Automotive startups",
-    "Car detailing app"
-    ],
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://drop-eg.com/" }
-}`;
+  ];
 
-// Breadcrumb Schema
-const breadcrumbSchema = `
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
+  let cumulativePath = "";
+  segments.forEach((seg, index) => {
+    cumulativePath += "/" + seg;
+    const position = index + 2;
+
+    // 1) Lowercase the segment
+    const rawSlug = seg.toLowerCase();
+    // 2) Remove any trailing ".html" for name lookup/fallback
+    const cleanSlug = rawSlug.replace(/\.html$/, "");
+    // 3) Look up in the map, or generate “Title Case” from cleanSlug
+    const name =
+      breadcrumbNameMap[cleanSlug] ||
+      cleanSlug
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+    // 4) Use the full cumulativePath (with .html if present) for the item URL
+    const itemUrl = window.location.origin + cumulativePath;
+
+    itemListElement.push({
       "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://drop-eg.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "WashDrop",
-      "item": "https://drop-eg.com/egypt/carwash/washdrop"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "WashDrop Coverage",
-      "item": "https://drop-eg.com/egypt/carwash/washdrop-coverage"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Early Access Registration",
-      "item": "https://drop-eg.com/early-access/register"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Investor Relations",
-      "item": "https://drop-eg.com/investor-relations"
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "name": "Blog",
-      "item": "https://drop-eg.com/blog"
-    },
-    {
-      "@type": "ListItem",
-      "position": 7,
-      "name": "Is It Safe to Wash Cars Engine?",
-      "item": "https://drop-eg.com/blog/is-it-safe-to-wash-cars-engine"
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "name": "The Ultimate Guide to Exterior Car Washing",
-      "item": "https://drop-eg.com/blog/the-ultimate-guide-exterior-car-washing"
-    },
-    {
-      "@type": "ListItem",
-      "position": 9,
-      "name": "The Ultimate Guide to Interior Car Washing",
-      "item": "https://drop-eg.com/blog/the-ultimate-guide-interior-car-washing"
-    },
-    {
-      "@type": "ListItem",
-      "position": 10,
-      "name": "Top Workshops in Egypt",
-      "item": "https://drop-eg.com/under-construction"
-    },
-    {
-      "@type": "ListItem",
-      "position": 11,
-      "name": "Navigation Menu",
-      "item": "https://drop-eg.com/side-menu.html"
+      position: position,
+      name: name,
+      item: itemUrl
+    });
+  });
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: itemListElement
+  };
+
+  return JSON.stringify(breadcrumb, null, 2);
+}
+
+  // ───────────────────────────────────────────────────────────────────────────────
+  // 3) MOBILE APPLICATION SCHEMA (iOS App Store)
+  // ───────────────────────────────────────────────────────────────────────────────
+function buildMobileAppSchema() {
+  const downloadUrls = [
+    "https://apps.apple.com/eg/app/drop-carwash-repairs-more/id6746170335",
+    "https://play.google.com/store/apps/details?id=com.dropappegypt.dropapplication&hl=en"
+  ];
+
+  const mobileApp = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Drop – All-in-One Car App",
+    "description": "Download the Drop App on iOS or Android to manage all your car services in Egypt from one place.",
+    "operatingSystem": ["iOS", "Android"],
+    "applicationCategory": "Business",
+    "url": "https://drop-eg.com/",
+    "downloadUrl": downloadUrls,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Drop",
+      "url": "https://drop-eg.com/"
     }
-  ]
-}`;
+  };
 
-// Inject the schema markup
-const injectSchema = (schema, type) => {
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.text = schema;
-  document.head.appendChild(script);
-};
+  return JSON.stringify(mobileApp, null, 2);
+}
 
-// Call the function to inject both schemas
-injectSchema(organizationSchema);
-injectSchema(breadcrumbSchema);
+
+  // ───────────────────────────────────────────────────────────────────────────────
+  // 4) SCRIPT INJECTION UTILITY
+  // ───────────────────────────────────────────────────────────────────────────────
+  function injectJsonLd(jsonString) {
+    const scriptTag = document.createElement("script");
+    scriptTag.type = "application/ld+json";
+    scriptTag.text = jsonString;
+    document.head.appendChild(scriptTag);
+  }
+
+  // ───────────────────────────────────────────────────────────────────────────────
+  // 5) ONCE THE DOM IS READY, INJECT ALL SCHEMAS
+  // ───────────────────────────────────────────────────────────────────────────────
+  function injectAllSchemas() {
+    injectJsonLd(buildOrganizationSchema());
+    injectJsonLd(buildBreadcrumbSchema());
+    injectJsonLd(buildMobileAppSchema());
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", injectAllSchemas);
+  } else {
+    injectAllSchemas();
+  }
+})();
