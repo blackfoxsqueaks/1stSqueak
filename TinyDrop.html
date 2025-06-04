@@ -7,13 +7,13 @@
 
   <style>
     @font-face {
-      font-family: 'Ridley Grotesk';
+      font-family: 'RidleyGroteskBold';
       src: url("fonts/Ridley_Grotesk_Bold.woff") format("truetype");
       font-weight: Bold;
       font-style: normal;
     }
     @font-face {
-      font-family: 'Ridley Grotesk';
+      font-family: 'RidleyGrotesk';
       src: url("fonts/Ridley_Grotesk_Medium.woff") format("truetype");
       font-weight: Medium;
       font-style: normal;
@@ -37,7 +37,7 @@
       margin-top: 80px;
       font-size: 24px;
       color: #333;
-      font-family: 'Ridley Grotesk';
+      font-family: 'RidleyGroteskBold';
       font-weight: bold;
     }
 
@@ -64,12 +64,63 @@
     }
   </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f2f2f2;">
 
-  <div id="header"></div>
-  <div id="redirectMessage">Preparing Your Link...</div>
+  <!-- Fixed Header -->
+  <div id="header" style="
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+  "></div>
 
-  <script>
+  <!-- Centered Content -->
+  <div id="centerContainer" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px); /* Full height minus header height */
+    text-align: center;
+    padding: 0 16px;
+  ">
+
+    <div id="redirectMessage" style="
+      font-size: 24px;
+      color: #333;
+      font-family: 'Ridley Grotesk';
+      font-weight: bold;
+    ">Just a Sec.</div>
+
+    <div id="redirectSubMessage" style="
+      margin-top: 8px;
+      font-size: 18px;
+      color: #333;
+      font-family: 'Ridley Grotesk';
+      font-weight: medium;
+    ">If you aren't redirected automatically</div>
+
+    <div id="fallbackButtonContainer" style="display: block; margin-top: 20px; width: 100%;">
+      <button id="fallbackRedirectBtn" style="
+        width: 100%;
+        background-color: #2667ff;
+        color: white;
+        font-family: 'RidleyGroteskBold';
+        font-size: 14px;
+        padding: 24px 20px;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        max-width: 600px;
+      ">
+        Click Here
+      </button>
+    </div>
+
+  </div>
+
+
+<script>
   function getUrlParameter(name) {
     const params = new URLSearchParams(window.location.search);
     return params.get(name);
@@ -79,7 +130,7 @@
     window.location.replace("404.html");
   }
 
-  function handleRedirection() {
+  function performRedirection() {
     const code = getUrlParameter('code');
     if (code && code.length > 0) {
       const backendBase = "https://tny-drop.vercel.app";
@@ -89,9 +140,34 @@
     }
   }
 
+  let redirected = false;
+
+  function handleRedirection() {
+    const code = getUrlParameter('code');
+    if (code && code.length > 0) {
+      redirected = true;
+      performRedirection();
+    } else {
+      redirectToErrorPage();
+    }
+  }
+
   window.onload = () => {
-    setTimeout(handleRedirection, 0);
+    setTimeout(() => {
+      if (!redirected) {
+        document.getElementById('fallbackButtonContainer').style.display = 'block';
+      }
+    }, 2000); // Show fallback button after 2 seconds
+
+    setTimeout(handleRedirection, 0); // Try auto redirection
   };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('fallbackRedirectBtn');
+    if (btn) {
+      btn.addEventListener('click', performRedirection);
+    }
+  });
 </script>
 
 
