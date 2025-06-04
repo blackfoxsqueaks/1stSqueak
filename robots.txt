@@ -4,3 +4,5 @@ Disallow:
 
 # Sitemap location
 Sitemap: https://drop-eg.com/sitemap.xml
+Sitemap: https://yourdomain.com/.well-known/openapi.yaml
+Sitemap: https://yourdomain.com/.well-known/nlweb.json
