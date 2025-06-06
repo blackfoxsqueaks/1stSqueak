@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dropcarapp.dropcarapp",
+      "sha256_cert_fingerprints": [
+        "2B:65:E5:80:4E:35:02:7B:30:2F:44:AD:CA:15:D5:92:41:64:83:9F:A8:53:EA:6F:54:F9:85:06:16:93:63:AF",
+        "AF:92:6C:87:BA:71:0C:37:F5:9D:C3:3E:77:B9:D5:FB:99:DF:A8:BE:94:D1:A8:F3:99:FF:09:72:CE:F3:2C:A4"
+      ]
+    }
+  }
+]
