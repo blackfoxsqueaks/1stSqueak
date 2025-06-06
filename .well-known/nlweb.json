@@ -1,0 +1,46 @@
+{
+  "name": "Drop",
+  "description": "Drop is an all-in-one automotive platform offering on-demand car washes, workshop services, QR-based car communication, in-car radio, and flexible payments.",
+  "features": {
+    "washDrop": {
+      "title": "WashDrop",
+      "description": "On-demand, at-home car washes in Cairo.",
+      "services": [
+        { "name": "Trim Restoration", "id": "trim_restoration" },
+        { "name": "Carnauba Wax", "id": "carnauba_wax" },
+        { "name": "Carpet Extraction", "id": "carpet_extraction" },
+        { "name": "Doors Deep Clean", "id": "doors_deep_clean" },
+        { "name": "Engine Bay Clean", "id": "engine_bay_clean" },
+        { "name": "Leather Care", "id": "leather_care" },
+        { "name": "Seats Deep Clean", "id": "seats_deep_clean" },
+        { "name": "Standard Exterior", "id": "standard_exterior" },
+        { "name": "Standard Interior", "id": "standard_interior" }
+      ]
+    },
+    "workshopServices": {
+      "title": "Workshops & Repairs",
+      "description": "Book all kinds of car services from top-notch workshops easily.",
+      "services": [
+        { "name": "Interior Repair", "id": "interior_repair", "available": true },
+        { "name": "Tire Shop", "id": "tire_shop", "available": true },
+        { "name": "Maintenance Service", "id": "maintenance_service", "available": true },
+        { "name": "Car Shoots", "id": "car_shoots", "available": true },
+        { "name": "Body Shop", "id": "body_shop", "available": true },
+        { "name": "Merchandise", "id": "merchandise", "available": true },
+        { "name": "Window Tinting", "id": "window_tinting", "available": true }
+      ]
+    },
+    "signals": {
+      "title": "Signals",
+      "description": "QR-based car-to-car communication for parking issues."
+    },
+    "dropFM": {
+      "title": "DropFM",
+      "description": "Stream NileFM & driving playlists."
+    },
+    "payments": {
+      "title": "Flexible Payments",
+      "description": "Countless payment methods & installment plans."
+    }
+  }
+}

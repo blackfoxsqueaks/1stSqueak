@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: Drop Services API
+  version: 1.0.0
+  description: API to fetch Drop's car services, workshops, smart features, and media streaming options.
+
+paths:
+  /services:
+    get:
+      summary: Get all available Drop features and services
+      responses:
+        '200':
+          description: A JSON object containing all Drop services
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: Drop
+                  description:
+                    type: string
+                    example: Drop is an all-in-one automotive platform offering on-demand car washes, workshop services, QR-based car communication, in-car radio, and flexible payments.
+                  features:
+                    type: object
+                    properties:
+                      washDrop:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            example: WashDrop
+                          description:
+                            type: string
+                            example: On-demand, at-home car washes in Cairo.
+                          services:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                id:
+                                  type: string
+                      workshopServices:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            example: Workshops & Repairs
+                          description:
+                            type: string
+                            example: Book all kinds of car services from top-notch workshops easily.
+                          services:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                id:
+                                  type: string
+                                available:
+                                  type: boolean
+                      signals:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            example: Signals
+                          description:
+                            type: string
+                            example: QR-based car-to-car communication for parking issues.
+                      dropFM:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            example: DropFM
+                          description:
+                            type: string
+                            example: Stream NileFM & driving playlists.
+                      payments:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            example: Flexible Payments
+                          description:
+                            type: string
+                            example: Countless payment methods & installment plans.

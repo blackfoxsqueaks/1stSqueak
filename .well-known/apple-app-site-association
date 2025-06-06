@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BPQ5GZMZ4D.com.dropllc.dropapp.prod",
+        "paths": [ "*" ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ]
+  }
+}
