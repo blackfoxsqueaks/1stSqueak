@@ -47,7 +47,7 @@
 }
 
 .animation {
-  width: 130%;
+  width: 110%;
   height: auto;
 }
   .loading-text {
@@ -60,7 +60,7 @@
     width: 70%;
     max-width: 300px; /* Ensures it doesn't stretch too wide */
     height: 20px;
-    background-color: lightgray;
+    background-color: #ededed;
     border-radius: 20px;
     overflow: hidden;
     margin: 2vh auto 0 auto; /* Centers it horizontally */
