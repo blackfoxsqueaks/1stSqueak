@@ -1,5 +1,3 @@
-// schemaMarkup.js
-
 ;(function () {
   // ───────────────────────────────────────────────────────────────────────────────
   // 1) ORGANIZATION SCHEMA (dynamic mainEntityOfPage)
@@ -71,7 +69,6 @@
     "the-ultimate-guide-interior-car-washing": "The Ultimate Guide to Interior Car Washing",
     "under-construction": "Top Workshops in Egypt",
     "side-menu.html": "Navigation Menu",
-    "app": "Web App",
     
     "6th-of-october":            "6th of October",
     "carwash-in-6th-of-october": "Car Wash in 6th of October",
