@@ -127,40 +127,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
     window.onload = function () {
         setTimeout(function () {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const platform = navigator.platform || "unknown";
+            const maxTouchPoints = navigator.maxTouchPoints || 0;
+
             let url = "https://drop-eg.com/app"; // Default for desktop
 
-            if (/android/i.test(userAgent)) {
+            const isAndroid = /android/i.test(userAgent) && !/macintosh/i.test(userAgent) && !/MacIntel/.test(platform);
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && maxTouchPoints > 1);
+
+            if (isAndroid) {
                 url = "https://play.google.com/store/apps/details?id=com.dropappegypt.dropapplication&hl=en";
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                url = "https://apps.apple.com/us/app/drop-carwash-repairs-more/id6746170335"; // Your App Store URL
+            } else if (isIOS) {
+                url = "https://apps.apple.com/us/app/drop-carwash-repairs-more/id6746170335";
             }
 
-            let newTab = window.open(); // Open a new blank tab first
+            const newTab = window.open(); // Try opening a new tab
             if (newTab) {
-                newTab.location.href = url; // Redirect the new tab
+                newTab.location.href = url;
             } else {
-                // Fallback in case popup blocking happens
-                window.location.href = url;
+                window.location.href = url; // Fallback
             }
-        }, 1100); // Small delay to ensure page is fully loaded
+        }, 1100);
     };
 </script>
 
 <script>
     function openApp() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        let url = "https://drop-eg.com/app"; // Default for desktop
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const platform = navigator.platform || "unknown";
+        const maxTouchPoints = navigator.maxTouchPoints || 0;
 
-        if (/android/i.test(userAgent)) {
+        let url = "https://drop-eg.com/app";
+
+        const isAndroid = /android/i.test(userAgent) && !/macintosh/i.test(userAgent) && !/MacIntel/.test(platform);
+        const isIOS = /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && maxTouchPoints > 1);
+
+        if (isAndroid) {
             url = "https://play.google.com/store/apps/details?id=com.dropappegypt.dropapplication&hl=en";
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            url = "https://apps.apple.com/us/app/drop-carwash-repairs-more/id6746170335"; // Your App Store URL
+        } else if (isIOS) {
+            url = "https://apps.apple.com/us/app/drop-carwash-repairs-more/id6746170335";
         }
 
         window.location.href = url;
     }
 </script>
+
 
 
 <style id="applicationStylesheet" type="text/css">
@@ -1203,7 +1215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</rect>
 			</svg>
 			<div id="Get_Exclusive_Access">
-				<span>Get Exclusive Access!</span>
+				<span>Download Now!</span>
 			</div>
 		</div>
 		</a>
