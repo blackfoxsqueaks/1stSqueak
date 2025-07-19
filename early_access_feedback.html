@@ -144,7 +144,7 @@
   padding: 15px;
   margin-bottom: 20px;
   border: 2px solid transparent; /* Start transparent */
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: white;
   filter: drop-shadow(rgba(0, 0, 0, 0.16) -2px 3px 20px);
   font-size: 14px;
@@ -152,7 +152,20 @@
   outline: none; /* Remove native focus glow */
 }
 
-textarea.field {
+.field-area {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16); /* <- Correct shadow */
+  font-size: 14px;
+  font-family: 'Ridley Grotesk', sans-serif;
+  outline: none;
+}
+
+textarea.field-area {
   resize: vertical;
   min-height: 100px;
   max-height: 300px;
@@ -221,7 +234,7 @@ textarea.field {
     <div class="subtitle">Please feel free to tell us about your experience</div>
 
     <input type="email" placeholder="Your Email" class="field" />
-    <textarea placeholder="Your Feedback" class="field"></textarea>
+    <textarea placeholder="Your Feedback" class="field-area"></textarea>
     <button class="submit-btn">Submit</button>
   </div>
 
