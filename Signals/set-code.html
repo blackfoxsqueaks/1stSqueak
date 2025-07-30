@@ -121,6 +121,7 @@
       if (!code || isNaN(code)) {
         document.querySelector('.loading-text').textContent = 'Congrats on your new code!';
         setTimeout(() => {
+          document.querySelector('.loading-text').textContent = 'Congrats on your new code!';
           window.location.href = 'https://drop-eg.com/download';
         }, 1500);
         return;
