@@ -3,10 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "cfdf05045e0227a38c2041ceecd05085",
+const RESOURCES = {"flutter_bootstrap.js": "db587d975e865a279a688b294eec3c44",
 "version.json": "6b26b7b1a68fa98ffab9c0617058a510",
-"index.html": "2ffc096d0a34732b6cf7aab936e93f13",
-"/": "2ffc096d0a34732b6cf7aab936e93f13",
+"index.html": "39b24c72c8a94e704abad8b91f662509",
+"/": "39b24c72c8a94e704abad8b91f662509",
 "styles.css": "443fe359e12de7fcaf7a9a2445976c45",
 "main.dart.js": "c5c0abe4093cc0f01983e667481e9a42",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
@@ -103,14 +103,10 @@ const RESOURCES = {"flutter_bootstrap.js": "cfdf05045e0227a38c2041ceecd05085",
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
-        "index.html",
-        "flutter_bootstrap.js",
-        "assets/AssetManifest.bin.json",
-        "assets/FontManifest.json",
-        "canvaskit/skwasm.js",
-        "canvaskit/skwasm.wasm",
-        "canvaskit/canvaskit.js"
-        ];
+"index.html",
+"flutter_bootstrap.js",
+"assets/AssetManifest.bin.json",
+"assets/FontManifest.json"];
 
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
