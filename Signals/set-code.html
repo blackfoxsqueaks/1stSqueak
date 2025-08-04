@@ -113,24 +113,36 @@
 }
   </style>
 
-  <script>
-    window.onload = () => {
-      const query = window.location.search;
-      const code = query.startsWith('?') ? query.substring(1) : '';
+<script>
+  window.onload = () => {
+    console.log("Page loaded");
 
-      if (!code || isNaN(code)) {
-        document.querySelector('.loading-text').textContent = 'Congrats on your new code!';
-        setTimeout(() => {
-          document.querySelector('.loading-text').textContent = 'Congrats on your new code!';
-          window.location.href = 'https://drop-eg.com/download';
-        }, 1500);
-        return;
+    // Get the query string, strip the leading "?"
+    const query = window.location.search.startsWith('?') ? window.location.search.substring(1) : '';
+    console.log("Raw query string:", query);
+
+    // If it's empty, show message and redirect to download
+    if (!query) {
+      const textElement = document.querySelector('.loading-text');
+      if (textElement) {
+        textElement.textContent = 'Validating Code...';
+      } else {
+        console.warn("Element '.loading-text' not found");
       }
 
-      // Redirect the browser to backend directly (let it handle 302)
-      window.location.href = `https://signals-api-xi.vercel.app/set_code?${code}`;
-    };
-  </script>
+      setTimeout(() => {
+        window.location.href = 'https://drop-eg.com/download';
+      }, 1500);
+      return;
+    }
+
+    // Redirect to the backend with the full raw query as-is
+    const redirectUrl = `https://signals-api-xi.vercel.app/set_code?${encodeURIComponent(query)}`;
+    console.log("Redirecting to:", redirectUrl);
+    window.location.href = redirectUrl;
+  };
+</script>
+
 </head>
 
 <body>
@@ -145,7 +157,7 @@
     <svg class="spinner" viewBox="0 0 50 50">
       <circle class="path" cx="25" cy="25" r="20"></circle>
     </svg>
-    <div class="loading-text">Validating your code...</div>
+    <div class="loading-text">Validating Code...</div>
   </div>
 </body>
 </html>
