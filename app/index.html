@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 
-  <base href="/">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="service" href="https://drop-eg/.wellknown/openapi.yaml" type="application/yaml">
+  <link rel="alternate" href="https://drop-eg/.wellknown/nlweb.json" type="application/json">
 
   <!-- Meta Tags for SEO -->
   <meta name="description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
@@ -38,14 +39,15 @@
   <meta name="twitter:description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
   <meta name="twitter:image" content="https://drop-eg.com/open-graph/open-graph-banner.png">
 
-  <!-- Meta tags for SEO and crawlability -->
-  <link rel="canonical" href="https://drop-eg.com/app">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://drop-eg.com/sitemap.xml">
-
   <!-- Title -->
   <title>Drop App</title>
+
+
+    <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Drop Web App">
+  <meta itemprop="description" content="Experience Drop's App on the web! Enjoy car washes right at home with WashDrop in areas like New Cairo, Maadi, Madinaty, and beyond. Easily book appointments for repairs, maintenance, and customizations at top-notch car workshops and automotive service centers in Egypt. Plus, explore exciting features like Signals for seamless peer-to-peer communication and DropFM for music streaming while cruising through Cairo's streets">
+  <meta itemprop="image" content="open-graph/open-graph-banner.png">
+
 
   <!-- Manifest for PWA -->
   <link rel="manifest" href="manifest.json">
@@ -58,11 +60,10 @@
 
   <script src="drop_init.js" ></script>
 
-
   <script src="https://drop-eg.com/schemaMarkup.js" defer></script>
 
 
-  <!-- Meta tags for SEO and crawlability -->
+    <!-- Meta tags for SEO and crawlability -->
   <link rel="canonical" href="https://drop-eg.com/app">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
@@ -99,23 +100,26 @@
 
 
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '194609353204345');
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '194609353204345');
+  fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=194609353204345&ev=PageView&noscript=1"
+  src="https://www.facebook.com/tr?id=194609353204345&ev=PageView&noscript=1"
   /></noscript>
 
 
   <!--------------------------------------------->
+
+
+
 
   <!-- Firebase Scripts -->
   <script type="module">
