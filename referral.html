@@ -302,16 +302,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     return;
   }
 
-  fetch("https://drop-referral.vercel.app/add_promo", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone: localPart })
-  }).catch(err => console.error("Background referral error:", err));
+  // Send the request in the background
+  navigator.sendBeacon(
+    "https://drop-referral.vercel.app/add_promo",
+    JSON.stringify({ phone: localPart })
+  );
 
-  // Give fetch ~150ms head start before redirect
+  // Wait 1 second before redirecting
   setTimeout(() => {
     window.location.href = "https://drop-eg.com/download";
-  }, 550);
+  }, 1000);
 }
 </script>
 </body>
