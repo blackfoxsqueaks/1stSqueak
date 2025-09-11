@@ -261,7 +261,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <input type="tel" id="phone" maxlength="11" placeholder="Your Phone Number" disabled />
     </div>
-    <button onclick="submitPhone()">Download</button>
+    <button id="download-btn" onclick="submitPhone()">Download</button>
   </div>
 
  <script>
@@ -287,31 +287,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     document.getElementById("ref-subtitle").textContent = `Download Drop to send ${nameParam} a gift.`;
   } else {
     document.getElementById("ref-title").textContent = "You've been referred!";
-    document.getElementById("ref-subtitle").textContent = "Join Drop and claim your welcome gift.";
+    document.getElementById("ref-subtitle").textContent = "Download Drop to send a gift to your friend.";
   }
 
   if (phoneParam) {
     document.getElementById("phone").value = phoneParam.trim();
   }
 
-  function submitPhone() {
-  let localPart = document.getElementById("phone").value.trim();
+  async function submitPhone() {
+  const btn = document.getElementById("download-btn");
+  btn.disabled = true; // prevent multiple clicks
+  btn.textContent = "Processing..."; // change button text
+
+  const localPart = document.getElementById("phone").value.trim();
 
   if (!/^01\d{9}$/.test(localPart)) {
     alert("Enter a valid Egypt phone number (11 digits starting with 01)");
+    btn.disabled = false;
+    btn.textContent = "Download";
     return;
   }
 
-  // Send the request in the background
-  navigator.sendBeacon(
-    "https://drop-referral.vercel.app/add_promo",
-    JSON.stringify({ phone: localPart })
-  );
+  let redirectUrl = "https://drop-eg.com/download";
 
-  // Wait 1 second before redirecting
-  setTimeout(() => {
-    window.location.href = "https://drop-eg.com/download";
-  }, 1000);
+  try {
+    const res = await fetch("https://drop-referral.vercel.app/add_promo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone: localPart })
+    });
+
+    const data = await res.json().catch(() => null);
+    if (data && data.redirect) {
+      redirectUrl = data.redirect;
+    }
+  } catch (err) {
+    console.error("Referral fetch failed:", err);
+  } finally {
+    window.location.href = redirectUrl;
+  }
 }
 </script>
 </body>
