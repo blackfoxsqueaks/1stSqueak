@@ -161,6 +161,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		window.addEventListener("resize", loadContentBasedOnScreenSize);
 		</script>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let referralUrl = "";
+
+  // Step 1: Collect info
+  document.getElementById("step1").onclick = function() {
+    const name = prompt("Hey! Please enter your name so we know who’s sharing Drop:");
+    if (!name) return;
+
+    const phone = prompt("Enter the phone number you’re registered with on Drop (ex: 01xxxxxxxx):");
+    if (!phone || !/^01\d{9}$/.test(phone.trim())) {
+      alert("Oops! Please enter a valid Egypt phone number starting with 01.");
+      return;
+    }
+
+    referralUrl = `https://drop-eg.com/referral.html?phone=${encodeURIComponent(phone.trim())}&name=${encodeURIComponent(name.trim())}`;
+    
+    // Switch to share mode
+    document.getElementById("step1").style.display = "none";
+    document.getElementById("step2").style.display = "inline";
+
+    // Prompt user to press the share button
+    alert("All set! Now press the 'Share Now' button to share your referral link.");
+};
+
+  // Step 2: Share
+  document.getElementById("step2").onclick = function() {
+    if (!referralUrl) {
+      alert("Please enter your info first to generate your referral link.");
+      return;
+    }
+
+    const title = "Check out Drop – Your All-In-One Car App in Egypt!";
+    const text = "I just discovered Drop and it’s amazing! From car washes to repairs, it has everything. Take a look and see for yourself:";
+
+    if (navigator.share) {
+      navigator.share({ title, text, url: referralUrl })
+        .then(() => console.log("Referral shared successfully"))
+        .catch(err => console.error("Sharing failed", err));
+    } else {
+      alert("Sharing isn’t supported on this device. Copy this link and send it to your friends: " + referralUrl);
+    }
+  };
+});
+</script>
+
+
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		// Function to check elements based on viewport size
@@ -1503,7 +1552,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		top: 0px;
 	}
 	#Share_Now {
-		left: 22.651px;
+		left: 23.4px;
 		top: 12.344px;
 		position: absolute;
 		overflow: visible;
@@ -3571,7 +3620,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		top: 0px;
 	}
 	#Share {
-		left: 51.114px;
+		left: 37.114px;
 		top: 18.174px;
 		position: absolute;
 		overflow: visible;
@@ -4386,14 +4435,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<img id="WashDropGiftGIF" src="assets/home/WashDropGiftGIF.gif" alt="Engaging animation showcasing the WashDrop referral service, highlighting convenience and care in car maintenance provided by Drop App." loading="lazy">
 					
 			</div>
-			<div id="Group_4318" onclick="if (navigator.share) { navigator.share({ title: 'Drop: Your All-In-One Car App in Egypt for Car Wash, Repairs, & More...', text: 'I just found this App, and it\'s really really cool. So I thought of you, and I\'m sure you\'ll absolutely love it. Go give it a try, and tell me what you think! 😉', url: 'https://drop-eg.com' }).then(() => console.log('Happy Drop')).catch(error => console.log('Sad Drop', error)); }">
-				<svg class="Rectangle_2968">
-				  <rect id="Rectangle_2968" rx="10" ry="10" x="0" y="0" width="100.303" height="34.688"></rect>
-				</svg>
-				<div id="Share_Now">
-				  <span>Share Now</span>
-				</div>
-			  </div>
+				<div id="Group_4318">
+					<svg class="Rectangle_2968">
+						<rect id="Rectangle_2968" rx="10" ry="10" x="0" y="0" width="100.303" height="34.688"></rect>
+					</svg>
+					<div id="Share_Now">
+						<span id="step1">Enter Info</span>
+						<span id="step2" style="display:none;">Share Now</span>
+					</div>
+					</div>
 		</div>
 		<div id="WashDrop_Egypt_Carwash_Block">
 			<div id="Group_4159">
@@ -4902,14 +4952,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<img id="WashDropGiftGIF_in" src="assets/home/WashDropGiftGIF.gif" alt="Animated GIF showcasing the WashDrop service, highlighting its features and benefits for convenient car cleaning and maintenance." loading="lazy">
 					
 			</div>
-			<div id="Group_4324" onclick="if (navigator.share) { navigator.share({ title: 'Drop: Your All-In-One Car App in Egypt for Car Wash, Repairs, & More...', text: 'I just found this App, and it\'s really really cool. So I thought of you, and I\'m sure you\'ll absolutely love it. Go give it a try, and tell me what you think! 😉', url: 'https://drop-eg.com' }).then(() => console.log('Happy Drop')).catch(error => console.log('Sad Drop', error)); }">
-				<svg class="Rectangle_2968_ip">
-				  <rect id="Rectangle_2968_ip" rx="20" ry="20" x="0" y="0" width="145.551" height="51.348"></rect>
-				</svg>
-				<div id="Share">
-				  <span>Share</span>
-				</div>
-			  </div>			  
+			<div id="Group_4324">
+  <svg class="Rectangle_2968_ip">
+    <rect id="Rectangle_2968_ip" rx="20" ry="20" x="0" y="0" width="145.551" height="51.348"></rect>
+  </svg>
+  <div id="Share">
+    <span id="step1">Enter Info</span>
+    <span id="step2" style="display:none;">Share Now</span>
+  </div>
+</div>			  
 		</div>
 		<div id="Group_4325">
 			<svg class="Drop_App_Button_Rectangle_3_is">
