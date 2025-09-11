@@ -190,22 +190,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Step 2: Share
   document.getElementById("step2").onclick = function() {
-    if (!referralUrl) {
-      alert("Please enter your info first to generate your referral link.");
-      return;
-    }
+  if (!referralUrl) {
+    alert("Please enter your info first to generate your referral link.");
+    return;
+  }
 
-    const title = "Check out Drop – Your All-In-One Car App in Egypt!";
-    const text = "I just discovered Drop and it’s amazing! From car washes to repairs, it has everything. Take a look and see for yourself:";
+  const title = "Check out Drop – The Coolest Car App in Egypt!";
+  const text = "Download Drop using my link and gift me a free carwash! It’s perfect for car washes, repairs, and more:";
 
-    if (navigator.share) {
-      navigator.share({ title, text, url: referralUrl })
-        .then(() => console.log("Referral shared successfully"))
-        .catch(err => console.error("Sharing failed", err));
-    } else {
-      alert("Sharing isn’t supported on this device. Copy this link and send it to your friends: " + referralUrl);
-    }
-  };
+  if (navigator.share) {
+    navigator.share({ title, text, url: referralUrl })
+      .then(() => console.log("Referral shared successfully"))
+      .catch(err => console.error("Sharing failed", err));
+  } else {
+    alert("Sharing isn’t supported on this device. Copy this link and send it to your friends: " + referralUrl);
+  }
+};
 });
 </script>
 
