@@ -341,52 +341,37 @@ a {
 
   //─────────────────────────────────────────────────────────────────────────
   function displayCarInfo() {
-    const carBrandElement   = document.getElementById('car-brand-card');
-    const carModelElement   = document.getElementById('car-model-card');
-    const licenseNumberElem = document.getElementById('license-number');
-    const licensePlateElem  = document.getElementById('license-plate');
-    const sendButton        = document.getElementById('send-button');
+  const carBrandElement   = document.getElementById('car-brand-card');
+  const carModelElement   = document.getElementById('car-model-card');
+  const licenseNumberElem = document.getElementById('license-number');
+  const licensePlateElem  = document.getElementById('license-plate');
+  const sendButton        = document.getElementById('send-button');
 
-    if (
-      !carBrandElement ||
-      !carModelElement ||
-      !licenseNumberElem ||
-      !licensePlateElem ||
-      !sendButton
-    ) {
-      console.error('One or more required elements not found.');
-      return;
+  // Populate fields from foundCar if the element exists
+  if (carBrandElement)   carBrandElement.innerText   = foundCar.brand ?? "";
+  if (carModelElement)   carModelElement.innerText   = foundCar.model ?? "";
+  if (licenseNumberElem) licenseNumberElem.innerText = foundCar.licenseNumber ?? "";
+  if (licensePlateElem)  licensePlateElem.innerText  = foundCar.licensePlate ?? "";
+
+  // Handle button color if found
+  if (sendButton && typeof foundCar.color === "string") {
+    let raw = foundCar.color;
+
+    // Case 1: starts with "0x" and is 10 chars long (e.g. "0xFFaabbcc")
+    if (raw.startsWith("0x") && raw.length === 10) {
+      raw = raw.slice(4);
     }
+    // Case 2: exactly 8 hex chars (e.g. "ffFFBE01")
+    else if (/^[0-9A-Fa-f]{8}$/.test(raw)) {
+      raw = raw.slice(2);
+    }
+    // Otherwise: leave as is
 
-    // Populate fields from foundCar
-    carBrandElement.innerText   = foundCar.brand;
-    carModelElement.innerText   = foundCar.model;
-    licenseNumberElem.innerText = foundCar.licenseNumber;
-    licensePlateElem.innerText  = foundCar.licensePlate;
-
-    if (typeof foundCar.color === "string") {
-  let raw = foundCar.color;
-
-  // Case 1: starts with "0x" and is 10 chars long (e.g. "0xFFaabbcc")
-  if (raw.startsWith("0x") && raw.length === 10) {
-    // skip "0xFF", keep the last 6 chars
-    raw = raw.slice(4); 
+    sendButton.style.setProperty("background-color", `#${raw}`);
   }
-  // Case 2: exactly 8 hex chars (e.g. "ffFFBE01")
-  else if (/^[0-9A-Fa-f]{8}$/.test(raw)) {
-    // skip the first 2 chars (alpha), keep the last 6
-    raw = raw.slice(2);
-  }
-  // Otherwise, fall back to using the entire string (may not be a valid 6-digit color)
-  
-  // Now `raw` should be exactly 6 hex digits (e.g. "aabbcc" or "FFBE01")
-  document
-    .getElementById("send-button")
-    .style.setProperty("background-color", `#${raw}`);
-}
 
-
-    // Enable or disable the Send button based on signalActive
+  // Handle signalActive toggle if button exists
+  if (sendButton) {
     if (foundCar.signalActive === true) {
       isSignalActive = true;
       sendButton.disabled = false;
@@ -398,6 +383,7 @@ a {
       alert(`Signals are not active for this ${foundCar.brand} / صاحب المركبة مفعلش الكود`);
     }
   }
+}
 
   //─────────────────────────────────────────────────────────────────────────
   async function sendSignal(encryptedCode) {
