@@ -191,19 +191,19 @@ a {
         .input-field {
         width: 92%;
         padding: 8px;
-        border-radius: 6px;
         border: 1px solid transparent; /* Set initial border as transparent */
         padding-top: 16px;
         padding-bottom: 32px;
         padding-left: 16px;
         margin-right: 18px;
         margin-bottom: 16px;
+        margin-top: 16px;
         font-family: 'RidleyGroteskRegular';
         font-size: 16px;
         background-color: white;
-        border-radius: 13px;
+        border-radius: 22px;
         box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);
-            outline: none; /* Remove browser default outline */
+        outline: none; /* Remove browser default outline */
 
         transition: border-color 0.2s ease; /* Smooth transition for border color change */
     }
@@ -493,28 +493,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Your content here -->
         <div class="header">Send a Signal / <span class="arabic-text">إبعت إشارة</span></div>
         <div class="subheader">Message the owner of this vehicle</div>
-        <div class="subheaderـar">ابعت رسالة لصاحب المركبة</div>
-        <div class="card" id="car-brand-card"></div>
+        <!-- <div class="subheaderـar">ابعت رسالة لصاحب المركبة</div> -->
+        <!-- <div class="card" id="car-brand-card"></div>
         <div class="card" id="car-model-card"></div>
 
-        <!-- License Number and Plate with Images -->
         <div style="position: relative; width: 100%;">
             <div style="position: relative; width: 100%; margin-top: 16px; margin-bottom: 16px; border-radius: 13px; overflow: hidden; box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.16);">
                 <img src="assets/EgyptPlates.png" alt="Egypt Plates" style="width: 100%; display: block;">
                 <div id="license-number" class="plate" style="position: absolute; left: 0%; top: 40%; width: 50%; height: 60px; display: flex; justify-content: center; align-items: center; font-family: 'RidleyGroteskBold';">
-                    <!-- Dynamic text loaded here -->
                 </div>
                 <div id="license-plate" class="plate" style="position: absolute; left: 55%; top: 40%; width: 43%; height: 60px; display: flex; justify-content: center; align-items: center; font-family: 'RidleyGroteskBold';">
-                    <!-- Dynamic text loaded here -->
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <textarea id="message" class="input-field" rows="3" placeholder="Your message to the vehicle owner..................................رسالتك لصاحب المركبة"></textarea>
+        <textarea id="message" class="input-field" rows="3" placeholder="Write your message to the vehicle owner | اكتب رسالتك لصاحب المركبة"></textarea>
         <button id="send-button" class="button" disabled>
             <span class="text-container">
                 <span class="english-text">Send Signal / </span>
-                <span class="arabic-text-button">ابعت الإشارة</span>
+                <span class="arabic-text-button">إرسال</span>
                 <svg class="spinner" viewBox="0 0 50 50">
                     <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="10"></circle>
                 </svg>
