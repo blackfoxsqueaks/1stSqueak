@@ -106,10 +106,14 @@ const RESOURCES = {"flutter_bootstrap.js": "50858b804a033bae0cdf40707ee564e3",
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
-"index.html",
-"flutter_bootstrap.js",
-"assets/AssetManifest.bin.json",
-"assets/FontManifest.json"];
+        "index.html",
+        "flutter_bootstrap.js",
+        "assets/AssetManifest.bin.json",
+        "assets/FontManifest.json",
+        "canvaskit/skwasm.js",
+        "canvaskit/skwasm.wasm",
+        "canvaskit/canvaskit.js"
+        ];
 
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
