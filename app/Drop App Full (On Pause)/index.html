@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta name="keywords" content="car app, vehicle, Drop, all-in-one, services, car management">
+  <meta name="author" content="Drop Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Drop App">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph Meta Tags (for better social sharing) -->
+  <meta property="og:title" content="Drop App">
+  <meta property="og:description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta property="og:image" content="https://drop-eg.com/open-graph/open-graph-banner.png">
+  <meta property="og:url" content="https://drop-eg.com/app">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drop App">
+  <meta name="twitter:description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta name="twitter:image" content="https://drop-eg.com/open-graph/open-graph-banner.png">
+
+  <!-- Meta tags for SEO and crawlability -->
+  <link rel="canonical" href="https://drop-eg.com/app">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://drop-eg.com/sitemap.xml">
+
+  <!-- Title -->
+  <title>Drop App</title>
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script src="drop_init.js" ></script>
+
+
+  <script src="https://drop-eg.com/schemaMarkup.js" defer></script>
+
+
+  <!-- Meta tags for SEO and crawlability -->
+  <link rel="canonical" href="https://drop-eg.com/app">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://drop-eg.com/sitemap.xml">
+
+
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K67483K');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B0GR0ZG7E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1B0GR0ZG7E');
+  </script>
+
+
+  <!--------------------------------------------->
+
+  <!-- Meta Pixel Code -------------------------------------->
+
+  <meta name="facebook-domain-verification" content="7vwzdv6rahpf7ctbbb28v2ex39i1cn" />
+
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '194609353204345');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=194609353204345&ev=PageView&noscript=1"
+  /></noscript>
+
+
+  <!--------------------------------------------->
+
+  <!-- Firebase Scripts -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js';
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js';
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js';
+  </script>
+</head>
+
+<body>
+  <!-- Header at the top -->
+  <img id="header-image" class="header" src="assets/drop_header_web.png" alt="Drop Appbar">
+
+  <!-- Main content -->
+  <div class="main-content">
+    <div id="mobile-content">
+      <div class="animation-container">
+        <img class="animation" src="drop-loading-animation.gif" alt="Drop Logo Animation">
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div id="loading-text" class="loading-text">Revving up engines</div>
+    </div>
+
+    <div id="desktop-message" class="desktop-message" style="display: none; width: 100vw; height: 100vh;">
+      <iframe id="desktop-iframe" src="https://drop-eg.com/scan-to-download.html"
+              style="width: 100vw; height: 100vh; border: none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function adjustLayout() {
+      if (window.innerWidth <= 768) {
+        // Load Flutter Bootstrap only on mobile
+        if (!document.getElementById("flutter-bootstrap")) {
+          var script = document.createElement("script");
+          script.id = "flutter-bootstrap";
+          script.src = "flutter_bootstrap.js";
+          script.async = true;
+          document.body.appendChild(script);
+        }
+
+        // Show mobile UI
+        document.getElementById("mobile-content").style.display = "block";
+        document.getElementById("desktop-message").style.display = "none";
+        document.getElementById("header-image").src = "drop_header_web.png";
+      } else {
+        // Show desktop message and load the iframe
+        document.getElementById("mobile-content").style.display = "none";
+        document.getElementById("desktop-message").style.display = "block";
+        document.getElementById("header-image").style.display = "none";
+      }
+    }
+
+    // Initial check
+    adjustLayout();
+
+    // Store initial screen type
+    let lastScreenType = window.innerWidth <= 768 ? "mobile" : "desktop";
+
+    // Listen for window resize and refresh if screen type changes
+    window.addEventListener("resize", () => {
+      let currentScreenType = window.innerWidth <= 768 ? "mobile" : "desktop";
+      if (lastScreenType !== currentScreenType) {
+        location.reload(); // Refresh to properly adjust layout
+      }
+    });
+  </script>
+
+</body>
+
+</html>
