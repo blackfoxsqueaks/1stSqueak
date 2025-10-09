@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#346df8">
+
+<title>Fuel Prices in Egypt | Drop App</title>
+
+<meta name="description" content="Check the latest fuel prices in Egypt updated daily. Real-time petrol and diesel prices including Gasoline 92, Gasoline 95, and Diesel per liter. Powered by Drop — Egypt’s all-in-one car app for car washes, repairs, and more.">
+<meta name="keywords" content="fuel prices Egypt, petrol prices Egypt, gasoline 92 price Egypt, gasoline 95 price Egypt, diesel price Egypt, petrol price today Egypt, Egypt fuel update, fuel price per liter Egypt, Drop app Egypt, car services Egypt, fuel cost Cairo, fuel cost Alexandria, Drop fuel prices, petrol cost Egypt, car wash app Egypt, Drop car app, Drop fuel tracker">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Drop App Egypt">
+<meta property="og:title" content="Fuel Prices in Egypt Today | Drop App">
+<meta property="og:description" content="Stay up to date with Egypt’s latest petrol and diesel prices (Gasoline 92, 95, Diesel). Updated daily by Drop — Egypt’s car super app.">
+<meta property="og:image" content="https://drop-eg.com/assets/fuel-thumbnail.webp">
+<meta property="og:url" content="https://drop-eg.com/fuel-prices">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_EG">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fuel Prices in Egypt Today | Drop App">
+<meta name="twitter:description" content="Check the latest petrol prices in Egypt (Gasoline 92, 95, Diesel). Updated daily.">
+<meta name="twitter:image" content="https://drop-eg.com/assets/fuel-thumbnail.webp">
+<meta name="twitter:site" content="@DropAppEgypt">
+
+<link rel="canonical" href="https://drop-eg.com/fuel-prices">
+<link rel="apple-touch-icon" sizes="180x180" href="https://drop-eg.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://drop-eg.com/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://drop-eg.com/icons/favicon-16x16.png">
+<link rel="manifest" href="https://drop-eg.com/icons/site.webmanifest">
+
+<!-- Schema.org JSON-LD for rich search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Fuel Prices in Egypt | Drop App",
+  "description": "Latest fuel and petrol prices in Egypt updated daily. Real-time Gasoline 92, Gasoline 95, and Diesel rates powered by Drop App.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Drop App Egypt",
+    "url": "https://drop-eg.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://drop-eg.com/icons/apple-touch-icon.png"
+    }
+  },
+  "mainEntity": {
+    "@type": "Dataset",
+    "name": "Egypt Fuel Prices Dataset",
+    "description": "Updated daily fuel price list for Egypt covering Gasoline 92, Gasoline 95, and Diesel.",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
+</script>
+
+<style>
+@font-face {
+  font-family: 'RidleyGroteskBold';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'RidleyGroteskMedium';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'RidleyGroteskRegular';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+::-webkit-scrollbar { display: none; }
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: 'RidleyGroteskRegular', sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#Burger {
+  display: none;
+}
+
+#Drop_App_Mockup {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #Burger {
+    display: block;
+    position: fixed;
+    top: 34px;
+    left: 27px;
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+
+#Drop_App_Mockup {
+    width: 130%;          /* Make the video larger on mobile */
+    max-width: none;
+    display: block;
+    position: relative;
+    z-index: 0;
+    object-fit: cover;
+    top: 15vh;
+    left: -17%;
+  }
+
+
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 82%;
+  width: calc(100% - 32px);
+  background: #fff;
+  padding: 24px;
+  border-radius: 30px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.16) -2px 3px 20px);
+  margin-top: 116px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'RidleyGroteskBold';
+  margin-bottom: 8px;
+}
+
+p {
+  font-family: 'RidleyGroteskMedium';
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.fuel-item {
+  border-radius: 20px;
+  background: #f9f9f9;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-family: 'RidleyGroteskMedium';
+  filter: drop-shadow(rgba(0, 0, 0, 0.08) 0px 2px 6px);
+}
+
+.fuel-type {
+  font-family: 'RidleyGroteskBold';
+  font-size: 16px;
+  color: #2667ff;
+  margin-bottom: 4px;
+}
+
+.fuel-price {
+  font-size: 18px;
+  color: #222;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 22px;
+  border-radius: 22px;
+  border: none;
+  background: #2667ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'RidleyGroteskBold';
+  transition: 0.3s;
+}
+button:hover {
+  background: #174ae6;
+}
+
+
+#text-container {
+  margin-top: 26px;
+  margin-bottom: -20px;
+}
+
+
+</style>
+</head>
+<body>
+
+<img id="Burger" onclick="window.location.href='side-menu.html';" src="assets/home/Burger.webp" alt="Menu icon">
+<img id="header-image" class="header" src="assets/referral/appbar_desktop.webp" alt="Drop Appbar">
+
+
+<video id="Drop_App_Mockup" src="assets/home/Wesbite AnimationFC.mp4" poster="assets/home/video-poster.png" playsinline autoplay muted>
+      Your browser does not support the video tag.
+    </video>
+
+<div class="container">
+  <h1>Current Fuel Prices</h1>
+  <p>Loading date...</p>
+
+  <div id="fuel-container">
+    <p>Loading latest prices...</p>
+  </div>
+
+
+  <div id="text-container">
+    <p>Drop: Egypt's All-in-One Car App - Carwash, Top Workshops, Connect, Music & More...</p>
+  </div>
+
+  <button onclick="window.location.href='https://drop-eg.com/download'">Download Drop</button>
+</div>
+
+<script>
+
+
+  // Auto-update title with current month/year
+const monthNames = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+const now = new Date();
+const formattedMonth = monthNames[now.getMonth()];
+const formattedYear = now.getFullYear();
+document.title = `Fuel Prices in Egypt (${formattedMonth} ${formattedYear}) | Drop App`;
+
+
+document.querySelector("p").textContent = `Updated fuel prices in Egypt (EGP per liter) — as of ${new Date().toLocaleDateString('en-GB')}:`;
+
+async function loadFuelPrices() {
+  const container = document.getElementById("fuel-container");
+  try {
+    const res = await fetch("https://drop-eg.com/assets/fuel_prices.json");
+    if (!res.ok) throw new Error("Failed to load");
+    const data = await res.json();
+
+    container.innerHTML = "";
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "fuel-item";
+      div.innerHTML = `
+        <div class="fuel-type">${item.fuel_type}</div>
+        <div class="fuel-price">${item.price.toFixed(2)} ${item.currency}</div>
+      `;
+      container.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error loading fuel prices:", err);
+    container.innerHTML = "<p>Unable to load fuel prices at the moment.</p>";
+  }
+}
+
+loadFuelPrices();
+
+// Responsive header switcher
+function updateHeaderImage() {
+  const headerImage = document.getElementById("header-image");
+  if (window.innerWidth > 768) {
+    headerImage.src = "assets/referral/appbar_desktop.webp";
+  } else {
+    headerImage.src = "https://app.drop-eg.com/assets/drop_header_web.png";
+  }
+}
+updateHeaderImage();
+window.addEventListener("resize", updateHeaderImage);
+</script>
+
+</body>
+</html>

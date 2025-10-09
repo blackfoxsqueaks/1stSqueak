@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#346df8">
+
+<title>أسعار البنزين في مصر | تطبيق دروب</title>
+
+<meta name="description" content="تعرّف على أحدث أسعار البنزين والديزل في مصر محدثة يومياً. أسعار بنزين 92 و95 والسولار باللتر. من دروب — تطبيق السيارات الشامل في مصر لخدمات الغسيل، الصيانة والمزيد.">
+<meta name="keywords" content="أسعار البنزين مصر, سعر البنزين اليوم, بنزين 92, بنزين 95, سعر السولار مصر, أسعار الوقود مصر, تحديث البنزين مصر, سعر لتر البنزين, تطبيق دروب مصر, خدمات السيارات مصر, أسعار الوقود القاهرة, أسعار الوقود الإسكندرية, تطبيق غسيل السيارات مصر, تطبيق دروب, أسعار البنزين دروب">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="تطبيق دروب مصر">
+<meta property="og:title" content="أسعار البنزين في مصر اليوم | تطبيق دروب">
+<meta property="og:description" content="تابع أحدث أسعار البنزين والسولار في مصر (بنزين 92 و95 وسولار). محدثة يومياً من تطبيق دروب — التطبيق الشامل للسيارات.">
+<meta property="og:image" content="https://drop-eg.com/assets/fuel-thumbnail.webp">
+<meta property="og:url" content="https://drop-eg.com/fuel-prices">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="أسعار البنزين في مصر اليوم | تطبيق دروب">
+<meta name="twitter:description" content="تعرّف على أحدث أسعار البنزين في مصر (بنزين 92 و95 وسولار). تحديث يومي.">
+<meta name="twitter:image" content="https://drop-eg.com/assets/fuel-thumbnail.webp">
+<meta name="twitter:site" content="@DropAppEgypt">
+
+<link rel="canonical" href="https://drop-eg.com/fuel-prices-ar">
+<link rel="apple-touch-icon" sizes="180x180" href="https://drop-eg.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://drop-eg.com/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://drop-eg.com/icons/favicon-16x16.png">
+<link rel="manifest" href="https://drop-eg.com/icons/site.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "أسعار البنزين في مصر | تطبيق دروب",
+  "description": "آخر أسعار البنزين والديزل في مصر محدثة يوميًا. أسعار بنزين 92 و95 وسولار من تطبيق دروب.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "تطبيق دروب مصر",
+    "url": "https://drop-eg.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://drop-eg.com/icons/apple-touch-icon.png"
+    }
+  },
+  "mainEntity": {
+    "@type": "Dataset",
+    "name": "بيانات أسعار الوقود في مصر",
+    "description": "قائمة محدثة يوميًا بأسعار البنزين والسولار في مصر.",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
+</script>
+
+<style>
+@font-face {
+  font-family: 'BukraBold';
+  src: url("https://drop-eg.com/app/assets/assets/fonts/29ltbukrabold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'BukraRegular';
+  src: url("https://drop-eg.com/app/assets/assets/fonts/29ltbukraregular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'RidleyGroteskBold';
+  src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+
+::-webkit-scrollbar { display: none; }
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: 'BukraRegular', sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+  text-align: right;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#Burger {
+  display: none;
+}
+
+#Drop_App_Mockup {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #Burger {
+    display: block;
+    position: fixed;
+    top: 34px;
+    right: 27px;
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  #Drop_App_Mockup {
+    width: 130%;
+    max-width: none;
+    display: block;
+    position: relative;
+    z-index: 0;
+    object-fit: cover;
+    top: 15vh;
+    right: -17%;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 82%;
+  width: calc(100% - 32px);
+  background: #fff;
+  padding: 24px;
+  border-radius: 30px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.16) -2px 3px 20px);
+  margin-top: 116px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'BukraBold', sans-serif;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #444;
+  font-family: 'BukraRegular', sans-serif;
+}
+
+.fuel-item {
+  border-radius: 20px;
+  background: #f9f9f9;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: right;
+  font-family: 'BukraRegular', sans-serif;
+  filter: drop-shadow(rgba(0, 0, 0, 0.08) 0px 2px 6px);
+}
+
+.fuel-type {
+  font-family: 'BukraBold', sans-serif;
+  font-size: 16px;
+  color: #2667ff;
+  margin-bottom: 4px;
+}
+
+.fuel-price {
+  font-family: 'RidleyGroteskBold', sans-serif;
+  font-size: 18px;
+  color: #222;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 22px;
+  border-radius: 22px;
+  border: none;
+  background: #2667ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'BukraBold', sans-serif;
+  transition: 0.3s;
+}
+button:hover {
+  background: #174ae6;
+}
+
+#text-container {
+  margin-top: 26px;
+  margin-bottom: -20px;
+}
+</style>
+
+</head>
+<body>
+
+<img id="Burger" onclick="window.location.href='side-menu.html';" src="assets/home/Burger.webp" alt="قائمة">
+<img id="header-image" class="header" src="assets/referral/appbar_desktop.webp" alt="شريط تطبيق دروب">
+
+<video id="Drop_App_Mockup" src="assets/home/Wesbite AnimationFC.mp4" poster="assets/home/video-poster.png" playsinline autoplay muted>
+متصفحك لا يدعم تشغيل الفيديو.
+</video>
+
+<div class="container">
+  <h1>أسعار البنزين الحالية في مصر</h1>
+  <p>جاري تحميل التاريخ...</p>
+
+  <div id="fuel-container">
+    <p>جاري تحميل أحدث الأسعار...</p>
+  </div>
+
+  <div id="text-container">
+    <p>دروب: تطبيق السيارات الأول في مصر - غسيل، صيانة، تواصل، موسيقى والمزيد...</p>
+  </div>
+
+  <button onclick="window.location.href='https://drop-eg.com/download'">حمّل تطبيق دروب</button>
+</div>
+
+<script>
+// تحديث العنوان حسب الشهر والسنة الحالية
+const monthNamesAr = [
+  "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+  "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
+];
+const now = new Date();
+const formattedMonth = monthNamesAr[now.getMonth()];
+const formattedYear = now.getFullYear();
+document.title = `أسعار البنزين في مصر (${formattedMonth} ${formattedYear}) | تطبيق دروب`;
+
+// تحديث التاريخ أسفل العنوان
+document.querySelector("p").textContent = `تم تحديث أسعار الوقود في مصر (بالجنيه للّتر) بتاريخ ${new Date().toLocaleDateString('ar-EG')}:`;
+
+async function loadFuelPrices() {
+  const container = document.getElementById("fuel-container");
+  try {
+    const res = await fetch("https://drop-eg.com/assets/fuel_prices.json");
+    if (!res.ok) throw new Error("فشل التحميل");
+    const data = await res.json();
+
+    // خريطة الترجمة من الإنجليزية إلى العربية
+    const fuelTypeMap = {
+      "Gasoline 95": "بنزين ٩٥",
+      "Gasoline 92": "بنزين ٩٢",
+      "Gasoline 80": "بنزين ٨٠",
+      "Diesel": "سولار",
+      "Natural Gas": "غاز طبيعي"
+    };
+
+    container.innerHTML = "";
+    data.forEach(item => {
+      const arabicFuelType = fuelTypeMap[item.fuel_type] || item.fuel_type;
+      const div = document.createElement("div");
+      div.className = "fuel-item";
+      div.innerHTML = `
+        <div class="fuel-type">${arabicFuelType}</div>
+        <div class="fuel-price">${item.price.toFixed(2)} ${item.currency}</div>
+      `;
+      container.appendChild(div);
+    });
+  } catch (err) {
+    console.error("حدث خطأ أثناء تحميل الأسعار:", err);
+    container.innerHTML = "<p>تعذّر تحميل أسعار الوقود حالياً.</p>";
+  }
+}
+
+
+loadFuelPrices();
+
+function updateHeaderImage() {
+  const headerImage = document.getElementById("header-image");
+  if (window.innerWidth > 768) {
+    headerImage.src = "assets/referral/appbar_desktop.webp";
+  } else {
+    headerImage.src = "https://app.drop-eg.com/assets/drop_header_web.png";
+  }
+}
+updateHeaderImage();
+window.addEventListener("resize", updateHeaderImage);
+</script>
+
+</body>
+</html>
