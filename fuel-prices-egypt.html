@@ -228,6 +228,69 @@ button:hover {
   </div>
 
   <button onclick="window.location.href='https://drop-eg.com/download'">Download Drop</button>
+
+
+
+<!-- FAQ Section -->
+<section id="faq" style="text-align:left; margin-top:32px;">
+  <h2 style="font-family:'RidleyGroteskBold'; font-size:20px; color:#2667ff; margin-bottom:16px;">
+    Frequently Asked Questions About Fuel Prices in Egypt
+  </h2>
+
+  <div id="faq-container">
+    <!-- Dynamic fuel price FAQs will be injected here via JS -->
+
+    <!-- Static comprehensive FAQs -->
+    <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+      <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+        How often do fuel prices change in Egypt?
+      </summary>
+      <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+        Fuel prices in Egypt are usually updated monthly based on global oil market fluctuations, exchange rates, and government subsidies. Drop provides the latest updates automatically so you always see the current prices.
+      </p>
+    </details>
+
+    <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+      <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+        Why do fuel prices vary between cities in Egypt?
+      </summary>
+      <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+        Slight variations in fuel prices occur due to distribution costs, local taxes, and regional logistics. Drop shows average market prices per fuel type but helps you find stations nearby with the best rates.
+      </p>
+    </details>
+
+    <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+      <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+        Where can I check official fuel prices in Egypt?
+      </summary>
+      <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+        The official fuel prices are published by the Egyptian Ministry of Petroleum. However, Drop aggregates these updates and provides real-time prices per liter for all fuel types, making it easier to plan refueling trips.
+      </p>
+    </details>
+
+    <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+      <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+        Can Drop notify me when fuel prices change?
+      </summary>
+      <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+        Yes! Drop can send you notifications about fuel price updates, helping you make smarter refueling decisions and track trends over time.
+      </p>
+    </details>
+
+    <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+      <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+        How can I save money on fuel in Egypt?
+      </summary>
+      <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+        To save money, compare fuel prices across stations, fill up when prices are lower, and maintain your vehicle for efficiency. Drop shows price trends and nearby stations, so you can always find the cheapest fuel.
+      </p>
+    </details>
+
+  </div>
+</section>
+
+
+
 </div>
 
 <script>
@@ -246,13 +309,16 @@ document.title = `Fuel Prices in Egypt (${formattedMonth} ${formattedYear}) | Dr
 
 document.querySelector("p").textContent = `Updated fuel prices in Egypt (EGP per liter) — as of ${new Date().toLocaleDateString('en-GB')}:`;
 
-async function loadFuelPrices() {
+async function loadFuelPricesAndFAQs() {
   const container = document.getElementById("fuel-container");
+  const faqContainer = document.getElementById("faq-container");
+
   try {
     const res = await fetch("https://drop-eg.com/assets/fuel_prices.json");
-    if (!res.ok) throw new Error("Failed to load");
+    if (!res.ok) throw new Error("Failed to load fuel prices");
     const data = await res.json();
 
+    // 1️⃣ Display fuel prices
     container.innerHTML = "";
     data.forEach(item => {
       const div = document.createElement("div");
@@ -263,13 +329,90 @@ async function loadFuelPrices() {
       `;
       container.appendChild(div);
     });
+
+    // 2️⃣ Build dynamic FAQs
+    let dynamicFAQs = data.map(item => `
+      <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+        <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+          What is the current price of ${item.fuel_type} in Egypt?
+        </summary>
+        <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+          The current price of ${item.fuel_type} is ${item.price.toFixed(2)} ${item.currency} per liter, updated on ${new Date().toLocaleDateString('en-GB')}.
+        </p>
+      </details>
+    `).join('');
+
+    // 3️⃣ Add static FAQs
+    const staticFAQs = `
+      <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+        <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+          How often do fuel prices change in Egypt?
+        </summary>
+        <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+          Fuel prices in Egypt are usually updated monthly based on global oil prices and government policies.
+        </p>
+      </details>
+
+      <details style="margin-bottom:12px; border-radius:12px; background:#f9f9f9; padding:12px; filter:drop-shadow(rgba(0,0,0,0.08) 0px 2px 6px);">
+        <summary style="font-family:'RidleyGroteskBold'; font-size:16px; cursor:pointer; color:#2667ff;">
+          Why do fuel prices vary between cities in Egypt?
+        </summary>
+        <p style="font-family:'RidleyGroteskMedium'; font-size:14px; margin-top:8px; color:#444;">
+          Differences in distribution, local taxes, and logistics cause slight regional variations.
+        </p>
+      </details>
+    `;
+
+    faqContainer.innerHTML = dynamicFAQs + staticFAQs;
+
+    // 4️⃣ Inject FAQ JSON-LD schema for SEO
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        // Dynamic questions
+        ...data.map(item => ({
+          "@type": "Question",
+          "name": `What is the current price of ${item.fuel_type} in Egypt?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `The current price of ${item.fuel_type} is ${item.price.toFixed(2)} ${item.currency} per liter, updated on ${new Date().toLocaleDateString('en-GB')}.`
+          }
+        })),
+        // Static questions
+        {
+          "@type": "Question",
+          "name": "How often do fuel prices change in Egypt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fuel prices in Egypt are usually updated monthly based on global oil prices and government policies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do fuel prices vary between cities in Egypt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Differences in distribution, local taxes, and logistics cause slight regional variations."
+          }
+        }
+      ]
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
   } catch (err) {
-    console.error("Error loading fuel prices:", err);
+    console.error("Error loading fuel prices and FAQs:", err);
     container.innerHTML = "<p>Unable to load fuel prices at the moment.</p>";
   }
 }
 
-loadFuelPrices();
+// Run the function
+loadFuelPricesAndFAQs();
+
 
 // Responsive header switcher
 function updateHeaderImage() {
@@ -282,6 +425,14 @@ function updateHeaderImage() {
 }
 updateHeaderImage();
 window.addEventListener("resize", updateHeaderImage);
+
+
+// Call after loading prices
+loadFuelPrices().then(() => fetch("https://drop-eg.com/assets/fuel_prices.json")
+  .then(res => res.json())
+  .then(data => injectFAQSchema(data))
+);
+
 </script>
 
 </body>
