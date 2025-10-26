@@ -9,7 +9,7 @@
 
     <!-- Favicon and Touch Icons -->
     <!-- <meta name="apple-itunes-app" content="app-id=6746170335, app-argument=drop://" /> -->
-	<link rel="apple-touch-icon" sizes="60x60" href="https://drop-eg.com/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://drop-eg.com/icons/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="76x76" href="https://drop-eg.com/icons/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="https://drop-eg.com/icons/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="https://drop-eg.com/icons/apple-touch-icon-152x152.png">
@@ -193,10 +193,10 @@ a {
         padding: 8px;
         border: 1px solid transparent; /* Set initial border as transparent */
         padding-top: 16px;
-        padding-bottom: 32px;
+        padding-bottom: 64px;
         padding-left: 16px;
         margin-right: 18px;
-        margin-bottom: 16px;
+        margin-bottom: 0px;
         margin-top: 16px;
         font-family: 'RidleyGroteskRegular';
         font-size: 16px;
@@ -226,6 +226,22 @@ a {
             padding: 32px;
             background-color: #2667ff;
             color: white;
+            margin-bottom: 16px;
+            border: none;
+            border-radius: 22px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.2); /* added shadow */
+            font-family: 'RidleyGroteskBold';
+        }
+        .button2 {
+            display: block;
+            width: 100%;
+            padding: 32px;
+            background-color: white;
+            color: #2667ff;
             margin-bottom: 40px;
             border: none;
             border-radius: 22px;
@@ -234,6 +250,8 @@ a {
             font-size: 16px;
             cursor: pointer;
             font-family: 'RidleyGroteskBold';
+            box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.2); /* added shadow */
+            transition: box-shadow 0.2s ease; /* optional: smooth hover effect */
         }
         .button:disabled {
             background-color: #2667ff;
@@ -285,6 +303,47 @@ a {
                 stroke-dashoffset: -124;
             }
         }
+
+
+
+        .quick-messages-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 16px 0;
+        margin-bottom: 12px;
+        scroll-behavior: smooth;
+        margin-left: -16px;
+        margin-right: -16px; /* counter the container’s padding */
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .quick-messages-container::-webkit-scrollbar {
+        display: none; /* hide scrollbar for a clean look */
+      }
+
+      .quick-message {
+        flex: 4 0 auto;
+        background-color: white;
+        border-radius: 20px;
+        padding: 22px 18px;
+        padding-top: 24px;
+        font-size: 14px;
+        font-family: 'RidleyGroteskMedium';
+        white-space: nowrap;
+        cursor: pointer;
+        color: black;
+        box-shadow: -2px 3px 20px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease, transform 0.1s ease;
+      }
+
+      .quick-message:hover {
+        background-color: #2667ff;
+        color: white;
+        transform: translateY(-1px);
+      }
+
     </style>
     <!-- Firebase App (the core Firebase SDK) -->
 <script type="module">
@@ -346,6 +405,7 @@ a {
   const licenseNumberElem = document.getElementById('license-number');
   const licensePlateElem  = document.getElementById('license-plate');
   const sendButton        = document.getElementById('send-button');
+  const subheaderElem     = document.getElementById('subheader-text');
 
   // Populate fields from foundCar if the element exists
   if (carBrandElement)   carBrandElement.innerText   = foundCar.brand ?? "";
@@ -383,6 +443,13 @@ a {
       alert(`Signals are not active for this ${foundCar.brand} / صاحب المركبة مفعلش الكود`);
     }
   }
+
+
+  if (subheaderElem && foundCar.brand) {
+  subheaderElem.innerText = `Message the owner of this ${foundCar.brand}`;
+}
+
+
 }
 
   //─────────────────────────────────────────────────────────────────────────
@@ -456,6 +523,21 @@ a {
     const sendButton = document.getElementById('send-button');
     sendButton.addEventListener('click', () => sendSignal(encryptedCode));
   });
+
+
+
+
+  // Handle quick message click → auto-fill text box
+document.addEventListener('DOMContentLoaded', () => {
+  const quickMessages = document.querySelectorAll('.quick-message');
+  const messageInput = document.getElementById('message');
+  
+  quickMessages.forEach(msg => {
+    msg.addEventListener('click', () => {
+      messageInput.value = msg.innerText;
+    });
+  });
+});
 </script>
 
 
@@ -478,7 +560,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <!-- Your content here -->
         <div class="header">Send a Signal / <span class="arabic-text">إبعت إشارة</span></div>
-        <div class="subheader">Message the owner of this vehicle</div>
+        <div class="subheader" id="subheader-text">Message the owner of this vehicle</div>
         <!-- <div class="subheaderـar">ابعت رسالة لصاحب المركبة</div> -->
         <!-- <div class="card" id="car-brand-card"></div>
         <div class="card" id="car-model-card"></div>
@@ -494,6 +576,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div> -->
 
         <textarea id="message" class="input-field" rows="3" placeholder="Write your message to the vehicle owner | اكتب رسالتك لصاحب المركبة"></textarea>
+        <!-- Quick message suggestions -->
+        <div class="quick-messages-container">
+        <div class="quick-message">Please move your car</div>
+        <div class="quick-message">لو سمحت حرك عربيتك</div>
+
+        <div class="quick-message">You're blocking my way</div>
+        <div class="quick-message">عربيتك قافلة الطريق</div>
+
+        <div class="quick-message">Emergency, please contact me</div>
+        <div class="quick-message">في ظرف طارئ، كلمني لو سمحت</div>
+
+        <div class="quick-message">Your car lights are on</div>
+        <div class="quick-message">أنوار عربيتك منوّرة</div>
+
+        <div class="quick-message">Your window is open</div>
+        <div class="quick-message">إزاز عربيتك مفتوح</div>
+
+        <div class="quick-message">You left something on your roof</div>
+        <div class="quick-message">سيبت حاجة فوق العربية</div>
+
+        <div class="quick-message">Flat tire alert</div>
+        <div class="quick-message">كوتش العربية نايم</div>
+
+        <div class="quick-message">Your alarm is going off</div>
+        <div class="quick-message">الإنذار بتاع عربيتك شغال</div>
+
+        <div class="quick-message">You’re parked in my spot</div>
+        <div class="quick-message">إنت راكن في مكاني</div>
+
+        <div class="quick-message">Your trunk is open</div>
+        <div class="quick-message">شنطة عربيتك مفتوحة</div>
+
+        <div class="quick-message">Can you move forward a bit?</div>
+        <div class="quick-message">ممكن تقدّم شوية لو سمحت؟</div>
+
+        <div class="quick-message">I accidentally hit your car, please contact me</div>
+        <div class="quick-message">خبطت عربيتك بالغلط، كلّمني ضروري</div>
+
+        <div class="quick-message">Someone is touching your car</div>
+        <div class="quick-message">في حد بيلعب في عربيتك</div>
+      </div>
+
         <button id="send-button" class="button" disabled>
             <span class="text-container">
                 <span class="english-text">Send Signal / </span>
@@ -504,7 +628,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </span>
         </button>
         <a href="https://drop-eg.com/download" target="_blank" rel="noopener noreferrer">
-    <button id="download-button" class="button">
+    <button id="download-button" class="button2">
         <span class="text-container">
             <span class="english-text">Need a Similar Code? / </span>
             <br>
