@@ -1,134 +1,176 @@
 [
   {
-    "id": "service_flow",
-    "en": {
-      "question": "How does Drop work from booking to completion?",
-      "answer": "Drop connects you with vetted service providers through a single app. You choose a service, see available options, confirm pricing or estimates, and track everything inside the app. Payments, updates, support, and service history are all handled in one place, without needing to call multiple vendors or visit locations unless required."
+    "category": {
+      "en": "General",
+      "ar": "عام"
     },
-    "ar": {
-      "question": "Drop بيشتغل إزاي من أول الحجز لحد ما الخدمة تخلص؟",
-      "answer": "Drop بيجمع لك كل خدمات العربية في تطبيق واحد. بتختار الخدمة، تشوف الاختيارات المتاحة، توافق على السعر أو التقدير، وتتابع الطلب كله من جوه التطبيق. الدفع، المتابعة، الدعم، وتاريخ العربية كله في مكان واحد من غير لف ولا اتصالات كتير."
-    }
+    "items": [
+      {
+        "en": {
+          "question": "What is Drop?",
+          "answer": "Drop is Egypt’s all-in-one car app. One place to wash, service, repair, customize, manage papers, and handle everything related to your car."
+        },
+        "ar": {
+          "question": "إيه هو Drop؟",
+          "answer": "Drop هو تطبيق العربية الشامل في مصر. مكان واحد لغسيل، صيانة، تصليح، تعديل العربية، وإنهاء كل أوراقك وخدمات عربيتك."
+        }
+      },
+      {
+        "en": {
+          "question": "Is Drop available across Egypt?",
+          "answer": "Coverage is expanding. Some services are city-specific, others are nationwide."
+        },
+        "ar": {
+          "question": "هل Drop متاح في كل مصر؟",
+          "answer": "التغطية بتتوسع باستمرار. بعض الخدمات متاحة في مدن معينة والبعض الآخر متاح على مستوى الجمهورية."
+        }
+      },
+      {
+        "en": {
+          "question": "Do I need to own a car to use Drop?",
+          "answer": "Yes. Drop is built for car owners and drivers."
+        },
+        "ar": {
+          "question": "هل لازم أكون مالك عربية علشان أستخدم Drop؟",
+          "answer": "أيوه. Drop معمول خصيصًا لمالكي العربيات والسائقين."
+        }
+      },
+      {
+        "en": {
+          "question": "Is Drop free to use?",
+          "answer": "Yes. You only pay for the services you book."
+        },
+        "ar": {
+          "question": "هل استخدام Drop مجاني؟",
+          "answer": "أيوه. بتدفع بس مقابل الخدمات اللي بتحجزها."
+        }
+      }
+    ]
   },
   {
-    "id": "coverage_logic",
-    "en": {
-      "question": "Why are some services available in certain areas only?",
-      "answer": "Service availability depends on operational readiness and partner coverage. On-demand services like WashDrop require nearby teams, while workshops and government services may be available nationwide. Drop expands coverage gradually to maintain quality and reliability."
+    "category": {
+      "en": "WashDrop",
+      "ar": "WashDrop"
     },
-    "ar": {
-      "question": "ليه في خدمات متاحة في مناطق معينة بس؟",
-      "answer": "توفّر الخدمة بيعتمد على الجاهزية التشغيلية والشركاء الموجودين في المنطقة. خدمات زي WashDrop محتاجة فرق قريبة، بينما الورش والخدمات الحكومية ممكن تكون متاحة على نطاق أوسع. التوسع بيتم تدريجيًا علشان نحافظ على الجودة."
-    }
+    "items": [
+      {
+        "en": {
+          "question": "What is WashDrop?",
+          "answer": "An on-demand car wash that comes to your location."
+        },
+        "ar": {
+          "question": "إيه هو WashDrop؟",
+          "answer": "غسيل عربية عند الطلب بيجيلك لحد مكانك."
+        }
+      },
+      {
+        "en": {
+          "question": "Where does the wash happen?",
+          "answer": "At your home, office, or anywhere you choose."
+        },
+        "ar": {
+          "question": "الغسيل بيتم فين؟",
+          "answer": "في البيت، الشغل، أو أي مكان تختاره."
+        }
+      },
+      {
+        "en": {
+          "question": "Do I need water or electricity?",
+          "answer": "No. WashDrop is fully equipped."
+        },
+        "ar": {
+          "question": "هل محتاج مية أو كهربا؟",
+          "answer": "لا. فريق WashDrop مجهز بالكامل."
+        }
+      },
+      {
+        "en": {
+          "question": "Is the wash eco-friendly?",
+          "answer": "Yes. Minimal water usage and safe products."
+        },
+        "ar": {
+          "question": "هل الغسيل صديق للبيئة؟",
+          "answer": "أيوه. استخدام مية أقل ومنتجات آمنة."
+        }
+      },
+      {
+        "en": {
+          "question": "How long does a wash take?",
+          "answer": "Typically 30–45 minutes depending on the package."
+        },
+        "ar": {
+          "question": "الغسيل بياخد وقت قد إيه؟",
+          "answer": "عادة من 30 لـ45 دقيقة حسب الباكدچ."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I schedule a wash later?",
+          "answer": "Yes. Instant or scheduled bookings are supported."
+        },
+        "ar": {
+          "question": "ينفع أحدد ميعاد الغسيل؟",
+          "answer": "أيوه. تقدر تحجز فورًا أو تحدد ميعاد لاحق."
+        }
+      }
+    ]
   },
   {
-    "id": "pricing_transparency",
-    "en": {
-      "question": "How are prices calculated and confirmed?",
-      "answer": "Some services have fixed prices, while others start with an estimate based on your request. Any changes are communicated before execution. No work proceeds without your confirmation, and all charges are visible inside the app."
+    "category": {
+      "en": "Workshops & Repairs",
+      "ar": "الورش والصيانة"
     },
-    "ar": {
-      "question": "الأسعار بتتحسب وبتتأكد إزاي؟",
-      "answer": "في خدمات بسعر ثابت، وخدمات تانية بتبدأ بتقدير حسب طلبك. أي تغيير في السعر بيتعرض عليك قبل التنفيذ. مفيش شغل بيتم من غير موافقتك وكل التكاليف واضحة جوه التطبيق."
-    }
-  },
-  {
-    "id": "quality_control",
-    "en": {
-      "question": "How does Drop ensure service quality?",
-      "answer": "All partners go through a vetting process. Performance is monitored through user feedback, issue tracking, and repeated behavior analysis. Drop can pause or remove partners who fail to meet standards."
-    },
-    "ar": {
-      "question": "Drop بيضمن جودة الخدمات إزاي؟",
-      "answer": "كل الشركاء بيتم فحصهم قبل الانضمام. الأداء بيتابع من خلال التقييمات، الشكاوى، وتحليل التعامل المتكرر. أي شريك مش ملتزم بالمعايير ممكن يتم إيقافه."
-    }
-  },
-  {
-    "id": "washdrop_execution",
-    "en": {
-      "question": "What actually happens during a WashDrop order?",
-      "answer": "A fully equipped team arrives at your location with their own water and tools. The wash is performed safely without requiring any setup from you. You can track arrival and completion time through the app."
-    },
-    "ar": {
-      "question": "بيحصل إيه فعليًا في طلب WashDrop؟",
-      "answer": "فريق مجهز بالكامل بيجيلك بالمعدات والمياه الخاصة بيه. الغسيل بيتم من غير ما تحتاج توفر أي حاجة. تقدر تتابع الوصول والانتهاء من التطبيق."
-    }
-  },
-  {
-    "id": "repairs_process",
-    "en": {
-      "question": "How are repairs handled and tracked?",
-      "answer": "Once a repair is booked, you receive updates on diagnosis, required work, and progress. Approvals are requested before additional work. All repair records are saved to your car’s history."
-    },
-    "ar": {
-      "question": "الصيانة والتصليح بيتداروا إزاي؟",
-      "answer": "بعد حجز التصليح، بيجيلك تحديثات عن الفحص والشغل المطلوب وسير التنفيذ. أي شغل إضافي بيتطلب موافقتك الأول. كل حاجة بتتسجل في تاريخ العربية."
-    }
-  },
-  {
-    "id": "installments",
-    "en": {
-      "question": "When are installments available?",
-      "answer": "Installments are available on selected services and partners. Eligibility depends on the payment provider and order value. Available options are shown clearly before confirmation."
-    },
-    "ar": {
-      "question": "إمتى التقسيط بيكون متاح؟",
-      "answer": "التقسيط متاح في خدمات وشركاء معينين. الإتاحة بتعتمد على جهة الدفع وقيمة الطلب. كل الخيارات بتظهر بوضوح قبل تأكيد الحجز."
-    }
-  },
-  {
-    "id": "customization_trust",
-    "en": {
-      "question": "How does Drop handle car customizations safely?",
-      "answer": "Customization services are offered through experienced workshops. You see service details, previous work when available, and agree on scope before execution to avoid surprises."
-    },
-    "ar": {
-      "question": "Drop بيتعامل إزاي مع تعديلات العربية بشكل آمن؟",
-      "answer": "التعديلات بتتم من خلال ورش خبرة. بتشوف تفاصيل الخدمة وأعمال سابقة لو متاحة، وبتتفق على كل حاجة قبل التنفيذ علشان مفيش مفاجآت."
-    }
-  },
-  {
-    "id": "signals_privacy",
-    "en": {
-      "question": "How do Signals protect my privacy?",
-      "answer": "Signals allow communication without sharing phone numbers or personal details. Messages are routed through Drop, keeping both parties anonymous."
-    },
-    "ar": {
-      "question": "Signals بتحمي خصوصيتي إزاي؟",
-      "answer": "Signals بتسمح بالتواصل من غير مشاركة رقمك أو أي بيانات شخصية. الرسائل بتوصل عن طريق Drop وبتفضل هويتك مخفية."
-    }
-  },
-  {
-    "id": "aila_role",
-    "en": {
-      "question": "What makes Aila different from a normal chatbot?",
-      "answer": "Aila is action-based. It can place orders, track issues, guide you through decisions, and connect you to support. It is designed to execute, not just answer."
-    },
-    "ar": {
-      "question": "إيه الفرق بين Aila وأي شات بوت عادي؟",
-      "answer": "Aila بتنفذ مش بس بترد. تقدر تحجز، تتابع مشاكل، تساعدك تختار، وتوصلك بالدعم. معمولة علشان تشتغل فعليًا مش مجرد كلام."
-    }
-  },
-  {
-    "id": "government_services",
-    "en": {
-      "question": "How are government services handled through Drop?",
-      "answer": "Drop simplifies processes like fines payment and license renewal by guiding you step by step and handling eligible parts digitally to reduce visits and waiting time."
-    },
-    "ar": {
-      "question": "الخدمات الحكومية بتتم إزاي من خلال Drop؟",
-      "answer": "Drop بيسهّل خطوات زي دفع المخالفات وتجديد الرخصة وبيساعدك تمشي خطوة خطوة ويقلل الزيارات والوقت الضايع قدر الإمكان."
-    }
-  },
-  {
-    "id": "data_history",
-    "en": {
-      "question": "What happens to my car data and service history?",
-      "answer": "Your car’s service history is stored securely and used to improve recommendations, tracking, and future maintenance decisions. Data is not shared without consent."
-    },
-    "ar": {
-      "question": "بيحصل إيه لبيانات العربية وتاريخها؟",
-      "answer": "تاريخ العربية بيتحفظ بشكل آمن وبيستخدم لتحسين الاقتراحات والمتابعة والصيانة المستقبلية. البيانات مش بتتشارك من غير موافقتك."
-    }
+    "items": [
+      {
+        "en": {
+          "question": "How do workshops join Drop?",
+          "answer": "Workshops are vetted before onboarding."
+        },
+        "ar": {
+          "question": "الورش بتنضم لـ Drop إزاي؟",
+          "answer": "كل ورشة بتعدي بمرحلة فحص قبل الانضمام."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I track my repair status?",
+          "answer": "Yes. Orders, updates, and history are all tracked in the app."
+        },
+        "ar": {
+          "question": "هل أقدر أتابع حالة التصليح؟",
+          "answer": "أيوه. الطلب، التحديثات، وتاريخ الصيانة كله متسجل في التطبيق."
+        }
+      },
+      {
+        "en": {
+          "question": "What services are available?",
+          "answer": "Maintenance, repairs, diagnostics, detailing, and more."
+        },
+        "ar": {
+          "question": "إيه الخدمات المتاحة؟",
+          "answer": "صيانة، تصليح، فحص، تنظيف تفصيلي، وخدمات تانية."
+        }
+      },
+      {
+        "en": {
+          "question": "Are prices transparent?",
+          "answer": "Yes. No surprise charges."
+        },
+        "ar": {
+          "question": "هل الأسعار واضحة؟",
+          "answer": "أيوه. مفيش أي مصاريف مفاجئة."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I choose the workshop?",
+          "answer": "Yes. You see options and decide."
+        },
+        "ar": {
+          "question": "هل أقدر أختار الورشة؟",
+          "answer": "أيوه. بتشوف الاختيارات وبتقرر."
+        }
+      }
+    ]
   }
 ]
