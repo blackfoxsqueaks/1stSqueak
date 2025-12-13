@@ -1,9 +1,6 @@
 [
   {
-    "category": {
-      "en": "General",
-      "ar": "عام"
-    },
+    "category": { "en": "General", "ar": "عام" },
     "items": [
       {
         "en": {
@@ -47,11 +44,9 @@
       }
     ]
   },
+
   {
-    "category": {
-      "en": "WashDrop",
-      "ar": "WashDrop"
-    },
+    "category": { "en": "WashDrop", "ar": "WashDrop" },
     "items": [
       {
         "en": {
@@ -115,11 +110,9 @@
       }
     ]
   },
+
   {
-    "category": {
-      "en": "Workshops & Repairs",
-      "ar": "الورش والصيانة"
-    },
+    "category": { "en": "Workshops & Repairs", "ar": "الورش والصيانة" },
     "items": [
       {
         "en": {
@@ -170,6 +163,344 @@
           "question": "هل أقدر أختار الورشة؟",
           "answer": "أيوه. بتشوف الاختيارات وبتقرر."
         }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Payments & Installments", "ar": "الدفع والتقسيط" },
+    "items": [
+      {
+        "en": {
+          "question": "How can I pay?",
+          "answer": "Cash, cards, POS, ValU, FawryPay, and installments."
+        },
+        "ar": {
+          "question": "طرق الدفع المتاحة إيه؟",
+          "answer": "كاش، كروت، POS، فاليو، فوري، وتقسيط."
+        }
+      },
+      {
+        "en": {
+          "question": "Are installments available for repairs?",
+          "answer": "Yes, on supported services and partners."
+        },
+        "ar": {
+          "question": "هل التقسيط متاح للتصليحات؟",
+          "answer": "أيوه، في خدمات وشركاء معينين."
+        }
+      },
+      {
+        "en": {
+          "question": "Is payment secure?",
+          "answer": "Yes. All transactions are protected."
+        },
+        "ar": {
+          "question": "هل الدفع آمن؟",
+          "answer": "أيوه. كل عمليات الدفع مؤمنة."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Customizations", "ar": "تعديلات العربية" },
+    "items": [
+      {
+        "en": {
+          "question": "What customization services are available?",
+          "answer": "Body kits, tints, exhausts, wraps, upgrades, and accessories."
+        },
+        "ar": {
+          "question": "إيه خدمات التعديل المتاحة؟",
+          "answer": "كيتات، تظليل، شكمانات، لف، ترقيات، وإكسسوارات."
+        }
+      },
+      {
+        "en": {
+          "question": "Are the workshops verified?",
+          "answer": "Yes. Only trusted partners are listed."
+        },
+        "ar": {
+          "question": "هل الورش معتمدة؟",
+          "answer": "أيوه. بنعرض بس شركاء موثوقين."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I see previous work?",
+          "answer": "Yes. Many workshops showcase past projects."
+        },
+        "ar": {
+          "question": "هل أقدر أشوف شغل سابق؟",
+          "answer": "أيوه. ورش كتير بتعرض شغلها السابق."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Government Services", "ar": "الخدمات الحكومية" },
+    "items": [
+      {
+        "en": {
+          "question": "What government services are supported?",
+          "answer": "Traffic fines payment, license renewal, and related car paperwork."
+        },
+        "ar": {
+          "question": "إيه الخدمات الحكومية المتاحة؟",
+          "answer": "دفع المخالفات، تجديد الرخصة، وأوراق العربية."
+        }
+      },
+      {
+        "en": {
+          "question": "Do I need to visit traffic units?",
+          "answer": "In many cases, no."
+        },
+        "ar": {
+          "question": "هل لازم أروح المرور؟",
+          "answer": "في حالات كتير، لا."
+        }
+      },
+      {
+        "en": {
+          "question": "Is my data secure?",
+          "answer": "Yes. Data privacy is a priority."
+        },
+        "ar": {
+          "question": "هل بياناتي آمنة؟",
+          "answer": "أيوه. خصوصية البيانات أولوية."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Signals", "ar": "Signals" },
+    "items": [
+      {
+        "en": {
+          "question": "What are Signals?",
+          "answer": "QR codes placed on cars to allow communication without sharing phone numbers."
+        },
+        "ar": {
+          "question": "إيه هي Signals؟",
+          "answer": "QR بيتحط على العربية للتواصل من غير مشاركة رقم الموبايل."
+        }
+      },
+      {
+        "en": {
+          "question": "What can people send me?",
+          "answer": "Parking alerts, lights left on, emergencies, or quick messages."
+        },
+        "ar": {
+          "question": "الناس ممكن تبعتلي إيه؟",
+          "answer": "تنبيه ركنة، نور سايب، طوارئ، أو رسائل سريعة."
+        }
+      },
+      {
+        "en": {
+          "question": "Is my identity exposed?",
+          "answer": "No. Communication is anonymous."
+        },
+        "ar": {
+          "question": "هويتي بتكون ظاهرة؟",
+          "answer": "لا. التواصل بيكون مجهول."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I customize my Signal QR?",
+          "answer": "Yes. Color-matched to your car."
+        },
+        "ar": {
+          "question": "هل أقدر أخصص لون Signal؟",
+          "answer": "أيوه. بنفس لون عربيتك."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Aila", "ar": "Aila" },
+    "items": [
+      {
+        "en": {
+          "question": "What is Aila?",
+          "answer": "Drop’s AI companion that takes action, not just chat."
+        },
+        "ar": {
+          "question": "إيه هي Aila؟",
+          "answer": "المساعد الذكي بتاع Drop اللي بينفذ مش بس بيرد."
+        }
+      },
+      {
+        "en": {
+          "question": "What can Aila do?",
+          "answer": "Place orders, track services, resolve issues, guide you, and assist in real time."
+        },
+        "ar": {
+          "question": "Aila بتعمل إيه؟",
+          "answer": "تحجز، تتابع الخدمات، تحل مشاكل، وتساعدك لحظيًا."
+        }
+      },
+      {
+        "en": {
+          "question": "Does Aila understand road signs?",
+          "answer": "Yes. It can analyze road signs and alert drivers."
+        },
+        "ar": {
+          "question": "Aila بتفهم إشارات الطريق؟",
+          "answer": "أيوه. بتقرا الإشارات وتنبه السائق."
+        }
+      },
+      {
+        "en": {
+          "question": "Is Aila available 24/7?",
+          "answer": "Yes."
+        },
+        "ar": {
+          "question": "Aila متاحة طول الوقت؟",
+          "answer": "أيوه."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "DropFM", "ar": "DropFM" },
+    "items": [
+      {
+        "en": {
+          "question": "What is DropFM?",
+          "answer": "Curated music and driving stations inside the app."
+        },
+        "ar": {
+          "question": "إيه هو DropFM؟",
+          "answer": "موسيقى ومحطات قيادة مختارة جوه التطبيق."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I control music while using other features?",
+          "answer": "Yes. Play, pause, or switch without leaving your screen."
+        },
+        "ar": {
+          "question": "هل أقدر أتحكم في الموسيقى وأنا بستخدم التطبيق؟",
+          "answer": "أيوه. تشغل، توقف، أو تغير من غير ما تسيب الشاشة."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Utilities & Extras", "ar": "أدوات وخدمات إضافية" },
+    "items": [
+      {
+        "en": { "question": "Does Drop show fuel stations and prices?", "answer": "Yes." },
+        "ar": { "question": "هل Drop بيعرض محطات البنزين والأسعار؟", "answer": "أيوه." }
+      },
+      {
+        "en": { "question": "Are EV stations included?", "answer": "Yes, where available." },
+        "ar": { "question": "هل محطات الشحن الكهربا متاحة؟", "answer": "أيوه، حسب التوفر." }
+      },
+      {
+        "en": { "question": "Can I check car specs and info?", "answer": "Yes." },
+        "ar": { "question": "هل أقدر أشوف مواصفات العربية؟", "answer": "أيوه." }
+      },
+      {
+        "en": { "question": "Is there an emergency hotline?", "answer": "Yes." },
+        "ar": { "question": "فيه خط طوارئ؟", "answer": "أيوه." }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Trust & Support", "ar": "الثقة والدعم" },
+    "items": [
+      {
+        "en": {
+          "question": "How does Drop ensure quality?",
+          "answer": "Partner vetting, reviews, and continuous monitoring."
+        },
+        "ar": {
+          "question": "Drop بيضمن الجودة إزاي؟",
+          "answer": "فحص الشركاء، التقييمات، والمتابعة المستمرة."
+        }
+      },
+      {
+        "en": {
+          "question": "What if I have a problem?",
+          "answer": "In-app support and Aila handle issues fast."
+        },
+        "ar": {
+          "question": "لو عندي مشكلة أعمل إيه؟",
+          "answer": "الدعم داخل التطبيق وAila بيحلوا المشكلة بسرعة."
+        }
+      },
+      {
+        "en": {
+          "question": "Can I see my service history?",
+          "answer": "Yes. Full car history is saved."
+        },
+        "ar": {
+          "question": "هل أقدر أشوف تاريخ خدمات العربية؟",
+          "answer": "أيوه. تاريخ العربية كله محفوظ."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "For Workshops & Partners", "ar": "للورش والشركاء" },
+    "items": [
+      {
+        "en": {
+          "question": "Why should workshops join Drop?",
+          "answer": "More customers, SaaS tools, payments, and exposure."
+        },
+        "ar": {
+          "question": "ليه الورش تنضم لـ Drop؟",
+          "answer": "عملاء أكتر، أدوات إدارة، مدفوعات، وانتشار."
+        }
+      },
+      {
+        "en": {
+          "question": "Is there a monthly fee?",
+          "answer": "Depends on the program."
+        },
+        "ar": {
+          "question": "هل فيه اشتراك شهري؟",
+          "answer": "حسب البرنامج."
+        }
+      },
+      {
+        "en": {
+          "question": "How do workshops get paid?",
+          "answer": "Fast and flexible payouts."
+        },
+        "ar": {
+          "question": "الورش بتقبض إزاي؟",
+          "answer": "تحويلات سريعة ومرنة."
+        }
+      }
+    ]
+  },
+
+  {
+    "category": { "en": "Account & App", "ar": "الحساب والتطبيق" },
+    "items": [
+      {
+        "en": { "question": "Is Drop available on iOS and Android?", "answer": "Yes." },
+        "ar": { "question": "Drop متاح على iOS وAndroid؟", "answer": "أيوه." }
+      },
+      {
+        "en": { "question": "Can I manage multiple cars?", "answer": "Yes." },
+        "ar": { "question": "هل أقدر أدير أكتر من عربية؟", "answer": "أيوه." }
+      },
+      {
+        "en": { "question": "Can I refer friends?", "answer": "Yes. Referral rewards are built in." },
+        "ar": { "question": "هل أقدر أعزم صحابي؟", "answer": "أيوه. نظام دعوة ومكافآت موجود." }
       }
     ]
   }
