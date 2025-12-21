@@ -3,12 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "1834bc9b5fc03b7dd4a3c0677d917787",
+const RESOURCES = {"flutter_bootstrap.js": "fd23cbaac98a4950780357c4546b48e4",
 "version.json": "ea833091db1f003d9732b86c549904fc",
 "index.html": "39b24c72c8a94e704abad8b91f662509",
 "/": "39b24c72c8a94e704abad8b91f662509",
 "styles.css": "443fe359e12de7fcaf7a9a2445976c45",
-"main.dart.js": "d674b8f90bc7cf2fbb4ec633b7f24df6",
+"main.dart.js": "8adfaf114ed0509a63b03da32c06574a",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
 "drop-loading-animation.gif": "6a6c307a62b63acf67146b20e138808d",
 "drop_init.js": "4eeb70096b06bdc6a8b2c4b07072d441",
@@ -39,7 +39,7 @@ const RESOURCES = {"flutter_bootstrap.js": "1834bc9b5fc03b7dd4a3c0677d917787",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/shaders/stretch_effect.frag": "40d68efbbf360632f614c731219e95f0",
 "assets/AssetManifest.bin": "30491140c6d62b5cdd73bb41435356bb",
-"assets/fonts/MaterialIcons-Regular.otf": "3b478572c3a2d68272d92e0c3f2e57f3",
+"assets/fonts/MaterialIcons-Regular.otf": "f267eba6d18feb0e6d09aec6e02f446e",
 "assets/assets/egypt_flag.png": "0fedfea839ac07061a7df8ef1e4a7579",
 "assets/assets/payment_visa.png": "3798b09b5b7d3721d663d5d8fd04681f",
 "assets/assets/washdrop_button_animation.json": "d5040563fc9c5b55e4e8d0bb20268ab2",
