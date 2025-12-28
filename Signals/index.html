@@ -366,7 +366,7 @@ a {
   //─────────────────────────────────────────────────────────────────────────
   async function getCarByID(encryptedCode) {
     try {
-      const resp = await fetch('https://signals-api-xi.vercel.app/get_car', {
+      const resp = await fetch('https://drop-car-fetch-send.vercel.app/get_car', {
         method: 'POST',
         // --- ADD THESE 3 LINES ---
         mode: 'cors',                // Explicitly state this is a Cross-Origin request
@@ -480,7 +480,7 @@ a {
     sendButton.querySelector('.arabic-text-button').style.display = 'none';
 
     try {
-      const resp = await fetch('https://signals-api-xi.vercel.app/send_signal', {
+      const resp = await fetch('https://drop-car-fetch-send.vercel.app/send_signal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ encryptedCode, message }),
