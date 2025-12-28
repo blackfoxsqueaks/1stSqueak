@@ -368,35 +368,34 @@ a {
     try {
       const resp = await fetch('https://signals-api-xi.vercel.app/get_car', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        // --- ADD THESE 3 LINES ---
+        mode: 'cors',                // Explicitly state this is a Cross-Origin request
+        credentials: 'omit',         // Tell Arc we don't need cookies (Privacy friendly)
+        referrerPolicy: 'no-referrer', // Tell Arc we don't care about the Referer header
+        // -------------------------
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json' // Good practice to add this
+        },
         body: JSON.stringify({ encryptedCode }),
       });
+
       if (!resp.ok) {
         console.error('get_car returned status', resp.status);
         alert('Car not found or invalid SignalCode.');
         return;
       }
+      
       const carData = await resp.json();
-      /*
-        carData has:
-          {
-            carDocId: "...",
-            brand: "...",
-            model: "...",
-            licenseNumber: "...",
-            licensePlate: "...",
-            color: "0xFFaabbcc",
-            signalActive: true|false,
-            brandImage: "... or null"
-          }
-      */
       foundCar = carData;
       displayCarInfo();
+
     } catch (e) {
-      console.error('Network error in getCarByID:', e);
-      alert('Unable to fetch car info.');
+      // DEBUG: Print the actual error message to see if it's "Failed to fetch" (CORS)
+      console.error('Network error details:', e); 
+      alert('Unable to fetch car info: ' + e.message);
     }
-  }
+}
 
   //─────────────────────────────────────────────────────────────────────────
   function displayCarInfo() {
