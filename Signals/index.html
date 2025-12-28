@@ -352,15 +352,18 @@ a {
   let isSignalActive = false;  // tracks whether we can send a signal
 
   //─────────────────────────────────────────────────────────────────────────
-  function getUrlParameter(name) {
+function getUrlParameter(name) {
     name = name.replace(/[\[\]]/g, '\\$&');
     const regex = new RegExp('[?&]' + name + '(?:=([^&#]*)|&|#|$)');
     const results = regex.exec(window.location.href);
     if (!results) return null;
     if (!results[1]) return '';
 
-    // DecodeURIComponent to handle URL decoding
-    return decodeURIComponent(results[1].replace(' ', /\+/g));
+    // 1. Decode the component (This turns %20 and + into spaces)
+    let decoded = decodeURIComponent(results[1].replace(/\+/g, ' '));
+    
+    // 2. Force all spaces back to '+' (The Repair)
+    return decoded.replace(/\s/g, '+');
 }
 
   //─────────────────────────────────────────────────────────────────────────
