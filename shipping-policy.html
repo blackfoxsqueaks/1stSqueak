@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop - Shipping Policy</title>
+    <style>
+        @font-face { font-family: 'RidleyGroteskBold'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("truetype"); font-weight: Bold; font-style: normal; }
+        @font-face { font-family: 'RidleyGroteskMedium'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("truetype"); font-weight: 500; font-style: normal; }
+        @font-face { font-family: 'RidleyGroteskRegular'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Regular.woff") format("truetype"); font-weight: normal; font-style: normal; }
+
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: white; }
+        .container { max-width: 82%; width: calc(100% - 32px); background: #fff; padding: 20px; border-radius: 30px; filter: drop-shadow(rgba(0, 0, 0, 0.16) -2px 3px 20px); margin: 8px auto 32px auto; }
+        h1 { font-size: 26px; text-align: center; font-family: 'RidleyGroteskBold'; }
+        h2 { text-align: center; font-family: 'RidleyGroteskBold'; font-size: 14px; }
+        h3 { font-size: 12px; font-weight: normal; text-align: center; font-family: 'RidleyGroteskRegular'; }
+        .accordion { background: #2667ff; color: white; cursor: pointer; padding: 15px; width: 100%; border: none; text-align: left; outline: none; font-family: 'RidleyGroteskBold'; font-size: 16px; transition: 0.3s; border-radius: 5px; margin-top: 10px; }
+        .accordion:hover { background: #0056b3; }
+        .panel { padding: 15px; display: none; background-color: white; overflow: hidden; border-left: 3px solid #007BFF; margin-bottom: 10px; border-radius: 5px; font-family: 'RidleyGroteskMedium'; font-size: 12px; }
+        .header { width: 100%; z-index: 1; }
+    </style>
+</head>
+<body>
+    <img id="header-image" class="header" src="https://app.drop-eg.com/assets/drop_header_web.png" alt="Drop Appbar">
+    <div class="container">
+        <h1>Shipping Policy</h1>
+        <h2>Last Updated: 11/12/2025</h2>
+        <h3>This policy details how we deliver physical products, such as Signals QR Stickers, to our users across Egypt.</h3>
+        
+        <button class="accordion">1. Delivery Coverage</button>
+        <div class="panel">
+            <p>Drop currently ships to all major governorates in the Arab Republic of Egypt. Shipping availability and fees are calculated at checkout based on your specific location.</p>
+        </div>
+
+        <button class="accordion">2. Processing & Dispatch</button>
+        <div class="panel">
+            <p>Orders are processed within 24 hours of confirmation. Orders placed on weekends or public holidays will be processed on the next business day.</p>
+        </div>
+        
+        <button class="accordion">3. Estimated Delivery Times</button>
+        <div class="panel">
+            <p>• Cairo, Giza, & New Cairo: 2 - 3 business days.
+            <br>• Alexandria & Nile Delta: 3 - 4 business days.
+            <br>• Upper Egypt & Remote Areas: 5 - 7 business days.</p>
+        </div>
+        
+        <button class="accordion">4. Shipping Fees</button>
+        <div class="panel">
+            <p>Shipping fees are non-refundable once an order has been dispatched. If a package is returned to us due to an incorrect address provided by the user, a re-shipping fee may apply.</p>
+        </div>
+
+        <button class="accordion">5. Tracking Your Order</button>
+        <div class="panel">
+            <p>Once your order is handed over to our delivery partner, you will receive a tracking number via the Drop App or SMS. You can use this number to track your order.</p>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = (panel.style.display === "block") ? "none" : "block";
+            });
+        }
+        function updateHeaderImage() {
+            const headerImage = document.getElementById("header-image");
+            if (window.innerWidth > 768) { headerImage.src = "https://app.drop-eg.com/drop_header_desktop.webp"; } 
+            else { headerImage.src = "https://app.drop-eg.com/assets/drop_header_web.png"; }
+        }
+        updateHeaderImage();
+        window.addEventListener("resize", updateHeaderImage);
+    </script>
+</body>
+</html>

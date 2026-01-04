@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop - Refund Policy</title>
+    <style>
+        @font-face { font-family: 'RidleyGroteskBold'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("truetype"); font-weight: Bold; font-style: normal; }
+        @font-face { font-family: 'RidleyGroteskMedium'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("truetype"); font-weight: 500; font-style: normal; }
+        @font-face { font-family: 'RidleyGroteskRegular'; src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Regular.woff") format("truetype"); font-weight: normal; font-style: normal; }
+
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: white; }
+        .container { max-width: 82%; width: calc(100% - 32px); background: #fff; padding: 20px; border-radius: 30px; filter: drop-shadow(rgba(0, 0, 0, 0.16) -2px 3px 20px); margin: 8px auto 32px auto; }
+        h1 { font-size: 26px; text-align: center; font-family: 'RidleyGroteskBold'; }
+        h2 { text-align: center; font-family: 'RidleyGroteskBold'; font-size: 14px; }
+        h3 { font-size: 12px; font-weight: normal; text-align: center; font-family: 'RidleyGroteskRegular'; }
+        .accordion { background: #2667ff; color: white; cursor: pointer; padding: 15px; width: 100%; border: none; text-align: left; outline: none; font-family: 'RidleyGroteskBold'; font-size: 16px; transition: 0.3s; border-radius: 5px; margin-top: 10px; }
+        .accordion:hover { background: #0056b3; }
+        .panel { padding: 15px; display: none; background-color: white; overflow: hidden; border-left: 3px solid #007BFF; margin-bottom: 10px; border-radius: 5px; font-family: 'RidleyGroteskMedium'; font-size: 12px; line-height: 1.5; }
+        .header { width: 100%; z-index: 1; }
+    </style>
+</head>
+<body>
+    <img id="header-image" class="header" src="https://app.drop-eg.com/assets/drop_header_web.png" alt="Drop Appbar">
+    <div class="container">
+        <h1>Refund Policy</h1>
+        <h2>Last Updated: 11/12/2025</h2>
+        <h3>This policy outlines the terms for refunds and cancellations across our On-Demand services, Subscriptions, and Workshop bookings.</h3>
+        
+        <button class="accordion">1. WashDrop (On-Demand)</button>
+        <div class="panel">
+            <p>For single-service WashDrop bookings:
+            <br>• <strong>Free Cancellation:</strong> You may cancel your booking at any time before the service provider arrives at your vehicle location.
+            <br>• <strong>Non-Refundable:</strong> Once the service has been completed and confirmed, payments are final and non-refundable.</p>
+        </div>
+
+        <button class="accordion">2. WashDrop Subscription</button>
+        <div class="panel">
+            <p>For recurring WashDrop plans:
+            <br>• <strong>Cancellation:</strong> You can cancel your WashDrop subscription at any time through the app settings. Your benefits will remain active until the end of your current billing period.
+            <br>• <strong>Refund Eligibility:</strong> Subscription fees are non-refundable once the billing cycle has started. We do not provide pro-rated refunds for unused washes within a month.
+            <br>• <strong>Failed Payments:</strong> If a subscription payment fails, your plan will be suspended until a valid payment method is updated.</p>
+        </div>
+
+        <button class="accordion">3. Workshop Reservations</button>
+        <div class="panel">
+            <p>To protect the scheduling of our partner workshops:
+            <br>• <strong>24-Hour Rule:</strong> Cancellations made within 24 hours of the appointment time will incur a fee of <strong>EGP 70 or 2.5%</strong> of the service cost (whichever is lower).
+            <br>• <strong>No-Shows:</strong> If you fail to show up for your appointment without prior notice, the workshop deposit or full payment is non-refundable.</p>
+        </div>
+        
+        <button class="accordion">4. Signals (Physical & Digital)</button>
+        <div class="panel">
+            <p>• <strong>QR Stickers:</strong> Refunds are only available for physical stickers if they are returned unopened and unused within 14 days.
+            <br>• <strong>Signals Subscription:</strong> Monthly digital subscriptions for receiving messages are non-refundable once billed.</p>
+        </div>
+
+        <button class="accordion">5. Refund Processing</button>
+        <div class="panel">
+            <p>Approved refunds are automatically issued to the original payment method (Credit Card, Digital Wallet, etc.). Please allow 5 to 10 business days for the amount to reflect in your account, depending on your bank's processing time.</p>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = (panel.style.display === "block") ? "none" : "block";
+            });
+        }
+
+        function updateHeaderImage() {
+            const headerImage = document.getElementById("header-image");
+            if (window.innerWidth > 768) {
+                headerImage.src = "https://app.drop-eg.com/drop_header_desktop.webp";
+            } else {
+                headerImage.src = "https://app.drop-eg.com/assets/drop_header_web.png";
+            }
+        }
+        updateHeaderImage();
+        window.addEventListener("resize", updateHeaderImage);
+    </script>
+</body>
+</html>
