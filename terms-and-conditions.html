@@ -114,7 +114,7 @@
         <button class="accordion">12. Contact Us</button>
         <div class="panel">
             <p>For support, legal inquiries, or complaints, please contact us at:<br>
-            📧 hello@drop-eg.com<br>
+            📧 legal@drop-eg.com<br>
             📍 Cairo, Egypt</p>
         </div>
     </div>
@@ -128,6 +128,17 @@
                 panel.style.display = (panel.style.display === "block") ? "none" : "block";
             });
         }
+        function updateHeaderImage() {
+        const headerImage = document.getElementById("header-image");
+        if (window.innerWidth > 768) {
+            headerImage.src = "https://drop-eg.com/app/drop_header_desktop.webp";
+        } else {
+            headerImage.src = "https://app.drop-eg.com/assets/drop_header_web.png";
+        }
+    }
+
+    updateHeaderImage();
+    window.addEventListener("resize", updateHeaderImage);
     </script>
 </body>
 </html>
