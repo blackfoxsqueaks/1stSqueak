@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Full Screen Flipbook</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        #Dashboard__3 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #logo-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        #Drop_Logo_White_vectorized {
+            width: 140px;
+            height: auto;
+            display: block;
+            margin-left: 32px;
+        }
+
+        /* THE PATCH: This covers the 'Powered by' logo */
+        .heyzine-cover-up {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0px; /* Adjust these dimensions until logo is hidden */
+            height: 0px;
+            background-color: #E8E8E8; /* Change to match your flipbook background */
+            z-index: 9998;
+            pointer-events: none;
+        }
+
+        .full-screen-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            #logo-link { top: 15px; left: 15px; padding: 5px; }
+            #Drop_Logo_White_vectorized { width: 90px; margin-top: 9px; margin-left: 8px; }
+            .heyzine-cover-up { width: 100%; height: 95px; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="Dashboard__3">
+    <!-- Overlay Logo -->
+    <a href="Dashboard.html" id="logo-link">
+        <img id="Drop_Logo_White_vectorized" src="assets/Drop_Apps/Drop_Logo_White_vectorized.png" alt="Logo">
+    </a>
+
+    <!-- The Patch -->
+    <div class="heyzine-cover-up"></div>
+
+    <!-- The Iframe -->
+    <iframe id="Retool" class="full-screen-iframe" src="https://heyzine.com/flip-book/965eabc1ad.html" allowfullscreen allow="clipboard-write; fullscreen"></iframe>
+</div>
+
+</body>
+</html>
