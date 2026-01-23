@@ -1,80 +1,129 @@
-<body style="font-size:10pt;font-family: 'Ridley Grotesk', sans-serif;">
-  <style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <style type="text/css">
     @font-face {
       font-family: 'Ridley Grotesk';
-      src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("truetype");
-      font-weight: Bold;
-      font-style: normal;
+      src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Bold.woff") format("woff");
+      font-weight: bold; font-style: normal;
     }
-
-
     @font-face {
       font-family: 'Ridley Grotesk';
-      src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("truetype");
-      font-weight: Medium;
-      font-style: normal;
+      src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Medium.woff") format("woff");
+      font-weight: 500; font-style: normal;
     }
 
-
-    @font-face {
-      font-family: 'Ridley Grotesk';
-      src: url("https://drop-eg.com/fonts/Ridley_Grotesk_Regular.woff") format("truetype");
-      font-weight: normal;
-      font-style: normal;
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
     }
 
-    
-    .banner-image {
-      max-width: 500px;
-      border-radius: 16px;
-      filter: drop-shadow(-2px 3px 20px rgba(0, 0, 0, 0.161));
-      height: auto;
-      border: 0;
+    /* Dark Mode Targeting */
+    @media (prefers-color-scheme: dark) {
+      .dark-card-bg { background-color: #1c1c1e !important; }
+      .white-text { color: #ffffff !important; }
+      .grey-text { color: #b0b0b0 !important; }
+      .border-fix { border-color: #333333 !important; }
     }
+
+    /* Outlook specific Dark Mode */
+    [data-ogsc] .dark-card-bg { background-color: #1c1c1e !important; }
+    [data-ogsc] .white-text { color: #ffffff !important; }
   </style>
-  <table cellspacing="0" cellpadding="0" border="0" style="color:#000;max-width:500px;background:transparent;">
-    <tbody>
-      <tr>
-        <td colspan="2" style="padding-bottom:8px;border-bottom:2px solid #EDEDED;border-radius:4px;">
-          <span style="font-family: Ridley Grotesk; font-size:18pt;color:#000;"><strong>Youssef Elhossary</strong></span><br>
-          <span style="margin-left:4px;font-size:10pt;color:grey;font-family: Ridley Grotesk">Founder &amp; CEO | </span>
-          <a href="https://drop-eg.com" target="_blank" rel="noopener" style="font-size:10pt;color:#000;text-decoration:none;font-family: Ridley Grotesk;">
-            <span style="font-size:10pt;color:grey;">Drop LLC.</span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td width="100" style="padding:16px 0;">
-          <img alt="Photo" src="https://drop-eg.com/24_Mail_Signature/Drop_Mail_Logo.png" style="background-color:#f8f8f8; max-width:90px;height:auto;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));">
-        </td>
-        <td colspan="2" style="padding-top:0;">
-          <div style="background-color:#f8f8f8;padding:6px 16px;border-radius:16px;filter:drop-shadow(-2px 3px 20px rgba(0,0,0,0.161));max-width:400px;margin:8px 0;">
-            <p style="margin:0;padding:4px 0;line-height:1.5;color:#101010;font-size:12px;">
-              <span style="font-family: Ridley Grotesk; font-weight: bold;">Mobile:</span> <a href="tel:+201271152411" style="text-decoration:none;color:#101010;font-family: Ridley Grotesk">+2 012 711 524 11</a>
-            </p>
-            <p style="margin:0;padding:4px 0;line-height:1.5;color:#101010;font-size:12px;">
-              <span style="font-family: Ridley Grotesk; font-weight: bold;">Email:</span> <a href="mailto:youssefelhossary@drop-eg.com" style="text-decoration:none;color:#101010;font-family: Ridley Grotesk">youssef.elhossary@drop-eg.com</a>
-            </p>
-            <p style="margin:0;padding:4px 0;line-height:1.5;color:#101010;font-size:12px;">
-              <span style="font-family: Ridley Grotesk; font-weight: bold;">LinkedIn:</span> <a href="https://linkedin.com/in/youssefelhossary/" style="text-decoration:none;color:#101010;font-family: Ridley Grotesk">in/youssefelhossary</a>
-            </p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" style="padding-top:8px;">
-          <a href="https://app.drop-eg.com/" target="_blank" rel="noopener">
-            <img alt="Banner" class="banner-image" src="https://drop-eg.com/24_Mail_Signature/Drop_Mail_Banner_Light.png">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" style="padding-top:16px;">
-          <p style="font-size:7pt;line-height:8pt;color:#959595;text-align:justify;font-family: Ridley Grotesk;">
-            The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without the written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.
-          </p>
-        </td>
-      </tr>
-    </tbody>
+</head>
+<body style="margin:0; padding:0; -webkit-text-size-adjust:none; text-size-adjust:none; background-color: transparent;">
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+      <td align="left">
+        <table cellpadding="0" cellspacing="0" border="0" style="max-width:500px; font-family: 'Ridley Grotesk', Helvetica, Arial, sans-serif;">
+          
+          <!-- Header: Name & Title -->
+          <tr>
+  <td style="padding-bottom:12px; border-bottom:1px solid #EDEDED;">
+    <span class="white-text" style="font-size:22px; color:#1a1a1a; font-family: 'Ridley Grotesk', Helvetica, sans-serif; font-weight:bold;">
+      Youssef Elhossary
+    </span><br />
+    <span class="grey-text" style="font-size:13px; color:#808080; font-family: 'Ridley Grotesk', Helvetica, sans-serif; line-height:20px;">
+      Founder &amp; CEO | <a href="https://drop-eg.com" target="_blank" class="grey-text" style="color:#808080; text-decoration:none; font-family: 'Ridley Grotesk', Helvetica, sans-serif;">Drop LLC.</a>
+    </span>
+  </td>
+</tr>
+
+          <!-- Profile Section: Logo & Contact Card -->
+          <tr>
+            <td style="padding: 20px 0;">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <!-- Logo Container -->
+                  <td width="90" valign="top">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="dark-card-bg border-fix" style="background-color: #f8f8f8; padding: 5px; border-radius: 16px; border: 1px solid #eeeeee;">
+                          <img src="https://drop-eg.com/24_Mail_Signature/Drop_Mail_Logo.png" alt="Drop" width="80" style="display:block; border:0; width:80px; height:auto; border-radius:12px;" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  
+                  <td width="12">&nbsp;</td>
+
+                  <!-- Contact Card -->
+                  <td valign="middle">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="dark-card-bg border-fix" style="background-color:#f8f8f8; border-radius:16px; border: 1px solid #eeeeee;">
+                      <tr>
+                        <td style="padding: 17px 18px;">
+                          <div style="margin-bottom:5px; font-size:12px; font-family: 'Ridley Grotesk', Helvetica, sans-serif;">
+                            <strong class="white-text" style="color:#1a1a1a; font-weight:bold;">Mobile:</strong> 
+                            <a href="tel:+201271152411" class="white-text" style="color:#1a1a1a; text-decoration:none;">+2 012 711 524 11</a>
+                          </div>
+                          <div style="margin-bottom:5px; font-size:12px; font-family: 'Ridley Grotesk', Helvetica, sans-serif;">
+                            <strong class="white-text" style="color:#1a1a1a; font-weight:bold;">Email:</strong> 
+                            <a href="mailto:youssef.elhossary@drop-eg.com" class="white-text" style="color:#1a1a1a; text-decoration:none;">youssefelhossary@drop-eg.com</a>
+                          </div>
+                          <div style="font-size:12px; font-family: 'Ridley Grotesk', Helvetica, sans-serif;">
+                            <strong class="white-text" style="color:#1a1a1a; font-weight:bold;">LinkedIn:</strong> 
+                            <a href="https://linkedin.com/in/youssefelhossary/" class="white-text" style="color:#1a1a1a; text-decoration:none;">in/youssefelhossary</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Banner Card Section (Updated for consistency) -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td class="dark-card-bg border-fix" style="background-color: #f8f8f8; border-radius: 20px; border: 1px solid #eeeeee; padding: 0px; overflow: hidden;">
+                    <a href="https://drop-eg.com/download" target="_blank" style="text-decoration: none; display: block;">
+                      <img src="https://drop-eg.com/24_Mail_Signature/Drop_Mail_Banner_Clear.png" alt="Drop App" width="490" style="display:block; border:0; width:100%; max-width:500px; height:auto; border-radius:16px;" />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Legal Disclaimer -->
+          <tr>
+            <td style="padding-top:20px;">
+              <p style="margin:0; font-size:10px; line-height:14px; color:#999999; font-family: 'Ridley Grotesk', Helvetica, sans-serif; text-align:justify;">
+                The content of this email is confidential and intended for the recipient specified in the message only. It is strictly forbidden to share any part of this message with any third party, without the written consent of the sender.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
   </table>
 </body>
+</html>
