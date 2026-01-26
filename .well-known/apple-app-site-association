@@ -4,12 +4,19 @@
     "details": [
       {
         "appID": "BPQ5GZMZ4D.com.dropllc.dropapp.prod",
-        "paths": [ "*" ]
+        "paths": [ "*" ],
+        "exclude": [ "/wash_now", "/wash_now/*" ]
       }
     ]
   },
   "appclips": {
-    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod.Clip" ]
+    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod.Clip" ],
+    "details": [
+      {
+        "appID": "BPQ5GZMZ4D.com.dropllc.dropapp.prod.Clip",
+        "paths": [ "/wash_now", "/wash_now/*" ]
+      }
+    ]
   },
   "webcredentials": {
     "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ]
