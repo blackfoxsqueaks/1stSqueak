@@ -8,6 +8,9 @@
       }
     ]
   },
+  "appclips": {
+    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod.WashDropClip" ]
+  },
   "webcredentials": {
     "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ]
   }
