@@ -3,9 +3,23 @@
     "apps": [],
     "details": [
       {
-        "appID": "BPQ5GZMZ4D.com.dropllc.dropapp.prod",
-        "paths": [ "*" ],
-        "exclude": [ "/wash_now", "/wash_now/*" ]
+        "appIDs": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ],
+        "components": [
+          {
+            "/": "/wash_now",
+            "exclude": true,
+            "comment": "Prevent main app from opening this. Falls back to Safari where App Clip is invoked."
+          },
+          {
+            "/": "/wash_now/*",
+            "exclude": true,
+            "comment": "Prevent main app from opening subpaths."
+          },
+          {
+            "/": "*",
+            "comment": "Main app handles everything else."
+          }
+        ]
       }
     ]
   },
