@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appIDs": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ],
+        "appIDs": ["BPQ5GZMZ4D.com.dropllc.dropapp.prod"],
         "components": [
           {
             "/": "/wash_now",
@@ -16,7 +16,7 @@
             "comment": "Prevent main app from opening subpaths."
           },
           {
-            "/": "*",
+            "/": "/*",
             "comment": "Main app handles everything else."
           }
         ]
@@ -24,9 +24,9 @@
     ]
   },
   "appclips": {
-    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod.WashDropClip" ]
+    "apps": ["BPQ5GZMZ4D.com.dropllc.dropapp.prod.WashDropClip"]
   },
   "webcredentials": {
-    "apps": [ "BPQ5GZMZ4D.com.dropllc.dropapp.prod" ]
+    "apps": ["BPQ5GZMZ4D.com.dropllc.dropapp.prod"]
   }
 }
