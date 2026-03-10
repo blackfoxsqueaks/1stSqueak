@@ -1,12 +1,12 @@
 [
   {
     "fuel_type": "Gasoline 95",
-    "price": 21.00,
+    "price": 24.00,
     "currency": "EGP"
   },
   {
     "fuel_type": "Gasoline 92",
-    "price": 19.25,
+    "price": 22.25,
     "currency": "EGP"
   }
 ]
